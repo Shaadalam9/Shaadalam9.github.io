@@ -1,7 +1,7 @@
 # Site settings
-title: Dr. Pavlo Bazilinskyy
-email: p.bazilinskyy@tudelft.nl
-description: Personal webpage of Dr. Pavlo Bazilinskyy
+title: Md Shadab Alam
+email: m.s.alam@tue.nl
+description: Personal webpage of Shadab Alam
 baseurl: ""
 url: ""
 affiliation: I am part of the <a href="https://www.tue.nl/en/research/research-groups/future-everyday/" target="_blank">Future Everyday</a> group at TU Eindhoven.
@@ -18,7 +18,7 @@ location: >
 
 # Contact info. (shown in footer)
 contact: >
-    Contact me via email: <a href="mailto:p.bazilinskyy@tue.nl" target="_blank">p.bazilinskyy@tue.nl</a><br/>
+    Contact me via email: <a href="mailto:m.s.alam@tue.nl" target="_blank">m.s.alam@tue.nl</a><br/>
 
 # Pages shown in navbar
 nav_pages:
