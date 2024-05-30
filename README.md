@@ -1,1 +1,1 @@
-Personal webpage of Shadab Alam. Live at [https://bazilinskyy.github.io](https://bazilinskyy.github.io/).
+Personal webpage of Shadab Alam. Live at [https://shaadalam9.github.io](https://shaadalam9.github.io/).
