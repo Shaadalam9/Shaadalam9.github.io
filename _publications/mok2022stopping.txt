@@ -1,9 +1,0 @@
-@article{mok2022stopping,
-  title={Stopping by looking: A driver-pedestrian interaction study in a coupled simulator using head-mounted displays with eye-tracking},
-  author={Mok, C. S. and Bazilinskyy, Pavlo and De Winter, J. C. F.},
-  year={2022},
-  volume={105},
-  journal={Applied Ergonomics},
-  publisher={Elsevier},
-  doi={10.1016/j.apergo.2022.103825}
-}

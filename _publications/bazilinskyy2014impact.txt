@@ -1,6 +1,0 @@
-@mastersthesis{bazilinskyy2014impact,
-  title={Impact of cache on data-sharing in multi-threaded programmes},
-  author={Bazilinskyy, Pavlo},
-  year={2014},
-  school={Maynooth University}
-}

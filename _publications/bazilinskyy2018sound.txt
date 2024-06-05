@@ -1,4 +1,0 @@
-@article{bazilinskyy2018sound,
-  title={Sound design process for automotive industry},
-  author={Bazilinskyy, Pavlo and Cieler, Stephan and Dodou, D and de Winter, J. C. F.}
-}

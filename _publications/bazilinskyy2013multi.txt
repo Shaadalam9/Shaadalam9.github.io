@@ -1,6 +1,0 @@
-@mastersthesis{bazilinskyy2013multi,
-  title={Multi-core Insense},
-  author={Bazilinskyy, Pavlo},
-  year={2013},
-  school={University of St Andrews}
-}

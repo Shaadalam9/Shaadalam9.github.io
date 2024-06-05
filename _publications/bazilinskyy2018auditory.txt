@@ -1,7 +1,0 @@
-@inproceedings{bazilinskyy2018auditory,
-  title={An auditory dataset of passing vehicles recorded with a smartphone},
-  author={Bazilinskyy, Pavlo and van der Aa, Arne and Schoustra, Michael and Spruit, John and Staats, Laurens and van der Vlist, Klaas Jan and De Winter, J. C. F.},
-  booktitle={Proceedings of Tools and Methods of Competitive Engineering (TMCE)},
-  year={2018},
-  address={Las Palmas de Gran Canaria, Spain}
-}

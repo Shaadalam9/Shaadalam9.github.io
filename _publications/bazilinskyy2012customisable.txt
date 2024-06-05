@@ -1,6 +1,0 @@
-@thesis{bazilinskyy2012customisable,
-  title={Customisable multitenant web form with JSF and MySQL},
-  author={Bazilinskyy, Pavlo},
-  year={2012},
-  school={South-Eastern Finland University of Applied Sciences}
-}

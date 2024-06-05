@@ -1,7 +1,0 @@
-@inproceedings{bazilinskyy2017usefulness,
-  title={Usefulness and satisfaction of take-over requests for highly automated driving},
-  author={Bazilinskyy, Pavlo and Eriksson, Alexander and Petermeijer, S. M. and De Winter, J. C. F.},
-  booktitle={Proceedings of Road Safety and Simulation (RSS)},
-  year={2017},
-  address={The Hague, The Netherlands}
-}

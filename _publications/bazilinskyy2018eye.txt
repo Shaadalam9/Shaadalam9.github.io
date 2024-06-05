@@ -1,7 +1,0 @@
-@inproceedings{bazilinskyy2018eye,
-  title={Eye movements while cycling in GTA V},
-  author={Bazilinskyy, Pavlo and Heisterkamp, Niels and Luik, Philine and Klevering, Stijn and Haddou, Assia and Zult, Michiel and Dialynas, George and Dodou, Dimitra and De Winter, J. C. F.},
-  booktitle={Proceedings of Tools and Methods of Competitive Engineering (TMCE)},
-  year={2018},
-  address={Las Palmas de Gran Canaria, Spain}
-}

@@ -1,6 +1,0 @@
-@phdthesis{bazilinskyy2018auditoryinterface,
-  title={Auditory interface for automated driving},
-  author={Bazilinskyy, Pavlo},
-  year={2018},
-  school={Delft University of Technology}
-}
