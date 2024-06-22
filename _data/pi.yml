@@ -1,4 +1,4 @@
-- name: Dr. Pavlo Bazilinskyy
+- name: Md Shadab Alam
   photo-small: bazilinskyy-defence.jpg
   photo-large: bazilinskyy-cycling.jpg
   info: PhD at TU Eindhoven
@@ -9,16 +9,12 @@
   linkedin: https://www.linkedin.com/in/md-shadab-alam-03b8251aa/
   orcid: https://orcid.org/0000-0001-9184-9963
   cv: https://github.com/bazilinskyy/bazilinskyy.github.io/blob/master/cv/CV-PavloBazilinskyy.pdf?raw=true
-  number_educ: 6
-  education1: (2023–) PhD researcher in <a href="https://www.tue.nl/en/research/research-groups/future-everyday" target="_blank">Future Everyday</a> group at <a href="https://www.tue.nl" target="_blank">TU Eindhoven</a> 🇳🇱
-  education2: (2018–22) Postdoc in VIDI project of <a href="https://sites.google.com/site/jcfdewinter" target="_blank">Dr. Joost de Winter</a> at <a href="https://www.tudelft.nl" target="_blank">TU Delft</a> 🇳🇱
-  education3: (2018–21) Director of data science research at <a href="https://sd-insights.eu" target="_blank">SD-Insights</a> 🇳🇱
-  education4: (2014–18) <b>PhD in Human Factors of Automated Driving</b> at <a href="https://www.tudelft.nl" target="_blank">TU Delft</a> 🇳🇱
-  education5: (2012–14) <b>Double MSc in Computer Science</b> at <a href="" target="_blank">University of St Andrews</a> 🏴󠁧󠁢󠁳󠁣󠁴󠁿 and <a href="" target="_blank">Maynooth University</a> 🇮🇪
-  education6: (2009–12) <b>BEng in Information Technology</b> at <a href="https://www.xamk.fi" target="_blank">Mikkeli University of Applied Sciences</a> 🇫🇮
-  education1short: (2022–) Assistant professor, TU/e 
-  education2short: (2018–22) Postdoc, TU Delft 
-  education3short: (2018–21) Data scientist, SD-Insights
-  education4short: (2014–18) PhD, TU Delft
-  education5short: (2012–14) MSc, St Andrews/Maynooth
-  education6short: (2009–12) BEng, Mikkeli AMK
+  number_educ: 4
+  education1: (2023–) <b>PhD in Human-Autonomous System Interaction</b> at <a href="https://www.tue.nl" target="_blank">TU Eindhoven</a> 🇳🇱
+  education2: (2021–23) <b>MSc in Autonomous Vehicles</b> at <a href="" target="_blank">Indian Institute of Technology Madras</a>
+  education3: (2021–23) Junior Research Fellow in <a href="https://icandsr.iitm.ac.in/" target="_blank">ICSR</a>
+  education4: (2016–20) <b>B.Tech in Mechanical Engineering</b> at <a href="https://www.jmi.ac.in" target="_blank">Jamia Millia Islamia</a>
+  education1short: (2023–) PhD Scholar, TU/e 
+  education2short: (2021–23) MSc, IIT Madras
+  education2short: (2021–23) JRF, ICSR
+  education3short: (2016–20) B.Tech, JMI
