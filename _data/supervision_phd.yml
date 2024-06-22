@@ -1,16 +1,16 @@
-- name: Shadab Alam
-  name_url: https://www.linkedin.com/in/md-shadab-alam-03b8251aa
-  project: Connected data from automated vehicles and road users for traffic safety
-  # project_url:
-  year: 2023
-  status: inprogress
+# - name: Shadab Alam
+#   name_url: https://www.linkedin.com/in/md-shadab-alam-03b8251aa
+#   project: Connected data from automated vehicles and road users for traffic safety
+#   # project_url:
+#   year: 2023
+#   status: inprogress
 
-- name: Rutger Verstegen
-  name_url: https://www.linkedin.com/in/rutger-verstegen
-  project: Uncertainty in interaction between automated vehicles and other road users 
-  # project_url:
-  year: 2023
-  status: inprogress
+# - name: Rutger Verstegen
+#   name_url: https://www.linkedin.com/in/rutger-verstegen
+#   project: Uncertainty in interaction between automated vehicles and other road users 
+#   # project_url:
+#   year: 2023
+#   status: inprogress
 
 # - name: Mervyn Franssen
 #   name_url: https://www.linkedin.com/in/mervynfranssen
@@ -26,12 +26,12 @@
 #   year: 2021
 #   status: inprogress
 
-- name: Roulin Gao
-  name_url: https://www.linkedin.com/in/ruolin-gao-731904163
-  project: Data-driven assessment of driving behaviour of young and elderly drivers
-  # project_url:
-  year: 2021
-  status: inprogress
+# - name: Roulin Gao
+#   name_url: https://www.linkedin.com/in/ruolin-gao-731904163
+#   project: Data-driven assessment of driving behaviour of young and elderly drivers
+#   # project_url:
+#   year: 2021
+#   status: inprogress
 
 # - name: Shiva Nischal Lingam
 #   name_url: https://www.linkedin.com/in/shiva-nischal-lingam/
