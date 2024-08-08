@@ -12,7 +12,24 @@
 
 - name: Abhilash Somayajula
   name_url: https://doe.iitm.ac.in/abhilash/
-  field: Autonomous Ships
+  field: Autonomous Ships, Reinforcement Learning
   institution: Indian Institute of Technology Madras
   institution_url: https://www.abhilash.consulting/home
 
+- name: Ignacio Carlucho
+  name_url: https://ignaciocarlucho.github.io/
+  field: Reinforcement Learning, Robotics
+  institution: Heriot Watt University
+  institution_url: https://researchportal.hw.ac.uk/en/persons/ignacio-carlucho
+
+- name: Wolfram Remlinger
+  name_url: 
+  field: User Interface, Shuttle Bus
+  institution: University of Stuttgart
+  institution_url: https://www.iktd.uni-stuttgart.de/en/institute/team/Remlinger/
+
+- name: Thirumanikandan Subramanian
+  name_url: 
+  field: User Interface, Mixed Reality
+  institution: University of Stuttgart
+  institution_url: https://www.iktd.uni-stuttgart.de/institut/team/Subramanian/
