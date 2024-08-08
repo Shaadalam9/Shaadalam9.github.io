@@ -4,7 +4,7 @@ sitemap: false
 title: "From A to B with ease: User-centric interfaces for shuttle buses"
 authors: Alam, M. S., & Carlucho, I. 
 pdf: alam2023trad
-image: alam2024trad.png
+image: alam2024trad.jpg
 display: Journal of Marine Engineering & Technology
 year: 2024
 doi: 10.1080/20464177.2024.2367276
