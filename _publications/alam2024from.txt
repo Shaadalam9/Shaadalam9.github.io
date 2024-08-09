@@ -1,4 +1,4 @@
-@techreport{alam2024from,
+@article{alam2024from,
   title={From A to B with ease: User-centric interfaces for shuttle buses},
   author={Alam, Md Shadab and Subramanian, Thirumanikandan and Martens, Marieke and Remlinger, Wolfram and Bazilinskyy, Pavlo},
   booktitle={Adjunct Proceedings of the 16th International Conference on Automotive User Interfaces and Interactive Vehicular Applications (AutoUI)},
