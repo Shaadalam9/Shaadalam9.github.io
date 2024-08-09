@@ -1,7 +1,7 @@
 ---
 layout: publication
 sitemap: false
-title: "From A to B with ease: User-centric interfaces for shuttle buses"
+title: "Harnessing traditional controllers for fast-track training of deep reinforcement learning control strategies"
 authors: Alam, M. S., & Carlucho, I. 
 pdf: alam2023trad
 image: alam2024trad.jpg
