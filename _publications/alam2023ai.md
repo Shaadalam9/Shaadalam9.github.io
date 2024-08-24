@@ -1,7 +1,7 @@
 ---
 layout: publication
 sitemap: false
-title: "AI on the water: Applying DRL to Autonomous Vessel Navigation"
+title: "Ai on the water: Applying drl to autonomous vessel navigation"
 authors: Alam, M. S.,Sanjeev Kumar, R.S., & Somayajula, A.
 pdf: alam2023ai.pdf
 image: alam2023ai.png
