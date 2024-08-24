@@ -3,7 +3,7 @@ layout: publication
 sitemap: false
 title: "Data Driven Control for marine vehicle maneuvering"
 authors: Alam, M. S. 
-pdf: masterthesis.pdf
+pdf: masterthesis
 image: masterthesis.png
 # display: Journal of Marine Engineering & Technology
 year: 2023
