@@ -1,0 +1,7 @@
+@article{alam2023ai,
+  title={Ai on the water: Applying drl to autonomous vessel navigation},
+  author={Alam, Md Shadab and Sudha, Sanjeev Kumar Ramkumar and Somayajula, Abhilash},
+  journal={arXiv preprint arXiv:2310.14938},
+  doi={10.48550/arXiv.2310.14938}
+  year={2023}
+}

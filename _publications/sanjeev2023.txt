@@ -1,0 +1,7 @@
+@article{sudha2023comparison,
+  title={Comparison of path following in ships using modern and traditional controllers},
+  author={Sudha, Sanjeev Kumar Ramkumar and Alam, Md Shadab and Reddy, Bindusara and Somayajula, Abhilash Sharma},
+  doi={10.48550/arXiv.2310.14940}
+  journal={arXiv preprint arXiv:2310.14940},
+  year={2023}
+}
