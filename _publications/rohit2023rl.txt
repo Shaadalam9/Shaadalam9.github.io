@@ -1,0 +1,10 @@
+@article{deraj2023deep,
+  title={Deep reinforcement learning based controller for ship navigation},
+  author={Deraj, Rohit and Kumar, RS Sanjeev and Alam, Md Shadab and Somayajula, Abhilash},
+  journal={Ocean Engineering},
+  volume={273},
+  pages={113937},
+  year={2023},
+  doi={10.1016/j.oceaneng.2023.113937}
+  publisher={Elsevier}
+}
