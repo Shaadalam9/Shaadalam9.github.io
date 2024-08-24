@@ -4,7 +4,7 @@ sitemap: false
 title: "Harnessing traditional controllers for fast-track training of deep reinforcement learning control strategies"
 authors: Alam, M. S., & Carlucho, I. 
 pdf: alam2023trad
-image: alam2024trad.jpg
+image: alam2023trad.jpg
 display: Journal of Marine Engineering & Technology
 year: 2024
 doi: 10.1080/20464177.2024.2367276
