@@ -1,8 +1,8 @@
-- image: ec-logo.png
-  url: https://ec.europa.eu/info/index_en
-- image: msca-logo.png
-  url: https://ec.europa.eu/research/mariecurieactions/about-marie-sklodowska-curie-actions
-- image: nwo-logo.png
-  url: https://www.nwo.nl
-- image: 4tu-logo.png
-  url: https://www.4tu.nl
+# - image: ec-logo.png
+#   url: https://ec.europa.eu/info/index_en
+# - image: msca-logo.png
+#   url: https://ec.europa.eu/research/mariecurieactions/about-marie-sklodowska-curie-actions
+# - image: nwo-logo.png
+#   url: https://www.nwo.nl
+# - image: 4tu-logo.png
+#   url: https://www.4tu.nl

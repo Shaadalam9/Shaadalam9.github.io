@@ -1,108 +1,108 @@
-- name: Wouter Salden, Jakub Woziwodzki, Axel Reitz
-  project: Designing an emergency drone
-  project_url: https://mobility-squad.com/angel
-  year: 2023
-  status: completed
-  comment: within <a href="https://mobility-squad.com" target="_blank">Future Mobility squad</a>
+# - name: Wouter Salden, Jakub Woziwodzki, Axel Reitz
+#   project: Designing an emergency drone
+#   project_url: https://mobility-squad.com/angel
+#   year: 2023
+#   status: completed
+#   comment: within <a href="https://mobility-squad.com" target="_blank">Future Mobility squad</a>
 
-- name: Jochem Verstegen
-  name_url: https://www.linkedin.com/in/jochemverstegen/
-  project: Slidable bicycle handle for AV interaction
-  project_url: https://mobility-squad.com/slideo
-  year: 2023
-  status: completed
-  comment: within <a href="https://mobility-squad.com" target="_blank">Future Mobility squad</a>
+# - name: Jochem Verstegen
+#   name_url: https://www.linkedin.com/in/jochemverstegen/
+#   project: Slidable bicycle handle for AV interaction
+#   project_url: https://mobility-squad.com/slideo
+#   year: 2023
+#   status: completed
+#   comment: within <a href="https://mobility-squad.com" target="_blank">Future Mobility squad</a>
 
-- name: Matin Maskitou
-  name_url: https://www.linkedin.com/in/matin-maskitou-6931831b7
-  project: Light-based presentation of objects around automated vehicle
-  project_url: https://mobility-squad.com/liquivi
-  year: 2022
-  status: completed
-  comment: within <a href="https://mobility-squad.com" target="_blank">Future Mobility squad</a>
+# - name: Matin Maskitou
+#   name_url: https://www.linkedin.com/in/matin-maskitou-6931831b7
+#   project: Light-based presentation of objects around automated vehicle
+#   project_url: https://mobility-squad.com/liquivi
+#   year: 2022
+#   status: completed
+#   comment: within <a href="https://mobility-squad.com" target="_blank">Future Mobility squad</a>
 
-- name: Jesper Kapteijns
-  name_url: https://www.linkedin.com/in/jesper-kapteijns-9079301b2/
-  project: eHMI inspired by movement of liquid
-  project_url: https://mobility-squad.com/current
-  year: 2022
-  status: completed
-  comment: within <a href="https://mobility-squad.com" target="_blank">Future Mobility squad</a>
+# - name: Jesper Kapteijns
+#   name_url: https://www.linkedin.com/in/jesper-kapteijns-9079301b2/
+#   project: eHMI inspired by movement of liquid
+#   project_url: https://mobility-squad.com/current
+#   year: 2022
+#   status: completed
+#   comment: within <a href="https://mobility-squad.com" target="_blank">Future Mobility squad</a>
 
-- name: Van Oeveren, C., Kroese, J., Brockhoff, L., Van Genderen, R.
-  project: "Communication between automated vehicles and pedestrians: A standalone external Human Machine Interface"
-  project_url: 2019communication
-  year: 2020
-  status: completed
+# - name: Van Oeveren, C., Kroese, J., Brockhoff, L., Van Genderen, R.
+#   project: "Communication between automated vehicles and pedestrians: A standalone external Human Machine Interface"
+#   project_url: 2019communication
+#   year: 2020
+#   status: completed
 
-- name: Mallant, K. P. T., Roosens, V. E. R., Middelweerd, M. D. L. M., Overbeek, L. D.
-  project: The working of a directional external Human-Machine Interface in near-collision tested with a coupled simulator
-  project_url: 2019working
-  year: 2019
-  status: completed
+# - name: Mallant, K. P. T., Roosens, V. E. R., Middelweerd, M. D. L. M., Overbeek, L. D.
+#   project: The working of a directional external Human-Machine Interface in near-collision tested with a coupled simulator
+#   project_url: 2019working
+#   year: 2019
+#   status: completed
 
-- name: Hopmans, B., Wesdorp, D., Visscher, J., De Vlam, V.
-  project: Visual scanning behaviour in a parking lot
-  project_url: 2019visual
-  year: 2019
-  status: completed
+# - name: Hopmans, B., Wesdorp, D., Visscher, J., De Vlam, V.
+#   project: Visual scanning behaviour in a parking lot
+#   project_url: 2019visual
+#   year: 2019
+#   status: completed
 
-- name: Bijker, L., Dielissen, T., French, S., Mooijman, T., Peters, L.
-  project: Blind driving by means of the predicted track angle error
-  project_url: 2018blind
-  year: 2018
-  status: completed
+# - name: Bijker, L., Dielissen, T., French, S., Mooijman, T., Peters, L.
+#   project: Blind driving by means of the predicted track angle error
+#   project_url: 2018blind
+#   year: 2018
+#   status: completed
 
-- name: De Koning, C., Lingmont, H., De Lint, T., Van den Ouden, F., Van der Sijs, T.
-  project: Comparing an intelligent and a conventional headway-based auditory feedback system on safety and acceptance in an on-road car following experiment
-  project_url: 2017comparing
-  year: 2017
-  status: completed
+# - name: De Koning, C., Lingmont, H., De Lint, T., Van den Ouden, F., Van der Sijs, T.
+#   project: Comparing an intelligent and a conventional headway-based auditory feedback system on safety and acceptance in an on-road car following experiment
+#   project_url: 2017comparing
+#   year: 2017
+#   status: completed
 
-- name: Brunt, A., Schijf, M., Schrader, E., Vroom, N.
-  project: The effects of auditory feedback in a racing simulator on a car’s slip angle relative to the ideal slip angle
-  project_url: 2017effects
-  year: 2017
-  status: completed
+# - name: Brunt, A., Schijf, M., Schrader, E., Vroom, N.
+#   project: The effects of auditory feedback in a racing simulator on a car’s slip angle relative to the ideal slip angle
+#   project_url: 2017effects
+#   year: 2017
+#   status: completed
 
-- name: Heisterkamp, N., Haddou, A., Luik, P., Klevering, S., Zult, M.
-  project: Measuring eye movements in a GTA V cycling simulation
-  project_url: 2017measuring
-  year: 2017
-  status: completed
+# - name: Heisterkamp, N., Haddou, A., Luik, P., Klevering, S., Zult, M.
+#   project: Measuring eye movements in a GTA V cycling simulation
+#   project_url: 2017measuring
+#   year: 2017
+#   status: completed
 
-- name: Van der Aa, A., Spruit, J., Schoustra, M., Staats, L., Van der Vlist, K. J.
-  project: Directionalization and classification of motorized vehicles using a smartphone
-  project_url: 2017directionalization
-  year: 2016
-  status: completed
+# - name: Van der Aa, A., Spruit, J., Schoustra, M., Staats, L., Van der Vlist, K. J.
+#   project: Directionalization and classification of motorized vehicles using a smartphone
+#   project_url: 2017directionalization
+#   year: 2016
+#   status: completed
 
-- name: Beaumont, C., Van der Geest, X., De Jonge, R., Van der Kroft, K.
-  project: Blind driving by means of a steering-based predictor algorithm
-  project_url: 2015blindsteering
-  year: 2015
-  status: completed
+# - name: Beaumont, C., Van der Geest, X., De Jonge, R., Van der Kroft, K.
+#   project: Blind driving by means of a steering-based predictor algorithm
+#   project_url: 2015blindsteering
+#   year: 2015
+#   status: completed
 
-- name: Van der Geest, L., Van Leeuwen, S., Numan, B., Pijnacker, J.
-  project: Blind driving by means of auditory feedback
-  project_url: 2015blind.pdf
-  year: 2015
-  status: completed
+# - name: Van der Geest, L., Van Leeuwen, S., Numan, B., Pijnacker, J.
+#   project: Blind driving by means of auditory feedback
+#   project_url: 2015blind.pdf
+#   year: 2015
+#   status: completed
 
-- name: Al Jawahiri, A., Kapel, P., Mulckhuyse, J., Wagenaar, S.
-  project: "Oculus rift: Does it improve depth perception?"
-  project_url: 2015oculus
-  year: 2015
-  status: completed
+# - name: Al Jawahiri, A., Kapel, P., Mulckhuyse, J., Wagenaar, S.
+#   project: "Oculus rift: Does it improve depth perception?"
+#   project_url: 2015oculus
+#   year: 2015
+#   status: completed
 
-- name: Van Haarlem, W., Quraishi, H., Berssenbrugge, C., Binda, J.
-  project: Detection of objects by means of sound
-  project_url: 2015detection
-  year: 2015
-  status: completed
+# - name: Van Haarlem, W., Quraishi, H., Berssenbrugge, C., Binda, J.
+#   project: Detection of objects by means of sound
+#   project_url: 2015detection
+#   year: 2015
+#   status: completed
 
-- name: De Jager, M., Struijk, J., Sleegers, D., Skenderi, N.
-  project: Navigation by auditory feedback
-  project_url: 2014navigation
-  year: 2014
-  status: completed
+# - name: De Jager, M., Struijk, J., Sleegers, D., Skenderi, N.
+#   project: Navigation by auditory feedback
+#   project_url: 2014navigation
+#   year: 2014
+#   status: completed
