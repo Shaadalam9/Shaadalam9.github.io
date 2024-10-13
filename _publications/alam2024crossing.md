@@ -1,7 +1,7 @@
 ---
 layout: publication
 sitemap: false
-title: "Crossing borders: Understanding the global language of pedestrian road safety"
+title: "Evaluation of Pedestrian Behaviour in 157 Cities with 285 Hours of Dashcam Footage from YouTube"
 authors: Alam, M. S., Martens, M., Bazilinskyy, P.
 pdf: alam2024crossing
 image: alam2024crossing.png
@@ -9,5 +9,5 @@ display: In preparation.
 year: 
 doi:
 suppmat: 
-abstract: "This paper conducts a comprehensive cross-cultural analysis of pedestrian behaviour during road crossings using global driving video datasets. As urban landscapes continue to evolve, understanding the diverse behaviours of pedestrians becomes crucial for ensuring safe interactions in both manual and autonomous vehicle environments. Through an extensive review of pedestrian studies from developed and developing countries, this research identifies key factors—cultural norms, socioeconomic conditions, infrastructure quality, and regulatory frameworks—that influence crossing behaviours. Our findings demonstrate distinct regional patterns: pedestrians in developed regions tend to follow structured, rule-based behaviours supported by strict traffic regulations and advanced infrastructure. Conversely, in developing regions, pedestrian behaviour is more informal and adaptive, shaped by variable infrastructure and a rich mix of cultural influences. These insights are critical for developing transportation systems that are responsive to the varied dynamics of pedestrian movement worldwide. By highlighting these differences, the study aids in the design of both manual and automated vehicles, ensuring they can safely navigate complex urban environments. This research provides valuable guidelines for improving pedestrian safety and enhancing the interaction between pedestrians and vehicles globally."
+abstract: "Interaction between future cars and pedestrians should be designed to be understandable and safe globally. While previous research has studied vehicle-pedestrian interactions within specific cities or countries, this study offers a more scalable and robust approach by examining pedestrian behaviour worldwide. We present a dataset, \textbf{PYT} which includes 285 hours of day and night dashcam YouTube footage from 157 cities and 59 countries. We detected pedestrian movements, focusing on the speed and the pedestrian crossing decision time during road crossings based on the bounding boxes given by YOLO.  Videos were carefully selected based on specific criteria to ensure urban settings and adequate pedestrian interactions. Results revealed statistically significant cross-cultural variations in pedestrian behaviour influenced by socioeconomic and environmental factors such as Gross Metropolitan Product (GMP), traffic-related mortality and literacy. The dataset is publicly available to encourage further research into global pedestrian behaviour."
 ---

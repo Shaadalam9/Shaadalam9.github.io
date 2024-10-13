@@ -1,5 +1,5 @@
 @techreport{alam2024crossing,
-  title={Crossing borders: Understanding the global language of pedestrian road safety},
+  title={Evaluation of Pedestrian Behaviour in 157 Cities with 285 Hours of Dashcam Footage from YouTube},
   author={Alam, Md Shadab and Martens, Marieke and Bazilinskyy, Pavlo},
   year={2024}
 }
