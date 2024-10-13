@@ -72,7 +72,7 @@ permalink: /about/
 ## Short biography
 
 <div class="short-bio">
-  Pavlo Bazilinskyy is an assistant professor at TU Eindhoven focusing on AI-driven interaction between automated vehicles and other road users. He finished his PhD at TU Delft in auditory feedback for automated driving as a Marie Curie Fellow, where he also worked as a postdoc. He was the head of data research at NEXTdriver. Pavlo is a treasurer of the Marie Curie Alumni Association (MCAA) and was a director of the Research and Innovation unit of the Erasmus Mundus Association (EMA).
+  Shadab Alam is a PhD scholar in Eindhoven University of Technology (TU/e) focused on study of pedestrians in free and naturalistic traffic by using machine learning and deep learning approaches.
 </div>
 
 {% if site.data.awards %}
