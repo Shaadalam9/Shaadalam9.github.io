@@ -4,7 +4,7 @@ layout: course
 sitemap: false
 name: Automotive human factors
 name_url: https://research.tue.nl/en/courses/automotive-human-factors-3
-year_start: 2022
+year_start: 2024
 year_end: 
 institution: TU/e
 type: msc
@@ -18,8 +18,7 @@ comment:
 The course Automotive Human Factors addresses the relation between a car or truck, its human driver, and the dynamic environment . It is concerned with the goals of productivity (getting from A to B in a reasonable time), safety and accident prevention, and driver comfort and experience. The 'Perception-Cognition-Action' cycle is taken as a point of departure, treating basic sensory processes (vision, hearing, touch), cognitive processes (mechanisms of attention, stress and workload) and human factors (displays & controls, automation, safety).
 
 #### My role
-- 2022–2023: lecturer.
-- 2023–: responsible lecturer.
+- 2024–2025: lecturer.
 
 #### Learning goals
 - **L1**. To gain a basic understanding of the human perceptual system (vision, hearing, touch) and its relevance to automotive tasks and information feedback.
