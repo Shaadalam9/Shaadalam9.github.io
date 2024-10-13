@@ -5,7 +5,7 @@ sitemap: false
 permalink: /volunteering/
 ---
 
-# Volunteering and organisation of events
+<!-- # Volunteering and organisation of events
 <div class="rowl1">
   <img src="{{ site.url }}{{ site.baseurl }}/images/volunteering/tudelft-defence.jpg" class="img-responsive" style="float: left; border-radius: 5px; width: 280px;" />
 
@@ -63,4 +63,4 @@ permalink: /volunteering/
 
   <ul style="overflow: hidden">
   </ul>
-</div>
+</div> -->

@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "Help Ukraine in its fight for freedom"
 layout: gridlay
 sitemap: false
@@ -88,4 +88,4 @@ permalink: /ua/
   Also, we are collecting supplies and donations in Radom, Poland from where they are being transported to the hotspots in Ukraine. Please contact me at [pavlo.bazilinskyy@gmail.com](mailto:pavlo.bazilinskyy@gmail.com) and I will share the exact address. Normal postal service (not DHL or any private parcel service) is good and we can also reimburse the shipment costs.
    <ul style="overflow: hidden">
   </ul>
-</div>
+</div> -->
