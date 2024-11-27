@@ -3,8 +3,8 @@ layout: publication
 sitemap: false
 title: "Wait! Don't cross the road. A virtual reality study on the influence of the distance between pedestrians on their crossing decision"
 authors: Alam, M. S., Dey, D., Martens, M.,& Bazilinskyy, P.
-pdf: alam2025_multiped
-image: alam2025_multiped.jpg
+pdf:
+image: multiped-pedestrian.jpg
 display: Submitted for publication.
 year: 
 doi: 
