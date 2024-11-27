@@ -1,0 +1,5 @@
+@article{alamGPT,
+  title={Comparison of eHMIs for future car between crowdsourcing and LLMs based personas},
+  author={Alam, Md Shadab and Martens, Marieke and Bazilinskyy, Pavlo},
+  year={2025}
+}

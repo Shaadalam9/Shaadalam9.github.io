@@ -5,11 +5,11 @@ sitemap: false
 permalink: /volunteering/
 ---
 
-<!-- # Volunteering and organisation of events
+<!-- <!-- # Volunteering and organisation of events
 <div class="rowl1">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/volunteering/tudelft-defence.jpg" class="img-responsive" style="float: left; border-radius: 5px; width: 280px;" />
+  <img src="{{ site.url }}{{ site.baseurl }}/images/volunteering/tudelft-defence.jpg" class="img-responsive" style="float: left; border-radius: 5px; width: 280px;" /> -->
 
-#### Academia
+<!-- #### 
 
   At TU Delft, during 2014–2018 I was a member of the 3mE PhD council. Within this position, I co-organised a number of lunch lectures both on the topics related to academia and industry, as well as well-being (for example, a finisher of the 3100 mile running race [Pradeep Hoogakker](https://3100.srichinmoyraces.org/rtl-nieuws-does-story-pradeep-5000-kilometer-rondjes-rennen?page=2) gave a talk on the importance of mental health). During my PhD, I was also a member of the Research Council of [HFAuto](http://hf-auto.eu), where I served as a link between early-stage researchers and managers of the project. To contribute to academic mobility and career development of academics in the EU, I became a member of the advisory board of the EURAXESS project [TOP IV](https://euraxess-top.eu/top-iv/the-basics).
 
@@ -18,9 +18,9 @@ permalink: /volunteering/
 </div>
 
 <div class="rowl1">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/volunteering/rmi-berlin.jpg" class="img-responsive" style="float: left; border-radius: 5px; width: 280px;" />
+  <img src="{{ site.url }}{{ site.baseurl }}/images/volunteering/rmi-berlin.jpg" class="img-responsive" style="float: left; border-radius: 5px; width: 280px;" /> -->
 
-#### Marie Curie Alumni Association (MCAA)
+<!-- #### Marie Curie Alumni Association (MCAA)
 
   To contribute back to the community that allowed me to conduct my PhD research, I became an active volunteer of [Marie Curie Alumni Association (MCAA)](https://www.mariecuriealumni.eu). In 2017, I organised a series of 20+ webinars on the topic of connecting the worlds of academia an industry ([playlist with webinars](https://www.youtube.com/watch?v=70cnOuJjHm8&list=PLVe2q_0uMP9SLqU684fZDJwMFHcH320QU)). I also took part in organisation of a number of sessions at the [General Assembly and Annual Conference](https://www.mariecuriealumni.eu/2021-conference-home) events of MCAA.
 
@@ -63,4 +63,4 @@ permalink: /volunteering/
 
   <ul style="overflow: hidden">
   </ul>
-</div> -->
+</div> --> -->

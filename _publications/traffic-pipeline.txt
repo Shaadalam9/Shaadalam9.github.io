@@ -1,0 +1,5 @@
+@article{alam_pipeline,
+  title={Deep Learning-Based Pipeline for Realistic Traffic Scene Video Transformations},
+  author={Alam, Md Shadab and Parmar, Sagar Hitendra and Martens, Marieke and Bazilinskyy, Pavlo},
+  year={2025}
+}
