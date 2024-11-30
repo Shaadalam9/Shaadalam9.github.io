@@ -1,5 +1,5 @@
 @article{alam_pipeline,
-  title={Deep Learning-Based Pipeline for Realistic Traffic Scene Video Transformations},
+  title={A deep learning approach for realistic traffic scene video changes across lighting and weather conditions},
   author={Alam, Md Shadab and Parmar, Sagar Hitendra and Martens, Marieke and Bazilinskyy, Pavlo},
   year={2025}
 }

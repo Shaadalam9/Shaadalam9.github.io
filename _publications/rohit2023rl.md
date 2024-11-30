@@ -2,7 +2,7 @@
 layout: publication
 sitemap: false
 title: "Deep reinforcement learning based controller for ship navigation"
-authors: Deraj, R., Sanjeev Kumar, R.S., Alam, M. S., & Somayajula, A. 
+authors: Deraj, R., Sanjeev Kumar, R. S., Alam, M. S., & Somayajula, A. 
 pdf: rohit2023rl
 image: rohit2023rl.jpg
 display: Ocean Engineering
