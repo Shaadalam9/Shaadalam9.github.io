@@ -8,7 +8,7 @@ permalink: /talks/
 # Chairing duties for conferences
 
 {% if site.data.chairing_autoui %}
-## AutoUI
+## IEEE RO-MAN
 <div class="rowl1" style="padding-top: 10px;">
 
 {% for session in site.data.chairing_autoui %}

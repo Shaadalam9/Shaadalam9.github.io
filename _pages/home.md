@@ -11,6 +11,12 @@ code {padding: 6px 8px; font-size: 90%;}
 
 Welcome to my personal homepage! I am currently working as a PhD Scholar in the [Future Everyday](https://www.tue.nl/en/research/research-groups/future-everyday) group of the department of [Industrial Design](https://www.tue.nl/en/our-university/departments/industrial-design/) of [TU Eindhoven](https://www.tue.nl). My focus is on AI-driven interaction between automated vehicles, people inside of autonomous agents and humans.
 
+I am deeply interested in exploring the applications of deep learning in:
+- Enhancing human-computer interaction in autonomous systems.
+- Developing real-time safety mechanisms through connected data.
+- Leveraging generative models for realistic traffic scenario generation.
+
+
 This website is under progress..........
 
 </div>
