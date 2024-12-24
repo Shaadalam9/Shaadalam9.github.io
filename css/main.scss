@@ -136,21 +136,21 @@ firstp {
 
 /* Custom style inspired by embedded twitter feed and tweaks */
 
-// #homeid {
-//   padding-left: 7px;
-//   padding-right: 0px;
-// }
+#homeid {
+  padding-left: 7px;
+  padding-right: 0px;
+}
 
-// #gridid .rowl1 {
-//   margin-right: 5px;
-//   border-radius: 5px;
-//   margin-left: -12px;
-//   background-color: #292F33;
-// }
+#gridid .rowl1 {
+  margin-right: 5px;
+  border-radius: 5px;
+  margin-left: -12px;
+  background-color: #292F33;
+}
 
-// #gridid .rowl1 ol {
-//   padding-left: 20px;
-// }
+#gridid .rowl1 ol {
+  padding-left: 20px;
+}
 
 /* First list in courses. Stupid hack to remove wrong
    spacing of the list but it works. */
