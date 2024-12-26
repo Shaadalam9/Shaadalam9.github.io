@@ -1,5 +1,7 @@
-@article{alam_pipeline,
-  title={A deep learning approach for realistic traffic scene video changes across lighting and weather conditions},
-  author={Alam, Md Shadab and Parmar, Sagar Hitendra and Martens, Marieke and Bazilinskyy, Pavlo},
-  year={2025}
+@inproceedings{alam2025deep,
+  title={Deep learning approach for realistic traffic video changes across lighting and weather conditions},
+  author={Alam, Md Shadab and Parmar, Sagar Hitendra and Martens, Marieke H. and Bazilinskyy, Pavlo},
+  booktitle={Proceedings of International Conference on Information and Computer Technologies (ICICT)},
+  year={2025},
+  address={Hilo, HI, USA}
 }
