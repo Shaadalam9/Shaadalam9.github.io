@@ -1,5 +1,5 @@
 @article{alam2025_multiped,
   title={Wait! Don't cross the road. A virtual reality study on the influence of the distance between pedestrians on their crossing decision},
-  author={Alam, Md Shadab and Dey, Debargha and Martens, Marieke and Bazilinskyy, Pavlo},
+  author={Alam, Md Shadab and Martens, Marieke and Bazilinskyy, Pavlo},
   year={2025}
 }

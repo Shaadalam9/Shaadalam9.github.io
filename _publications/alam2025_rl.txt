@@ -1,0 +1,5 @@
+@inproceedings{alam2025rl,
+  title={Deep Reinforcement Learning based Eye Tracking for Unity Environment},
+  author={Alam, Md Shadab and Martens, Marieke H. and Bazilinskyy, Pavlo},
+  year={2025}
+}
