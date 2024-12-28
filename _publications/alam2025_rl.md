@@ -1,7 +1,7 @@
 ---
 layout: publication
 sitemap: false
-title: "Generating realistic traffic scenarios: A deep learning approach using generative adversarial networks (GANs)"
+title: "Deep Reinforcement Learning based Eye Tracking for Unity Environment"
 authors: Alam, M. S., Bazilinskyy, P.
 pdf: 
 image: alam2025_rl.jpg
