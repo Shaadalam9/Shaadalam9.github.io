@@ -5,7 +5,7 @@ title: "Wait! Don't cross the road. A virtual reality study on the influence of 
 authors: Alam, M. S., Martens, M.,& Bazilinskyy, P.
 pdf:
 image: multiped-pedestrian.jpg
-display: Submitted for publication.
+display: Working document.
 year: 
 doi: 
 code: https://github.com/bazilinskyy/multiped

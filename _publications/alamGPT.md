@@ -5,7 +5,7 @@ title: "Comparison of eHMIs for future car between crowdsourcing and LLMs based 
 authors: Alam, M. S., Martens, M.,& Bazilinskyy, P.
 pdf: alamGPT
 image: alamGPT.png
-display: Submitted for publication.
+display: Working document.
 year: 
 doi: 
 code: https://github.com/Shaadalam9/gpt-av-crowdsourced
