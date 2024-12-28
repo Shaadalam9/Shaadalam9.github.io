@@ -5,10 +5,11 @@ title: "Generating realistic traffic scenarios: A deep learning approach using g
 authors: Alam, M. S., Martens, M., Bazilinskyy, P.
 pdf: alam2024generating
 image: alam2024generating.jpg
-display: Submitted for publication.
-year: 
+display: "13th International Conference on Human Interaction & Emerging Technologies: Artificial Intelligence & Future Applications. Málaga, Spain"
+year: 2025
 doi:
 code: https://github.com/Shaadalam9/gans-traffic
-suppmat: https://www.dropbox.com/scl/fo/wikk927sitse4dc0iwm9v/AAM5hWlKjlCOHkjfr7w587g?rlkey=j4yw3q6q5oipq7gawu0ic5pgl&st=0nyw3yy6&dl=0
-abstract: "Diverse and realistic traffic scenarios are crucial for testing systems and human behaviour in transportation research. Leveraging Generative Adversarial Networks (GANs), this study focuses on video-to-video translation to generate a variety of traffic scenes. By employing GANs for video-to-video translation, the study accurately captures the nuances of urban driving environments, enriching realism and breadth. One advantage of this approach is the ability to model how road users adapt and behave differently across varying conditions depicted in the translated videos. For instance, certain scenarios may exhibit more cautious driver behaviour, while others may involve heavier traffic and faster speeds. Maintaining consistent driving patterns in the translated videos improves their resemblance to real-world scenarios, thereby increasing the reliability of the data for testing and validation purposes. Ultimately, this approach provides researchers and practitioners with a valuable method for evaluating algorithms and systems under challenging conditions, advancing transportation models and automated driving technologies."
+suppmat: http://doi.org/10.4121/80c664cb-a4b5-4eb1-bc1c-666349b1b927
+abstract: "Traffic simulations are crucial for testing systems and human behaviour in transportation research. This study investigates the potential efficacy of Unsupervised Recycle Generative Adversarial Networks (Recycle–GANs) in generating realistic traffic videos by transforming daytime scenes into nighttime environments and vice-versa. By leveraging Unsupervised Recycle-GANs, we bridge the gap between data availability during day and night traffic scenarios, enhancing the robustness and applicability of deep learning algorithms for real - world applications. GPT-4V was provided with two sets of six different frames from each
+day and night time from the generated videos and queried whether the scenes were artificially created based on lightning, shadow behaviour, perspective, scale, texture, detail and presence of edge artefacts. The analysis of GPT-4V output did not reveal evidence of artificial manipulation, which supports the credibility and authenticity of the generated scenes. Furthermore, the generated transition videos were evaluated by 15 participants who rated their realism on a scale of 1 to 10, achieving a mean score of 7.21. Two persons identified the videos as deep-fake generated without pointing out what was fake in the video; they did mention that the traffic was generated."
 ---
