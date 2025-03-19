@@ -24,7 +24,7 @@ My work is distinguished by its practical focus and innovative applications. My 
 
 Beyond academia, I have a strong foundation in industrial collaboration. His internships include developing machine learning models for premium user protection at Goalwit Technologies and inventory management systems at Guinea Motors Pvt. Ltd. These experiences underscore his ability to translate research into practical solutions. With his multidisciplinary expertise, Shadab Alam is poised to make significant contributions to the fields of autonomous systems and road safety technology.
 
-</div>
+<!-- </div> -->
 
 <!-- ### Free time
 * 🏃‍♂🚴‍♂️🏊‍♂️ Running, [cycling](https://www.wielervrienden.nl/profiel/pavlo-7126007), swimming, cross-country skiing, hiking. Like, [a lot of it](https://www.strava.com/athletes/bazilinskyy).

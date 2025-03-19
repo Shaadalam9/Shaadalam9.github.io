@@ -1,0 +1,5 @@
+@inproceedings{Zeng_2025,
+  title={Robot like in-vehicle agent for a level 3 automated car},
+  author={Zeng, Xingjian and Alam, Md Shadab and Bazilinskyy, Pavlo},
+  year={2025}
+}
