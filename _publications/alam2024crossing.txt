@@ -1,5 +1,6 @@
 @techreport{alam2024crossing,
-  title={Evaluation of Pedestrian Behaviour in 157 Cities with 285 Hours of Dashcam Footage from YouTube},
-  author={Alam, Md Shadab and Martens, Marieke and Bazilinskyy, Pavlo},
-  year={2024}
+  title={Understanding global pedestrian behaviour in 565 cities with dashcam videos
+on YouTube},
+  author={Alam, Md Shadab and Martens, Marieke and Bazilinska, Olena and Bazilinskyy, Pavlo},
+  year={2025}
 }
