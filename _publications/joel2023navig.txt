@@ -1,6 +1,6 @@
 @article{jose2023navigatingoceandrlpath,
       title={Navigating the Ocean with DRL: Path following for marine vessels}, 
-      author={Joel Jose and Md Shadab Alam and Abhilash Sharma Somayajula},
+      author={Jose, Joel and Alam, Md Shadab and Somayajula, Abhilash Sharma},
       year={2023},
       doi={10.48550/arXiv.2310.14932}
       archivePrefix={arXiv},
