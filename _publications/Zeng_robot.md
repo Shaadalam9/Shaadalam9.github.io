@@ -4,8 +4,8 @@ sitemap: false
 title: "Robot like in-vehicle agent for a level 3 automated car"
 authors: Zeng, X., Alam, M. S., Bazilinskyy, P.
 pdf: zeng_robot
-image: zeng_robot.png
-display: 
+image: zeng_robot.jpg
+display: Submitted
 year: 2025
 doi:
 code: 

@@ -5,7 +5,7 @@ title: "Pedestrian Planet: What 1,609 Hours of YouTube Driving from 133 Countrie
 authors: Alam, M. S., Martens, M.H., & Bazilinskyy, P.
 pdf: alam2025national
 image: alam2025national.png
-display:
+display: Submitted
 year: 2025
 doi:
 code: https://github.com/bazilinskyy/youtube-national

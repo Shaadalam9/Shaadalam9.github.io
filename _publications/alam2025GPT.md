@@ -5,7 +5,7 @@ title: "Cross or Nah? LLMs Get in the Mindset of a Pedestrian in front of Automa
 authors: Alam, M. S., & Bazilinskyy, P.
 pdf: alam2025GPT
 image: alam2025GPT.png
-display: 
+display: Submitted
 year: 2025
 doi: 
 code: https://github.com/Shaadalam9/llms-av-crowdsourced
