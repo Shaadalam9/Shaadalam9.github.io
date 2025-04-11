@@ -4,7 +4,7 @@ sitemap: false
 title: "Deep learning approach for realistic traffic video changes across lighting and weather conditions"
 authors: Alam, M. S., Parmar, S. H., Martens, M. H., Bazilinskyy, P.
 pdf: traffic-pipeline
-image: traffic-pipeline.png
+image: traffic-pipeline.jpg
 display: "8th International Conference on Information and Computer Technologies (ICICT). Hilo, HI, USA"
 year: 2025
 doi:

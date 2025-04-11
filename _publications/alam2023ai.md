@@ -4,7 +4,7 @@ sitemap: false
 title: "AI on the water: Applying drl to autonomous vessel navigation"
 authors: Alam, M. S.,Sanjeev Kumar, R.S., & Somayajula, A.
 pdf: alam2023ai
-image: alam2023ai.png
+image: alam2023ai.jpg
 display: Proceedings of the Sixth International Conference in Ocean Engineering (ICOE2023)
 year: 2023
 doi: 10.48550/arXiv.2310.14938

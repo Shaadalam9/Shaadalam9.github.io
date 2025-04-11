@@ -4,7 +4,7 @@ sitemap: false
 title: "Pedestrian Planet: What 1,609 Hours of YouTube Driving from 133 Countries Teaches Us About the World"
 authors: Alam, M. S., Martens, M.H., & Bazilinskyy, P.
 pdf: alam2025national
-image: alam2025national.png
+image: alam2025national.jpg
 display: Submitted
 year: 2025
 doi:

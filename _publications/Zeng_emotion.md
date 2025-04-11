@@ -4,7 +4,7 @@ sitemap: false
 title: "Robot-like In-vehicle Agent for a Level 3 Automated Vehicle with Emotions"
 authors: Zeng, X., Alam, M. S., Bazilinskyy, P.
 pdf: zeng_emotion
-image: zeng_emotion.png
+image: zeng_emotion.jpg
 display: Submitted
 year: 2025
 doi:

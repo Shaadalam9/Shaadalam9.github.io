@@ -4,7 +4,7 @@ sitemap: false
 title: "Comparison of path following in ships using modern and traditional controllers"
 authors: Sanjeev Kumar, R. S., Alam, M. S., Reddy, B., & Somayajula, A.S.
 pdf: sanjeev2023
-image: sanjeev2023.png
+image: sanjeev2023.jpg
 display: Proceedings of the Sixth International Conference in Ocean Engineering (ICOE2023)
 year: 2023
 doi: 10.48550/arXiv.2310.14940
