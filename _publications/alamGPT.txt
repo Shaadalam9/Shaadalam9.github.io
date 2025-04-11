@@ -1,5 +1,5 @@
 @article{alamGPT,
-  title={Comparison of eHMIs for future car between crowdsourcing and LLMs based personas},
+  title={Cross or Nah? LLMs Get in the Mindset of a Pedestrian in front of Automated Car with an eHMI},
   author={Alam, Md Shadab and Martens, Marieke and Bazilinskyy, Pavlo},
   year={2025}
 }

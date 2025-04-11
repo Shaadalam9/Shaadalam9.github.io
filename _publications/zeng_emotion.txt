@@ -1,0 +1,5 @@
+@inproceedings{Zeng_emotion,
+  title={Robot-like In-vehicle Agent for a Level 3 Automated Vehicle with Emotions},
+  author={Zeng, Xingjian and Alam, Md Shadab and Bazilinskyy, Pavlo},
+  year={2025}
+}

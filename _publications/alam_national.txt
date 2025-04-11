@@ -1,0 +1,5 @@
+@article{alam_national,
+  title={Pedestrian Planet: What 1,609 Hours of YouTube Driving from 133 Countries Teaches Us About the World},
+  author={Alam, Md Shadab and Martens, Marieke H. and Bazilinskyy, Pavlo},
+  year={2025}
+}
