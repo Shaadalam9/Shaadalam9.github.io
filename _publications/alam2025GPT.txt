@@ -1,5 +1,5 @@
 @article{alamGPT,
   title={Cross or Nah? LLMs Get in the Mindset of a Pedestrian in front of Automated Car with an eHMI},
-  author={Alam, Md Shadab and Martens, Marieke and Bazilinskyy, Pavlo},
+  author={Alam, Md Shadab and Bazilinskyy, Pavlo},
   year={2025}
 }

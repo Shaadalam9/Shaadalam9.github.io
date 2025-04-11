@@ -2,9 +2,9 @@
 layout: publication
 sitemap: false
 title: "Cross or Nah? LLMs Get in the Mindset of a Pedestrian in front of Automated Car with an eHMI"
-authors: Alam, M. S., Martens, M.,& Bazilinskyy, P.
-pdf: alamGPT
-image: alamGPT.png
+authors: Alam, M. S., & Bazilinskyy, P.
+pdf: alam2025GPT
+image: alam2025GPT.png
 display: 
 year: 2025
 doi: 
