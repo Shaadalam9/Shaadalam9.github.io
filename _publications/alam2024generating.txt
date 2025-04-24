@@ -1,7 +1,10 @@
-@inproceedings{alam2025generating,
-  title={Generating realistic traffic scenarios: A deep learning approach using generative adversarial networks (GANs)},
-  author={Alam, Md Shadab and Martens, Marieke H. and Bazilinskyy, Pavlo},
-  booktitle={Proceedings of International Conference on Human Interaction & Emerging Technologies: Artificial Intelligence & Future Applications (IHIET-AI)},
+@article{alam2025generating,
+  title={Generating Realistic Traffic Scenarios: A Deep Learning Approach Using Generative Adversarial Networks (GANs)},
+  author={Alam, Md Shadab and Martens, Marieke and Bazilinskyy, Pavlo},
+  journal={Human Interaction and Emerging Technologies (IHIET-AI 2025): Artificial Intelligence and Future Applications},
+  volume={3},
+  number={3},
   year={2025},
-  address={Malaga, Spain}
-}
+  publisher={AHFE Open Acces},
+  doi={10.54941/ahfe1005927}
+} 
