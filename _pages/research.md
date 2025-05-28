@@ -7,7 +7,7 @@ permalink: /research/
 
 # Research
 
-<<div class="rowl1">
+<div class="rowl1">
   <div class="img-responsive" style="margin-top: 15px; margin-right: 19px; float: left"><iframe src="https://www.youtube.com/embed/NipvoDg0Nyk?playlist=NipvoDg0Nyk&loop=1&autoplay=1&mute=1" style="width: 280px; height: 158px; border-radius: 5px" frameborder="0" allowfullscreen></iframe></div>
 
 #### YouTube as the data source for research on global traffic behaviour
@@ -37,9 +37,12 @@ The logical next step is to question whether we even need human participants to 
 
 The future of maritime autonomy hinges on intelligent control strategies that are both adaptive and robust, and my masters' research brings together the best of classic maritime control wisdom with the latest in artificial intelligence. Traditionally, autopilots based on proven PID or PD control and line-of-sight (LOS) guidance have safely navigated ships for decades, but the emergence of deep reinforcement learning (DRL) offers a way to automate and optimize these tasks with unprecedented adaptability. In these works, we address the central challenge of DRL for autonomous vessels—the need for vast amounts of training data and computational time—by leveraging traditional controllers to “fast-track” DRL training through behavioral cloning, allowing the AI to learn efficiently from stable, time-tested strategies before exploring on its own. Our approach was rigorously validated both in simulation and scaled experimental setups using a benchmark container ship model (KCS), where DRL agents not only achieved effective path-following and maneuvering but also demonstrated faster convergence and improved safety in challenging scenarios, including strong winds and dynamic conditions. The synergy of DRL with established maritime control not only bridges the gap between reliable practice and innovation but sets a foundation for safer, more cost-effective, and future-ready autonomous ships. Read the full research in [Ocean Engineering](https://doi.org/10.1016/j.oceaneng.2023.113937) and [Journal of Marine Engineering & Technology](https://doi.org/10.1080/20464177.2024.2367276).
 
- <div class="row" style="text-align:center; margin-bottom: 0px;">
-  <iframe style="display:inline-block; border-radius: 5px; border:0px solid #FFF; width: 97%; height: 358px" src="https://www.youtube.com/watch?v=qmuS_ZRelwc" frameborder="0" allowfullscreen></iframe>
-  KCS hull [RL-paper](https://github.com/Shaadalam9/rl_ship_controller) with DQN agent.
+   <div class="row" style="text-align:center; margin-bottom: 0px;">
+    <iframe style="display:inline-block; border-radius: 5px; border:0px solid #FFF; width: 97%; height: 358px" src="https://www.youtube.com/embed/qmuS_ZRelwc" frameborder="0" allowfullscreen></iframe>
+    <br/>
+    KCS hull [RL-paper](https://github.com/Shaadalam9/rl_ship_controller) with DQN agent.
+  </div>
+</div>
 
   <ul style="overflow: hidden">
   </ul>
