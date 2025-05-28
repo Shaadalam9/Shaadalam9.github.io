@@ -7,50 +7,34 @@ permalink: /research/
 
 # Research
 
-<div class="rowl1">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/research/multi_user_communication.jpg" class="img-responsive" style="float: left; border-radius: 5px; width: 280px; height: 158px" />
+<<div class="rowl1">
+  <div class="img-responsive" style="margin-top: 15px; margin-right: 19px; float: left"><iframe src="https://www.youtube.com/embed/NipvoDg0Nyk?playlist=NipvoDg0Nyk&loop=1&autoplay=1&mute=1" style="width: 280px; height: 158px; border-radius: 5px" frameborder="0" allowfullscreen></iframe></div>
 
-#### Multi-user communication in traffic
-  
-  I am currently engaged in research on communication between multiple automated vehicles and multiple vulnerable road users. Most of experiments in current research features 1, maybe 2, human participants. But, think about driving around a town in real life. Traffic situations are very complicated. And being able to perform experiments with 3, 4, ..., 16 participants is essential for understanding the mechanics of communication of situation awareness/collaborative decision making/collaboration in both modern and future traffic. To enable such research, I present [an open-source simulator](https://github.com/bazilinskyy/coupled-sim) supporting a virtually unlimited number of human participants and fine-tuned for high precision data logging. It is aimed for, but not limited to, academic research.
+#### YouTube as the data source for research on global traffic behaviour
 
-  <div class="row" style="text-align:center; margin-bottom: 0px;">
-  <iframe style="display:inline-block; border-radius: 5px; border:0px solid #FFF; width: 97%; height: 358px" src="https://www.youtube.com/embed/W2VWLYnTYrM?playlist=W2VWLYnTYrM&loop=1&autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
-  
-  Demo of [coupled simulator](https://github.com/bazilinskyy/coupled-sim) with 3 agents in the same traffic scene. One agents is wearing a motion suit and one a head-mounted display.
-  </div>
-  <ul style="overflow: hidden">
+The interactions between future cars and pedestrians should be designed to be understandable and safe worldwide. Crowdsourcing helps to go beyond WEIRD (Western, educated, industrialised, rich, developed) studies. But we can go beyond that and cover the whole world to have a true understanding of how people behave around the globe and get a better grasp of how future cars and transportation infrastructure should be designed. We live in the 21st century, where the internet has become ubiquitous and universally adopted. Accessibility to technology created a phenomenon of ASMR driving videos. I established work on the population of the Pedestrians in YouTube (PYT) [dataset](https://github.com/Shaadalam9/pedestrians-in-youtube), which includes 2051 hand-picked hours of day and night urban dashcam footage from 1268 towns and cities in 216 sovereign states and dependent territories. Using YOLO, we analysed aggregated pedestrian behaviour both on the [city](/_publications/alam2024crossing.pdf) and [country](/_publications/alam2025national.pdf) levels. And we are investing in going beyond YOLO to have a more precise and complete understanding of what exactly happens on the streets of cities on all continents.
+
+<ul style="overflow: hidden">
   </ul>
 </div>
 
 <div class="rowl1">
-  <div class="img-responsive" style="margin-top: 15px; margin-right: 19px; float: left"><iframe src="https://www.youtube.com/embed/ZroKe9dKQvs?playlist=ZroKe9dKQvs&loop=1&autoplay=1&mute=1" style="width: 280px; height: 158px; border-radius: 5px" frameborder="0" allowfullscreen></iframe></div>
+  <img src="{{ site.url }}{{ site.baseurl }}/publications/alam2025GPT.jpg" class="img-responsive" style="float: left; border-radius: 5px; width: 280px; height: 158px" />
 
-#### Crowdsourced Human Factors experiments
-  
-  During my PhD on Human Factors, I was astonished to realised that the majority of research features features a sample of <i>"10 white male highly educated students from Europe with an average age of 21.5 years"</i>. I thought that it was not a right way to design and develop systems, which primary function is to save lives and be used by the public (especially in developing countries, which are impacted the most by unsafe traffic). I launched my first [study](/publications/bazilinskyy2015auditory.pdf) using a novel method of crowdsourcing already in the 2nd month of my PhD project. 1,205 respondents from 91 countries expressed their opinions about current and hypothetical auditory interfaces. In another [study](/publications/bazilinskyy2017analyzing.pdf), I implemented synthesised speech in a crowdsourcing survey—an innovative approach, as most researchers in the domain focus on non-speech feedback. I developed a new framework to reliably present stimuli to participants online and replicated several well-established studies but with a much larger sample size of 2669 participants from 95 countries. Then, I developed a JavaScript framework based on the [jsPsych project](https://www.jspsych.org/7.0/) for accurate online measurements of reaction times and asking 20000 participants to react to 176 trials featuring [auditory, visual, and multimodal stimuli](/publications/bazilinskyy2018crowdsourced.pdf). Then, I adapted the [TurkEyes](https://turkeyes.mit.edu) library to receive accurate measurement of eye gazes from a browser without any eye trackers (see video on the left for a demonstration of animated heatmaps of 2000 pedestrians looking at 107 traffic scenes with different exposure times in a recent [study](/publications/bazilinskyy2021visual.pdf)). I also published the [source code with an extendable framework](https://github.com/bazilinskyy/gazes-crowdsourced) for crowdsourced recording of eye gazes. Such code can be used in combination with [accurate measurement of keypresses](https://github.com/bazilinskyy/crossing-crowdsourcing). Being able to conduct crowdsourced research proved to be especially useful during the pandemic.
+#### Do we need human participants for human factors research?
 
-  <ul style="overflow: hidden">
-  </ul>
-</div>
-
-<div class="rowl1">
-  <div class="img-responsive" style="margin-top: 15px; margin-right: 19px; float: left"><iframe src="https://www.youtube.com/embed/isjbqXs2g7k?playlist=isjbqXs2g7k&loop=1&autoplay=1&mute=1" style="width: 280px; height: 158px; border-radius: 5px" frameborder="0" allowfullscreen></iframe></div>
-
-#### Portable sensor to collect information on the state of the traffic environment
-
-  During my work at SD-Insights, I developed a portable sensor to collect information on the state of the environment called NEXTeye. It is based on [Mapbox Vision SDK](https://www.mapbox.com/vision) and [NVIDIA Jetson Nano](https://developer.nvidia.com/embedded/jetson-nano-developer-kit). The sensor is plug-n-play, retrieves vehicle dynamics data, and performs real-time scene segmentation and object detection. The portability of NEXTeye allows its use not only inside of a car, but also as a wearable by vulnerable road users. Multiple such sensors can be connected and synchronised.
+The logical next step is to question whether we even need human participants to conduct (basic) human factors research. Of course, some hypothesis must be tested in a very controlled environment with expensive eye trackers. But, some research questions can maybe be answered through the "wisdom of humanity up until a certain point in time", which arguably what AI (LLM) is. In this [study](https://doi.org/10.4121/dfbe6de4-d559-49cd-a7c6-9bebe5d43d50), we used the GPT-4V vision-language models to compare LLM-based assessment of risk with findings from a [crowdsourced study](https://doi.org/10.1016/j.trf.2023.01.014) with 1378 participants. The conclusion was that the population-level human risk can be predicted using AI with a high degree of accuracy. We also [explored](/publications/alam2025GPT.pdf) the use of 11 LLMs to evaluate external human-machine interfaces (eHMIs) in automated vehicles.
 
   <ul style="overflow: hidden">
   </ul>
 </div>
 
 <div class="rowl1">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/research/auditory_feedback_ad.jpg" class="img-responsive" style="float: left; border-radius: 5px; width: 280px; height: 158px" />
+  <img src="{{ site.url }}{{ site.baseurl }}/publications/rohit2023rl.jpg" class="img-responsive" style="float: left; border-radius: 5px; width: 280px; height: 158px" />
 
-#### Auditory feedback for automated driving
-  
-  My intrinsic motivation to do a PhD stemmed from the fact that automated vehicles have the potential to prevent virtually all road fatalities. To achieve that, automated vehicles must collaborate with humans inside and outside the vehicle. During [my PhD](/publications/bazilinskyy2018auditoryinterface.pdf) I focused on auditory feedback for automated driving. With on-road and driving simulator studies, I showed that multimodal feedback that takes the urgency of the traffic situation into account could support AV-driver collaboration effectively.
+#### Accelerating Autonomous Ship Control with Deep Reinforcement Learning and Maritime Expertise
+
+The future of maritime autonomy hinges on intelligent control strategies that are both adaptive and robust, and my masters' research brings together the best of classic maritime control wisdom with the latest in artificial intelligence. Traditionally, autopilots based on proven PID or PD control and line-of-sight (LOS) guidance have safely navigated ships for decades, but the emergence of deep reinforcement learning (DRL) offers a way to automate and optimize these tasks with unprecedented adaptability. In these works, we address the central challenge of DRL for autonomous vessels—the need for vast amounts of training data and computational time—by leveraging traditional controllers to “fast-track” DRL training through behavioral cloning, allowing the AI to learn efficiently from stable, time-tested strategies before exploring on its own. Our approach was rigorously validated both in simulation and scaled experimental setups using a benchmark container ship model (KCS), where DRL agents not only achieved effective path-following and maneuvering but also demonstrated faster convergence and improved safety in challenging scenarios, including strong winds and dynamic conditions. The synergy of DRL with established maritime control not only bridges the gap between reliable practice and innovation but sets a foundation for safer, more cost-effective, and future-ready autonomous ships. Read the full research in [Journal of Marine Engineering & Technology](https://doi.org/10.1080/20464177.2024.2367276) and [Ocean Engineering](https://doi.org/10.1016/j.oceaneng.2023.113937).
 
   <ul style="overflow: hidden">
   </ul>
