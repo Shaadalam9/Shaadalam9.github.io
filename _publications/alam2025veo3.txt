@@ -1,0 +1,5 @@
+@article{alam2025veo3,
+  title={Exploring Veo 3's Capabilities for Generating Urban Traffic Scenes in 76 Cities Worldwide},
+  author={Alam, Md Shadab and Wang, Zi and Zhang, Linghan and Bazilinskyy, Pavlo},
+  year={2025}
+}
