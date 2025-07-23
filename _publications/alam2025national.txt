@@ -5,7 +5,7 @@
   publisher = {Association for Computing Machinery},
   address = {New York, NY, USA},
   year={2025},
-  url = {https://doi.org/10.1145/3641308.3685033},
+  url={https://doi.org/10.1145/3641308.3685033},
   doi={10.1145/3641308.3685033},
   location = {Brisbane, QLD, Australia},
   series = {AutomotiveUI '25}
