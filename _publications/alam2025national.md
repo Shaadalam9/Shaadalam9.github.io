@@ -5,7 +5,7 @@ title: "Pedestrian Planet: What YouTube Driving from 233 Countries and Territori
 authors: Alam, M. S., Martens, M.H., Bazilinskyy, P.
 pdf: alam2025national
 image: alam2025national.jpg
-display: Submitted
+display: 17th International Conference on Automotive User Interfaces and Interactive Vehicular Applications (AutoUI) Brisbane, QLD, Australia
 year: 2025
 doi: 10.1145/3744333.3747827
 code: https://github.com/bazilinskyy/youtube-national
