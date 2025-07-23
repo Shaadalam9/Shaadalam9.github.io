@@ -1,5 +1,12 @@
-@article{alam_national,
-  title={Pedestrian Planet: What 1,609 Hours of YouTube Driving from 133 Countries Teaches Us About the World},
+@inproceedings{alam_national,
+  title={Pedestrian Planet: What YouTube Driving from 233 Countries and Territories Teaches Us About the World},
   author={Alam, Md Shadab and Martens, Marieke H. and Bazilinskyy, Pavlo},
-  year={2025}
+  booktitle={Proceedings of the 17th International Conference on Automotive User Interfaces and Interactive Vehicular Applications},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  year={2025},
+  url = {https://doi.org/10.1145/3641308.3685033},
+  doi={10.1145/3641308.3685033},
+  location = {Brisbane, QLD, Australia},
+  series = {AutomotiveUI '25}
 }
