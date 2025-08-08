@@ -1,5 +1,8 @@
-@article{alamGPT,
-  title={Cross or Nah? LLMs Get in the Mindset of a Pedestrian in front of Automated Car with an eHMI},
-  author={Alam, Md Shadab and Bazilinskyy, Pavlo},
-  year={2025}
+@inproceedings{alamGPT,
+  title={Cross or Nah? LLMs get in the mindset of a pedestrian in front of automated car with an eHMI},
+  author={Alam, Md Shadab and Martens, Marieke H. and Bazilinskyy, Pavlo},
+  booktitle={Adjunct Proceedings of the 17th International Conference on Automotive User Interfaces and Interactive Vehicular Applications (AutoUI)},
+  address={Brisbane, QLD, Australia},
+  year={2025},
+  doi={10.1145/3744335.3758477}
 }
