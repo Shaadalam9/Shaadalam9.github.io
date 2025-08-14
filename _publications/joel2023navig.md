@@ -5,7 +5,7 @@ title: "Navigating the Ocean with DRL: Path following for marine vessels"
 authors: Jose, J., & Alam, M. S., Somayajula, A.S.
 pdf: joel2023navig
 image: joel2023navig.jpg
-display: Proceedings of the Sixth International Conference in Ocean Engineering (ICOE2023)
+display: Proceedings of the Sixth International Conference in Ocean Engineering (ICOE2023). Aachen, Germany
 year: 2023
 doi: 10.48550/arXiv.2310.14932
 # code: https://github.com/Shaadalam9/rl-learning-traditional

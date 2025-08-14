@@ -5,7 +5,7 @@ title: "Psychoacoustic assessment of synthetic sounds for electric vehicles in a
 authors: Bazilinskyy, P., Alam, M. S., Merino-Martınez, R.
 pdf: bazilinskyy2025sound
 image: bazilinskyy2025sound.jpg
-display: "11th Convention of the European Acoustics Association (Euronoise). Malaga, Spain"
+display: "11th Convention of the European Acoustics Association (Euronoise). Málaga, Spain"
 year: 2025
 suppmat: https://doi.org/10.4121/1f8ae9be-950b-430e-9b75-e2b420dcaa26
 code: https://github.com/Shaadalam9/sound-ev

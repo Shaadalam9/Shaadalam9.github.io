@@ -5,7 +5,7 @@ title: "Data Driven Control for marine vehicle maneuvering"
 authors: Alam, M. S. 
 pdf: masterthesis
 image: masterthesis.jpg
-# display: Journal of Marine Engineering & Technology
+display: Indian Institute of Technology Madras. Chennai, TN, India
 year: 2023
 doi: 10.13140/RG.2.2.16194.15045
 # code: https://github.com/Shaadalam9/rl-learning-traditional

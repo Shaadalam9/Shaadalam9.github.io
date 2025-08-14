@@ -5,7 +5,7 @@ title: "Generating realistic traffic scenarios: A deep learning approach using g
 authors: Alam, M. S., Martens, M., Bazilinskyy, P.
 pdf: alam2024generating
 image: alam2024generating.jpg
-display: "Human Interaction and Emerging Technologies (IHIET-AI 2025): Artificial Intelligence and Future Applications, Málaga, Spain"
+display: "Human Interaction and Emerging Technologies (IHIET-AI 2025): Artificial Intelligence and Future Applications. Málaga, Spain"
 year: 2025
 doi: https://doi.org/10.54941/ahfe1005927
 code: https://github.com/Shaadalam9/gans-traffic

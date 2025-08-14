@@ -5,7 +5,7 @@ title: "Comparison of path following in ships using modern and traditional contr
 authors: Sanjeev Kumar, R. S., Alam, M. S., Reddy, B., Somayajula, A.S.
 pdf: sanjeev2023
 image: sanjeev2023.jpg
-display: Proceedings of the Sixth International Conference in Ocean Engineering (ICOE2023)
+display: Proceedings of the Sixth International Conference in Ocean Engineering (ICOE2023). Aachen, Germany
 year: 2023
 doi: 10.48550/arXiv.2310.14940
 # code: https://github.com/MarineAutonomy/Deep-Reinforcement-Learning-Based-Control-for-Ship-Navigation
