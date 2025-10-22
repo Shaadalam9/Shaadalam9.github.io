@@ -1,7 +1,7 @@
 @inproceedings{bazilinskyy2025ev,
   title={Pedestrian crossing behaviour in front of electric vehicles emitting synthetic sounds: A virtual reality experiment},
   author={Bazilinskyy, Pavlo and Alam, Md Shadab and Merino-Martınez, Roberto},
-  booktitle={Proceedings of InterNoise, 53rd International Congress \& Exposition on Noise Control Engineering},
+  booktitle={Proceedings of InterNoise, 54rd International Congress \& Exposition on Noise Control Engineering},
   year={2025},
   address={Sao Paulo, Brazil}
 }
