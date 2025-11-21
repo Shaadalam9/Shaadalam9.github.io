@@ -1,20 +1,7 @@
-# - name: William Yen
-#   name_url: https://www.linkedin.com/in/william-yen-1029bb28a/
-#   project: Flexible electronic circuits
-#   project_url: 
-#   year: 2023
-#   status: completed
-
-# - name: Job van Houten
-#   name_url: https://www.linkedin.com/in/job-van-houten-a78536226/
-#   project: Relation between trust and eye gaze behaviour of the driver of an automated vehicle
-#   project_url: 
-#   year: 2023
-#   status: completed
-
-# - name: Lena Siegling
-#   name_url: https://www.linkedin.com/in/lena-siegling
-#   project: A naturalistic pilot study of cyclists' eye-and head movement using head-mounted eye tracking
-#   project_url: 2020naturalistic
-#   year: 2020
-#   status: completed
+- name: Margarida Fortes Ferreira 
+  name_url: https://www.linkedin.com/in/margaridaff
+  project: Vibe coding a driving simulator
+  project_url:
+  year: 2025
+  status: completed
+  comment: <a href="https://www.universiteitleiden.nl" target="_blank">Leiden University</a> student placement at TU/e

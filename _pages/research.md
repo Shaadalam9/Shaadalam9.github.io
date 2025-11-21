@@ -19,7 +19,7 @@ The interactions between future cars and pedestrians should be designed to be un
 </div>
 
 <div class="rowl1">
-  <img src="{{ site.url }}{{ site.baseurl }}/publications/alam2025GPT.jpg" class="img-responsive" style="float: left; border-radius: 5px; width: 280px; height: 158px" />
+  <img src="{{ site.url }}{{ site.baseurl }}/images/research/alam2025GPT.gif" class="img-responsive" style="float: left; border-radius: 5px; width: 280px; height: 158px" />
 
 #### Do we need human participants for human factors research?
 

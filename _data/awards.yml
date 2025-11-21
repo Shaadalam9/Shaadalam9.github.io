@@ -1,3 +1,9 @@
+- name: Honorable Mention
+  name_url: https://www.auto-ui.org/25/
+  organisation: AUTO-UI, QUT, Queensland, Australia
+  organisation_url: https://www.auto-ui.org/
+  year: 2025
+
 - name: VRX Competition
   name_url: https://robotx.org/programs/vrx-competition-2022/
   organisation: Open Robotics & Office of Naval Research

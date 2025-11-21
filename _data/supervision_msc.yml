@@ -1,3 +1,11 @@
+- name: Christian Janssen
+  name_url: https://www.linkedin.com/in/christian-janssen-783156288
+  project: Dynamic external Human-Machine Interface for pedestrians
+  project_url:
+  year: 2025
+  status: inprogress
+  comment: Co-supervision with IE&IS department
+
 - name: Alexandra van Dijk
   name_url: https://www.linkedin.com/in/alexandra-van-dijk-7aa5a3233
   project: Using generative AI for person-based traffic research
@@ -7,11 +15,11 @@
 
 - name: Xingjian Zeng
   name_url: https://www.linkedin.com/in/xingjian-zeng-596a29213
-  project: 
-  project_url:
+  project: Enhancing Driver Experience in SAE Level 3 Automated Vehicles through Multimodal and Emotion-aware In-vehicle Agents
+  project_url: https://bazilinskyy.github.io/publications/zeng2025like
   year: 2024
-  status: In progress
-  comment: M1.1 project within <a href="https://mobility-squad.com" target="_blank">Future Mobility squad</a>
+  status: completed
+  comment: FMP project within <a href="https://mobility-squad.com" target="_blank">Future Mobility squad</a>
 
 - name: Giovanni Sapienza
   name_url: https://www.linkedin.com/in/giovanni-sapienza/
@@ -46,10 +54,3 @@
   year: 2024
   status: completed
   comment: M1.1 project within <a href="https://studiegids.tue.nl/opleidingen/graduate-school/masters-programs/industrial-design/curriculum/core-courses" target="_blank">Constructive Design Research</a>
-
-# - name: 
-#   name_url: 
-#   project: 
-#   project_url:
-#   year: 
-#   status: inprogress

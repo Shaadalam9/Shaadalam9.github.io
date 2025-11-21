@@ -5,7 +5,7 @@
   institution_url: https://research.tue.nl/en/organisations/future-everyday
 
 - name: Pavlo Bazilinksyy
-  name_url: https://research.tue.nl/en/persons/pavlo-bazilinskyy
+  name_url: https://bazilinskyy.github.io/
   field: Automated Driving
   institution: TU Eindhoven
   institution_url: https://research.tue.nl/en/organisations/future-everyday
@@ -15,6 +15,24 @@
   field: Autonomous Ships, Reinforcement Learning
   institution: Indian Institute of Technology Madras
   institution_url: https://www.abhilash.consulting/home
+
+- name: Roberto Merino-Martinez
+  name_url: https://www.tudelft.nl/en/staff/r.merinomartinez/
+  field: Acoustics
+  institution: TU Delft
+  institution_url: https://www.tudelft.nl/lr
+
+- name: Linghan Zhang
+  name_url: https://www.tue.nl/en/research/researchers/linghan-zhang
+  field: Human-Technology Interaction (HTI)
+  institution: TU Eindhoven
+  institution_url: https://research.tue.nl/en/persons/linghan-zhang/
+
+- name: Zi Wang
+  name_url: https://ziwang-zw.github.io/
+  field: Human-Computer Interaction
+  institution: Augusta University
+  institution_url: https://www.augusta.edu/faculty/directory/view.php?id=ZWANG1
 
 - name: Ignacio Carlucho
   name_url: https://ignaciocarlucho.github.io/
@@ -33,3 +51,15 @@
   field: User Interface, Mixed Reality
   institution: University of Stuttgart
   institution_url: https://www.iktd.uni-stuttgart.de/institut/team/Subramanian/
+
+- name: Sanjeev Ramkumar Sudha
+  name_url: https://www.ntnu.edu/employees/sanjeevr
+  field: Marine Robotics
+  institution: NTNU
+  institution_url: https://www.ntnu.edu/
+
+- name: Joel Jose
+  name_url: https://www.ntnu.edu/employees/joel.j.chirapanath
+  field: Mobile Robotics
+  institution: NTNU
+  institution_url: https://www.ntnu.edu/
