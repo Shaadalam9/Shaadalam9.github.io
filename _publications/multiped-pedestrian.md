@@ -1,13 +1,13 @@
 ---
 layout: publication
 sitemap: false
-title: "Wait! Don't cross the road. A virtual reality study on the influence of the distance between pedestrians on their crossing decision"
-authors: Alam, M. S., Martens, M., Bazilinskyy, P.
+title: "You’ll never walk alone: Inter-pedestrian distance, eHMIs, and crossing decisions in virtual reality"
+authors: Alam, M. S., Dey, D., Martens, M., Bazilinskyy, P.
 pdf:
 image: multiped-pedestrian.jpg
 display: Working document.
 year: 
 doi: 
 code: https://github.com/bazilinskyy/multiped
-abstract: "As vehicles with SAE level 2 automation become increasingly prevalent in certain countries and are set to expand globally, understanding the behaviour of pedestrians and other road users in these evolving scenarios is essential. This study investigates how the presence of an automated vehicle equipped with an external Human-Machine Interface (eHMI) or a manually driven car influences pedestrians' crossing decision-making processes as the distance between them varies. We examine the conditions under which vehicles yield, offering a comprehensive perspective on pedestrian-vehicle interactions in dynamic environments. Using a virtual reality (VR) experiment, we manipulate several key variables: the distance between two pedestrians, whether the incoming vehicle yields, the presence of an eHMI, and the pedestrian's standing position relative to the second person. Both pedestrians aim to cross the road, and we observe how these factors impact one pedestrian's decision-making process in the presence of another."
+abstract: "Traffic interactions rarely happen in sanitised, one-on-one, dyadic settings, and automated vehicles (AVs) are no exception -- they will encounter pedestrians not only walking alone, but also in groups or scattered co-located individuals. Yet AV–pedestrian research rarely considers this social context. We conducted a virtual reality study (N = 50) to examine how a co-located pedestrian and an external human–machine interface (eHMI) shape perceived crossing safety. The participants stood at the curb alongside a second pedestrian while an AV approached. In a within-subjects design we varied vehicle yielding (yielding vs. non-yielding), eHMI (off vs. on), inter-pedestrian distance (2 -- 10~m, in 2~m increments) and whether the other pedestrian stood in front of the participant, facing the oncoming AV, or behind them. Participants held a controller trigger whenever crossing felt unsafe and later rated how much the other pedestrian and the inter-pedestrian distance influenced their crossing decision. The perceived crossing risk was substantially lower for yielding than non-yielding AVs, with an active eHMI further reducing risk in yielding trials. Distance-influence ratings were modest, yet strongly depended on visibility. The correlations between perceived risk and distance influence were small and negative, indicating that vehicle behaviour dominated safety judgements, while social spacing primarily shaped subjective impressions."
 ---
