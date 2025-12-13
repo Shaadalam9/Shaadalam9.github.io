@@ -1,5 +1,0 @@
-@article{zeng_emotion,
-  title={Enhancing Driver Experience in SAE Level 3 Automated Vehicles through Multimodal and Emotion-aware In-vehicle Agents},
-  author={Zeng, Xingjian and Alam, Md Shadab and Bazilinskyy, Pavlo},
-  year={2025}
-}
