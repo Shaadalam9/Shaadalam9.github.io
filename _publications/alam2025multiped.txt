@@ -1,4 +1,4 @@
-@article{alam2025_multiped,
+@article{alam2025multiped,
   title={You’ll never walk alone: Inter-pedestrian distance, eHMIs, and crossing decisions in virtual reality},
   author={Alam, Md Shadab and Dey, Debargha and Martens, Marieke and Bazilinskyy, Pavlo},
   year={2025}
