@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: workshop
 sitemap: false
 title: "Multi-agent research in automotive"
@@ -39,4 +39,4 @@ tbc
 
 ## Organisers
 ### Pavlo Bazilinskyy
-<img src="{{ site.url }}{{ site.baseurl }}/workshops/autoui2023breaking_pavlo.jpg" style="max-width: 200px; float: left; margin: 5px;"/><span style="display: block; min-height: 200px"><a href="https://bazilinskyy.github.io">Pavlo Bazilinskyy</a> is an assistant professor at Eindhoven University of Technology focusing on AI-driven interaction between AVs and other road users. He finished his PhD at TU Delft in auditory feedback for automated driving as a Marie Curie Fellow, where he also worked as a postdoc. He was the head of data research at SD-Insights. Pavlo is a treasurer of the Marie Curie Alumni Association (MCAA).
+<img src="{{ site.url }}{{ site.baseurl }}/workshops/autoui2023breaking_pavlo.jpg" style="max-width: 200px; float: left; margin: 5px;"/><span style="display: block; min-height: 200px"><a href="https://bazilinskyy.github.io">Pavlo Bazilinskyy</a> is an assistant professor at Eindhoven University of Technology focusing on AI-driven interaction between AVs and other road users. He finished his PhD at TU Delft in auditory feedback for automated driving as a Marie Curie Fellow, where he also worked as a postdoc. He was the head of data research at SD-Insights. Pavlo is a treasurer of the Marie Curie Alumni Association (MCAA). -->

@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: workshop
 sitemap: false
 title: "Breaking barriers: Workshop on open data practices in AutoUI research"
@@ -59,4 +59,4 @@ table th:nth-of-type(2) {
 <img src="{{ site.url }}{{ site.baseurl }}/workshops/autoui2023breaking_qian.jpg" style="max-width: 200px; float: left; margin: 5px;"/><span style="display: block; min-height: 200px"><a href="https://qianyang.co ">Qian Yang</a> is an Assistant Professor in Information Science at Cornell University who received her Ph.D. from Carnegie Mellon University. Her main research goal is to better understand how to bring human-centered thinking to bear on evermore complex AI systems and create interactive tools that make such AI more accessible for human-centered design innovation.
 
 ### Philipp Wintersberger
-<img src="{{ site.url }}{{ site.baseurl }}/workshops/autoui2023breaking_philipp.jpg" style="max-width: 200px; float: left; margin: 5px;"/><span style="display: block; min-height: 200px"><a href="http://wintersberger.info">Philipp Wintersberger</a> is a Professor of Interactive Systems at the University of Applied Sciences Upper Austria (Hagenberg) and lecturer at TU Wien. He received his Ph.D. in Human-Computer Interaction from Johannes Kepler University Linz. His research focuses on the effects of safety-critical AI-controlled automated systems on user behaviour.
+<img src="{{ site.url }}{{ site.baseurl }}/workshops/autoui2023breaking_philipp.jpg" style="max-width: 200px; float: left; margin: 5px;"/><span style="display: block; min-height: 200px"><a href="http://wintersberger.info">Philipp Wintersberger</a> is a Professor of Interactive Systems at the University of Applied Sciences Upper Austria (Hagenberg) and lecturer at TU Wien. He received his Ph.D. in Human-Computer Interaction from Johannes Kepler University Linz. His research focuses on the effects of safety-critical AI-controlled automated systems on user behaviour. -->

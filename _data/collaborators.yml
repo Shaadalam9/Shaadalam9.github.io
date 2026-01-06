@@ -2,13 +2,13 @@
   name_url: https://research.tue.nl/en/persons/marieke-h-martens
   field: Automated Driving
   institution: TU Eindhoven
-  institution_url: https://research.tue.nl/en/organisations/future-everyday
+  institution_url: https://www.tue.nl/en/research/researchers/marieke-martens
 
 - name: Pavlo Bazilinksyy
   name_url: https://bazilinskyy.github.io/
   field: Automated Driving
   institution: TU Eindhoven
-  institution_url: https://research.tue.nl/en/organisations/future-everyday
+  institution_url: https://www.tue.nl/en/research/researchers/pavlo-bazilinskyy
 
 - name: Abhilash Somayajula
   name_url: https://doe.iitm.ac.in/abhilash/
@@ -21,6 +21,12 @@
   field: Acoustics
   institution: TU Delft
   institution_url: https://www.tudelft.nl/lr
+
+- name: Debargha (Dave) Dey
+  name_url: https://debdey.com/
+  field: User-Centered Design
+  institution: TU Eindhoven
+  institution_url: https://www.tue.nl/en/research/researchers/debargha-dey
 
 - name: Linghan Zhang
   name_url: https://www.tue.nl/en/research/researchers/linghan-zhang

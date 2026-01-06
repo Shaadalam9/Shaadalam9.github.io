@@ -1,0 +1,5 @@
+@article{alam2025IDT,
+  title={A Survey of Day-Night Illumination Domain Translation for Outdoor Vision Covering 30 Methods 22 Datasets and Evaluation Protocols},
+  author={Alam, Md Shadab and Singh, Priyanshu and Bazilinskyy, Pavlo},
+  year={2026}
+}

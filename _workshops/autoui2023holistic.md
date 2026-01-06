@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: workshop
 sitemap: false
 title: "Holistic HMI design for automated vehicles: Bridging in-vehicle and external communication"
@@ -71,4 +71,4 @@ Our target participants include designers, engineers, and researchers with exper
 <img src="{{ site.url }}{{ site.baseurl }}/workshops/autoui2023holistic_ruolin.jpg" style="max-width: 200px; float: left; margin: 5px;"/><span style="display: block; min-height: 200px">Ruolin Gao is a doctoral candidate in the Department of Industrial Design, Eindhoven University of Technology. She focuses on the interaction between AVs and manually-driven vehicles to foster smooth interaction in a mixed-traffic environment.
 
 ### Mervyn Franssen
-<img src="{{ site.url }}{{ site.baseurl }}/workshops/autoui2023holistic_mervyn.jpg" style="max-width: 200px; float: left; margin: 5px;"/><span style="display: block; min-height: 200px">Mervyn Franssen is a doctoral candidate at the Eindhoven University of Technology in the Department of Industrial Design. His research is focused on designing and validating natural interfaces and behavioural characteristics for automation systems in order to reduce uncertainty and avoid unpredictable behaviour for human operators who sometimes need to take control.
+<img src="{{ site.url }}{{ site.baseurl }}/workshops/autoui2023holistic_mervyn.jpg" style="max-width: 200px; float: left; margin: 5px;"/><span style="display: block; min-height: 200px">Mervyn Franssen is a doctoral candidate at the Eindhoven University of Technology in the Department of Industrial Design. His research is focused on designing and validating natural interfaces and behavioural characteristics for automation systems in order to reduce uncertainty and avoid unpredictable behaviour for human operators who sometimes need to take control. -->
