@@ -1,8 +1,18 @@
-@article{ferreira2025,
-  title={Vibe coding in practice: Building a driving simulator without expert programming skills}, 
-  author={Fortes-Ferreira, Margarida and Alam, Md Shadab and Bazilinskyy, Pavlo},
-  booktitle={Adjunct Proceedings of the 17th International Conference on Automotive User Interfaces and Interactive Vehicular Applications (AutoUI)},
-  address={Brisbane, QLD, Australia},
-  year={2025},
-  doi={10.1145/3744335.3758482}
+@inproceedings{10.1145/3744335.3758482,
+author = {Fortes-Ferreira, Margarida and Alam, Md Shadab and Bazilinskyy, Pavlo},
+title = {Vibe Coding in Practice: Building a Driving Simulator Without Expert Programming Skills},
+year = {2025},
+isbn = {9798400720147},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3744335.3758482},
+doi = {10.1145/3744335.3758482},
+abstract = {The emergence of large language models has introduced new opportunities in software development, particularly through a revolutionary paradigm known as vibe coding or “coding by vibes”, in which developers express their software ideas in natural language and where the LLM generates the code. This paper investigates the potential of vibe coding to support novice programmers. The first author, without coding experience, attempted to create a 3D driving simulator using the Cursor platform and Three.js. The iterative prompting process improved the simulation’s functionality and visual quality. The results indicated that LLM can reduce barriers to creative development and expand access to computational tools. However, challenges remain: prompts often required refinements, output code can be logically flawed, and debugging demanded a foundational understanding of programming concepts. These findings highlight that while vibe coding increases accessibility, it does not completely eliminate the need for technical reasoning and understanding prompt engineering.},
+booktitle = {Adjunct Proceedings of the 17th International Conference on Automotive User Interfaces and Interactive Vehicular Applications},
+pages = {60–66},
+numpages = {7},
+keywords = {Vibe Coding, Large Language Models (LLMs), Driving Simulator, Prompts},
+location = {
+},
+series = {AutomotiveUI Adjunct '25}
 }

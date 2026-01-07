@@ -1,4 +1,4 @@
-@article{alam2025ASMR,
+@techreport{alam2025ASMR,
   title={Eighteen Years of ASMR on YouTube: A Multilingual, Theme-Level Analysis of 20,087 Videos},
   author={Alam, Md Shadab and Bazilinskyy, Pavlo},
   year={2025}

@@ -1,4 +1,4 @@
-@INPROCEEDINGS{alam2025deep,
+@inproceedings{alam2025deep,
   author={Alam, Md Shadab and Parmar, Sagar Hitendra and Martens, Marieke H. and Bazilinskyy, Pavlo},
   booktitle={2025 8th International Conference on Information and Computer Technologies (ICICT)}, 
   title={Deep Learning Approach for Realistic Traffic Video Changes Across Lighting and Weather Conditions}, 
