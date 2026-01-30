@@ -1,4 +1,4 @@
-@inproceedings{10.1145/3744335.3758482,
+@inproceedings{ferreira2025,
 author = {Fortes-Ferreira, Margarida and Alam, Md Shadab and Bazilinskyy, Pavlo},
 title = {Vibe Coding in Practice: Building a Driving Simulator Without Expert Programming Skills},
 year = {2025},

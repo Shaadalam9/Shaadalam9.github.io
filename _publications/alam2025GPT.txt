@@ -1,4 +1,4 @@
-@inproceedings{10.1145/3744335.3758477,
+@inproceedings{alam2025GPT,
 author = {Alam, Md Shadab and Bazilinskyy, Pavlo},
 title = {Cross or Nah? LLMs Get in the Mindset of a Pedestrian in front of Automated Car with an eHMI},
 year = {2025},
@@ -12,7 +12,5 @@ booktitle = {Adjunct Proceedings of the 17th International Conference on Automot
 pages = {19–34},
 numpages = {16},
 keywords = {Vision language models, Automated cars, eHMI, Crowdsourcing},
-location = {
-},
 series = {AutomotiveUI Adjunct '25}
 }

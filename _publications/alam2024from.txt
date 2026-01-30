@@ -1,4 +1,4 @@
-@inproceedings{10.1145/3641308.3685033,
+@inproceedings{alam2024from,
 author = {Alam, Md Shadab and Subramanian, Thirumanikandan and Martens, Marieke and Remlinger, Wolfram and Bazilinskyy, Pavlo},
 title = {From A to B with Ease: User-Centric Interfaces for Shuttle Buses},
 year = {2024},

@@ -1,4 +1,4 @@
-@inproceedings{10.1145/3744333.3747827,
+@inproceedings{alam2025pedestrian,
 author = {Alam, Md Shadab and Martens, Marieke H. and Bazilinskyy, Pavlo},
 title = {Pedestrian Planet: What YouTube Driving from 233 Countries and Territories Teaches Us About the World},
 year = {2025},
