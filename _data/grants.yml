@@ -1,3 +1,9 @@
+- name: The FAIR Data Fund
+  name_url: https://community.data.4tu.nl/the-fair-data-fund/
+  organisation: 4TU.NIRICT
+  organisation_url: https://community.data.4tu.nl/
+  year: 2026
+
 - name: Small Compute applications (NWO)
   name_url: https://www.surf.nl/en/small-compute-applications-nwo
   organisation: SURF
