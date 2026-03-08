@@ -52,19 +52,19 @@ Beyond academia, I have a strong foundation in industrial collaboration. My inte
   width: 100%;
   height: 520px;
   margin: 20px 0 30px 0;
-  background: #0f1115;
-  border: 1px solid #2a2f3a;
+  border: 1px solid #cfd8e3;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 #visited-map .jvm-tooltip {
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(255, 255, 255, 0.97);
   color: #111827;
   border: 1px solid #d1d5db;
   border-radius: 6px;
   padding: 6px 10px;
   font-size: 13px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 </style>
 
@@ -79,37 +79,38 @@ document.addEventListener("DOMContentLoaded", function () {
   new jsVectorMap({
     selector: "#visited-map",
     map: "world_merc",
+    backgroundColor: "#7ec8ff",
     zoomButtons: true,
     zoomOnScroll: false,
     showTooltip: true,
 
     regionStyle: {
       initial: {
-        fill: "#1b2230",
-        stroke: "#3a4354",
+        fill: "#f3f4f6",
+        stroke: "#ffffff",
         strokeWidth: 0.8
       },
       hover: {
-        fill: "#243041"
+        fill: "#e5e7eb"
       },
       selected: {
-        fill: "#4f86c6"
+        fill: "#d62828"
       },
       selectedHover: {
-        fill: "#6aa3e3"
+        fill: "#b71c1c"
       }
     },
 
     markerStyle: {
       initial: {
         r: 4,
-        fill: "#ffd166",
-        stroke: "#111827",
+        fill: "#111111",
+        stroke: "#ffffff",
         strokeWidth: 1.2
       },
       hover: {
         r: 6,
-        fill: "#ffe29a"
+        fill: "#111111"
       }
     },
 
