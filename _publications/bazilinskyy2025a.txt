@@ -1,14 +1,8 @@
-@inproceedings{bazilinskyy2025ev,
-  author    = {Bazilinskyy, Pavlo and Alam, Md Shadab and Merino-Mart{\'i}nez, Roberto},
-  title     = {Psychoacoustic assessment of synthetic sounds for electric vehicles in a virtual reality experiment},
-  booktitle = {Proceedings of the 11th Convention of the European Acoustics Association, Forum Acusticum / Euronoise 2025},
-  editor    = {{de la Prida}, Daniel and Ramis, Jaime and Machimbarrena, Mar{\'i}a},
-  year      = {2025},
-  pages     = {5635--5642},
-  address   = {M{\'a}laga, Spain},
-  publisher = {European Acoustics Association (EAA)},
-  doi       = {10.61782/fa.2025.0710},
-  url       = {https://doi.org/10.61782/fa.2025.0710},
-  isbn      = {978-84-87985-35-5},
-  note      = {Conference held 23--26 June 2025. Preprint available at arXiv:2510.25593.}
+@inproceedings{bazilinskyy2025pedestrian,
+  title={Pedestrian crossing behaviour in front of electric vehicles emitting synthetic sounds: A virtual reality experiment},
+  author={Bazilinskyy, Pavlo and Alam, Md Shadab and Merino-Martınez, Roberto},
+  booktitle={Proceedings of 54th International Congress & Exposition on Noise Control Engineering (INTER-NOISE)},
+  year={2025},
+  address={São Paulo, Brazil},
+  doi={10.3397/IN_2025_1076086}
 }
