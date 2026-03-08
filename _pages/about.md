@@ -95,6 +95,16 @@ permalink: /about/
 </div>
 {% endif %}
 
+{% if site.data.research_visits %}
+## Research visits
+
+{% for visit in site.data.research_visits %}
+{{ forloop.index }}.
+{% if visit.institution_url %}[{{ visit.institution }}]({{ visit.institution_url }}){% else %}{{ visit.institution }}{% endif %}{% if visit.location %}, {{ visit.location }}{% endif %}{% if visit.period %} ({{ visit.period }}){% endif %}.
+
+{% endfor %}
+{% endif %}
+
 {% if site.data.collaborators %}
 ## Collaborations
 <div class="rowl1" style="padding-top: 10px;">

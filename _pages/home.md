@@ -43,3 +43,81 @@ Beyond academia, I have a strong foundation in industrial collaboration. My inte
    {% for funder in site.data.funders %}{% if funder.url %}<a href="{{funder.url}}" target="_blank"><img src='/images/logos/{{ funder.image }}' style='max-height: 70px; max-width: 170px;'/></a>{% else %}<img src='/images/logos/{{ funder.image }}' class='mycenter' style='max-height: 70px; max-width: 170px;'/>{% endif %}   {% endfor %}
   </div>
 </div> -->
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsvectormap/1.4.3/css/jsvectormap.min.css">
+
+<style>
+#research-map {
+  width: 100%;
+  height: 500px;
+  margin: 20px 0 30px 0;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+}
+</style>
+
+<h3>Research visits</h3>
+<div id="research-map"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsvectormap/1.4.3/js/jsvectormap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsvectormap/1.4.3/maps/world-merc.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  new jsVectorMap({
+    selector: "#research-map",
+    map: "world_merc",
+    zoomButtons: true,
+    zoomOnScroll: false,
+
+    regionStyle: {
+      initial: {
+        fill: "#e9ecef",
+        stroke: "#ffffff",
+        strokeWidth: 0.8
+      },
+      selected: {
+        fill: "#7aa6c2"
+      },
+      selectedHover: {
+        fill: "#5d93b5"
+      }
+    },
+
+    markerStyle: {
+      initial: {
+        r: 5,
+        fill: "#c0392b",
+        stroke: "#ffffff",
+        strokeWidth: 1.5
+      },
+      hover: {
+        r: 7
+      }
+    },
+
+    labels: {
+      markers: {
+        render: marker => marker.name
+      }
+    },
+
+    selectedRegions: [
+      {% assign country_codes = site.data.trips | map: "country_code" | uniq %}
+      {% for code in country_codes %}
+        "{{ code }}"{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ],
+
+    markers: [
+      {% for visit in site.data.trips %}
+      {
+        name: "{{ visit.city }}, {{ visit.country }}",
+        coords: [{{ visit.lat }}, {{ visit.lng }}]
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  });
+});
+</script>
