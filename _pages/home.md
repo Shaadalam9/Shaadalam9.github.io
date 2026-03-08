@@ -48,17 +48,28 @@ Beyond academia, I have a strong foundation in industrial collaboration. My inte
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsvectormap/1.4.3/css/jsvectormap.min.css">
 
 <style>
-#research-map {
+#visited-map {
   width: 100%;
-  height: 500px;
+  height: 520px;
   margin: 20px 0 30px 0;
-  border: 1px solid #e5e5e5;
-  border-radius: 8px;
+  background: #0f1115;
+  border: 1px solid #2a2f3a;
+  border-radius: 10px;
+}
+
+#visited-map .jvm-tooltip {
+  background: rgba(255, 255, 255, 0.96);
+  color: #111827;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 13px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
 }
 </style>
 
-<h3>Research visits</h3>
-<div id="research-map"></div>
+<h3>Places I have visited</h3>
+<div id="visited-map"></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jsvectormap/1.4.3/js/jsvectormap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jsvectormap/1.4.3/maps/world-merc.js"></script>
@@ -66,41 +77,44 @@ Beyond academia, I have a strong foundation in industrial collaboration. My inte
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   new jsVectorMap({
-    selector: "#research-map",
+    selector: "#visited-map",
     map: "world_merc",
     zoomButtons: true,
     zoomOnScroll: false,
+    showTooltip: true,
 
     regionStyle: {
       initial: {
-        fill: "#e9ecef",
-        stroke: "#ffffff",
+        fill: "#1b2230",
+        stroke: "#3a4354",
         strokeWidth: 0.8
       },
+      hover: {
+        fill: "#243041"
+      },
       selected: {
-        fill: "#7aa6c2"
+        fill: "#4f86c6"
       },
       selectedHover: {
-        fill: "#5d93b5"
+        fill: "#6aa3e3"
       }
     },
 
     markerStyle: {
       initial: {
-        r: 5,
-        fill: "#c0392b",
-        stroke: "#ffffff",
-        strokeWidth: 1.5
+        r: 4,
+        fill: "#ffd166",
+        stroke: "#111827",
+        strokeWidth: 1.2
       },
       hover: {
-        r: 7
+        r: 6,
+        fill: "#ffe29a"
       }
     },
 
-    labels: {
-      markers: {
-        render: marker => marker.name
-      }
+    onRegionTooltipShow: function (event, tooltip, code) {
+      event.preventDefault();
     },
 
     selectedRegions: [
