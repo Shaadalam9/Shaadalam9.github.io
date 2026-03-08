@@ -15,9 +15,9 @@ permalink: /education/
 <div class="rowl1" style="padding-top: 10px;">
 
 {% for course in courses %}
-{{ forloop.index }}. {% if course.url %}<a href="{{ course.url }}" target="_blank">{% endif %} <strong>{{ course.name }}</strong> {% if course.name_url %}</a>{% endif %} ({{ course.institution }}, {{ course.year_start }}–{{ course.year_end }}) {% if course.type == 'bsc' %}<button class="btn-completed">BSc</button>{% endif %}{% if course.type == 'msc' %}<button class="btn-inprogress">MSc</button>{% endif %}{% if course.type == 'phd' %}<button class="btn-notstarted">PhD</button>{% endif %}{% if course.comment %} – {{ course.comment }}{% endif %}
+{{ forloop.index }}. {% if course.url %}<a href="{{ course.url }}" target="_blank">{% endif %}<strong>{{ course.name }}</strong>{% if course.name_url %}</a>{% endif %} ({{ course.institution }}, {{ course.year_start }}{% if course.year_end %}–{{ course.year_end }}{% endif %}) {% if course.type == 'bsc' %}<button class="btn-completed">BSc</button>{% endif %}{% if course.type == 'msc' %}<button class="btn-inprogress">MSc</button>{% endif %}{% if course.type == 'phd' %}<button class="btn-notstarted">PhD</button>{% endif %}{% if course.comment %} – {{ course.comment }}{% endif %}
 <br/>
-<i>{{ course.code }}. {{ course.subheading }}</i>.
+<i>{% if course.code %}{{ course.code }}. {% endif %}{{ course.subheading }}</i>.
 
 {% endfor %}
 
