@@ -45,73 +45,80 @@ Beyond academia, I have a strong foundation in industrial collaboration. My inte
 </div> -->
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsvectormap/1.4.3/css/jsvectormap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap/dist/jsvectormap.min.css" />
 
 <style>
 #visited-map {
   width: 100%;
-  height: 520px;
-  margin: 20px 0 30px 0;
-  border: 1px solid #cfd8e3;
-  border-radius: 10px;
+  height: 620px;
+  margin: 24px 0 32px 0;
+  border: 1px solid #d8dee9;
+  border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 #visited-map .jvm-tooltip {
-  background: rgba(255, 255, 255, 0.97);
+  background: rgba(255, 255, 255, 0.98);
   color: #111827;
   border: 1px solid #d1d5db;
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 6px 10px;
   font-size: 13px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 </style>
 
 <h3>Places I have visited</h3>
 <div id="visited-map"></div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jsvectormap/1.4.3/js/jsvectormap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jsvectormap/1.4.3/maps/world-merc.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsvectormap"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsvectormap/dist/maps/world.js"></script>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  new jsVectorMap({
+  const map = new jsVectorMap({
     selector: "#visited-map",
-    map: "world_merc",
-    backgroundColor: "#7ec8ff",
-    zoomButtons: true,
+    map: "world",
+    backgroundColor: "#8fd3ff",
+    zoomButtons: false,
     zoomOnScroll: false,
+    draggable: false,
     showTooltip: true,
 
     regionStyle: {
       initial: {
-        fill: "#f3f4f6",
+        fill: "#f8fafc",
         stroke: "#ffffff",
-        strokeWidth: 0.8
+        strokeWidth: 0.7
       },
       hover: {
-        fill: "#e5e7eb"
+        fill: "#f1f5f9"
       },
       selected: {
         fill: "#d62828"
       },
       selectedHover: {
-        fill: "#b71c1c"
+        fill: "#b91c1c"
       }
     },
 
     markerStyle: {
       initial: {
-        r: 4,
+        r: 3.5,
         fill: "#111111",
         stroke: "#ffffff",
-        strokeWidth: 1.2
+        strokeWidth: 1.1
       },
       hover: {
-        r: 6,
-        fill: "#111111"
+        r: 5
       }
+    },
+
+    onLoaded(map) {
+      map.updateSize();
+      window.addEventListener("resize", function () {
+        map.updateSize();
+      });
     },
 
     onRegionTooltipShow: function (event, tooltip, code) {
