@@ -141,3 +141,33 @@
   country_code: "BE"
   lat: 50.8503
   lng: 4.3517
+
+- city: Kodaikanal
+  country: India
+  country_code: "IN"
+  lat: 10.2393
+  lng: 77.4893
+
+- city: Munnar
+  country: India
+  country_code: "IN"
+  lat: 10.0892
+  lng: 77.0597
+
+- city: Pondicherry
+  country: India
+  country_code: "IN"
+  lat: 11.9161
+  lng: 79.8123
+
+- city: Delft
+  country: Netherlands
+  country_code: "NL"
+  lat: 51.9880
+  lng: 4.3777
+
+- city: Leiden
+  country: Netherlands
+  country_code: "NL"
+  lat: 52.1601
+  lng: 4.4970

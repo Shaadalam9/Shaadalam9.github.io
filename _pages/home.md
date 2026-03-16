@@ -80,9 +80,9 @@ document.addEventListener("DOMContentLoaded", function () {
     selector: "#visited-map",
     map: "world",
     backgroundColor: "#8fd3ff",
-    zoomButtons: false,
-    zoomOnScroll: false,
-    draggable: false,
+    zoomButtons: true,
+    zoomOnScroll: true,
+    draggable: true,
     showTooltip: true,
 
     regionStyle: {
