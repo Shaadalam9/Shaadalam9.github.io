@@ -5,57 +5,207 @@ sitemap: false
 permalink: /
 ---
 
-<style>
-code {padding: 6px 8px; font-size: 90%;}
-</style>
-
-Welcome to my personal homepage! I am currently working as a PhD Scholar in the [Computational Design Systems](https://www.tue.nl/en/research/research-groups/computational-design-systems) group of the department of [Industrial Design](https://www.tue.nl/en/our-university/departments/industrial-design/) of [TU Eindhoven](https://www.tue.nl). My research focuses on understanding road-user behaviour in real-world traffic settings using deep learning and data-driven analysis.
-
-
-I have completed my Master of Science from the Indian Institute of Technology (IIT) Madras, where my thesis, titled Data-Driven Control for Marine Vehicle Maneuvering, explored innovative applications of deep reinforcement learning and control strategies for marine vessels. During my time at IIT Madras, I was actively contributed to several cutting-edge projects and honed my expertise in advanced algorithms, trajectory prediction, and reinforcement learning. My undergraduate degree is a Bachelor of Technology in Mechanical Engineering from Jamia Millia Islamia (JMI), where I developed a product prototype for Inventory Management 4.0, demonstrating my early interest in applying engineering solutions to real-world challenges.
-
-Throughout my academic and professional journey, I have cultivated a robust skill set, including proficiency in Python, C++, C, and emerging programming languages such as Rust. My technical expertise encompasses computer vision, machine learning frameworks (TensorFlow, PyTorch), and state-of-the-art technologies such as Transformers and Graph Neural Networks. Additionally, my experience in cloud computing platforms like AWS, Google Cloud Platform, and Microsoft Azure positions him as an adept practitioner in deploying scalable and efficient machine learning systems.
-
-My research has been disseminated through various publications in esteemed journals and conferences. I have authored papers on topics such as pedestrian behaviour evaluation using dashcam footage, trajectory forecasting with generative adversarial networks (GANs), and deep reinforcement learning applications in autonomous systems. In particular, my recent work includes analysing user-centric interfaces for autonomous shuttle buses and applying deep learning models to generate realistic traffic scenarios. My contributions to these fields have been recognised in journals like Ocean Engineering, Journal of Marine Engineering and Technology and conferences such as AutomotiveUI, IHIET-AI, ICICT and ICOE.
-
-In addition to my research achievements, I have also demonstrated leadership in academic service. I was serving as the web chair for the [IEEE RO-MAN 2025 conference](https://www.ro-man2025.org/) and as a placement coordinator during my tenure at IIT Madras, fostering collaborative environments for student success. I was also appointed reviewer for prominent journals, including [NeurIPS](https://neurips.cc/), [IEEE RO-MAN] (https://ro-man2026.org/), [AutoUI](https://www.auto-ui.org/), [Ocean Engineering](https://www.sciencedirect.com/journal/ocean-engineering), [Journal of Intelligent & Robotic Systems](https://link.springer.com/journal/10846) and [Engineering Applications of Artificial Intelligence](https://www.sciencedirect.com/journal/engineering-applications-of-artificial-intelligence), reflecting my deep engagement with the academic community.
-
-My work is distinguished by a practical focus on building scalable resources for studying pedestrian behaviour in natural traffic environments. In my current PhD research, I develop and curate [CROWD](https://dl.acm.org/doi/10.1145/3744333.3747827), a global dashcam video dataset sourced from publicly available driving footage that enables comparative, in-the-wild analysis of pedestrian behaviour across different countries and territories. Rather than relying on a single model, the dataset is supported by a modular computer-vision pipeline that can incorporate complementary methods for detection, multi-object tracking, semantic understanding, and 3D scene reasoning—enabling richer behavioural and contextual measurements from real-world videos. Depending on the analysis need, this includes integrating state-of-the-art components such as semantic segmentation (e.g., MMSegmentation), dedicated tracking frameworks (e.g., TrackLab), depth estimation (e.g., UniDepth), and emerging 3D/geometry-centric approaches (e.g., VGGT and VoxDet), among others. By providing a large-scale, extensible foundation for analysis, CROWD aims to help researchers systematically study pedestrian behaviour worldwide and support the design of safer automated and connected-vehicle systems that generalise across regions.
-
-Beyond academia, I have a strong foundation in industrial collaboration. My internships include developing machine learning models for premium user protection at [Nikah Forever](https://www.nikahforever.com/) and inventory management systems at Guinea Motors Pvt. Ltd. These experiences underscore my ability to translate research into practical solutions. With my multidisciplinary expertise, Shadab Alam is poised to make significant contributions to the fields of autonomous systems and road safety technology.
-
-<!-- </div> -->
-
-<!-- ### Free time
-* 🏃‍♂🚴‍♂️🏊‍♂️ Running, [cycling](https://www.wielervrienden.nl/profiel/pavlo-7126007), swimming, cross-country skiing, hiking. Like, [a lot of it](https://www.strava.com/athletes/bazilinskyy).
-* 🗺️ Travelling ([travel map](https://beeneverywhere.net/user/bazilinskyy)).
-* 💻 Coding ([github](https://github.com/shaadalam9)).
-* 📖 Reading ([goodreads](https://www.goodreads.com/user/show/5571310-pavlo-bazilinskyy)).
-* ♟️ Chess ([chess.com](https://www.chess.com/member/bazilinskyy)).
-* 🎸 Music ([last.fm](https://www.last.fm/user/Hollgam)). I also play sax alto and guitar.
-* 📺 Films and tv series ([imdb](https://www.imdb.com/user/ur16534776), [trakt](https://trakt.tv/users/bazilinskyy)). Somebody likes tv, surprise! 😬
-
-<br/> -->
-
-<!-- <div class="well-md">
-  <h3>Funding</h3>
-  <div style='display:block; text-align:center; margin-left:auto; margin-right:auto;'>
-   {% for funder in site.data.funders %}{% if funder.url %}<a href="{{funder.url}}" target="_blank"><img src='/images/logos/{{ funder.image }}' style='max-height: 70px; max-width: 170px;'/></a>{% else %}<img src='/images/logos/{{ funder.image }}' class='mycenter' style='max-height: 70px; max-width: 170px;'/>{% endif %}   {% endfor %}
-  </div>
-</div> -->
-
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap/dist/jsvectormap.min.css" />
 
 <style>
+code {
+  padding: 6px 8px;
+  font-size: 90%;
+}
+
+.home-landing {
+  color: #172033;
+  line-height: 1.72;
+}
+
+.home-landing a {
+  color: #1d4ed8;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(29, 78, 216, 0.22);
+}
+
+.home-landing a:hover {
+  color: #0f3ea8;
+  border-bottom-color: rgba(29, 78, 216, 0.65);
+}
+
+.home-hero-clean {
+  position: relative;
+  margin: 10px 0 32px;
+  padding: 42px 44px;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.18), transparent 34%),
+    linear-gradient(135deg, #ffffff 0%, #f8fafc 58%, #edf6ff 100%);
+  box-shadow: 0 18px 42px rgba(15, 23, 42, 0.08);
+}
+
+.home-hero-clean::after {
+  content: "";
+  position: absolute;
+  right: -90px;
+  bottom: -110px;
+  width: 290px;
+  height: 290px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.08);
+}
+
+.home-kicker {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  margin-bottom: 14px;
+  padding: 7px 12px;
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.76);
+  color: #1e40af;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.home-hero-clean h1 {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  margin: 0 0 16px;
+  font-size: clamp(2.15rem, 4.8vw, 3.9rem);
+  line-height: 1.05;
+  letter-spacing: -0.052em;
+}
+
+.home-hero-clean h1 span {
+  color: #2563eb;
+}
+
+.home-intro {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0;
+  color: #3f4b5f;
+  font-size: clamp(1.02rem, 2vw, 1.23rem);
+}
+
+.home-actions-clean {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+  margin-top: 26px;
+}
+
+.home-button-clean {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 9px 15px;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.home-button-clean.primary {
+  background: #2563eb;
+  color: #ffffff !important;
+  border: 1px solid #2563eb !important;
+  box-shadow: 0 12px 22px rgba(37, 99, 235, 0.22);
+}
+
+.home-button-clean.secondary {
+  background: rgba(255, 255, 255, 0.78);
+  color: #1f2937 !important;
+  border: 1px solid rgba(148, 163, 184, 0.45) !important;
+}
+
+.home-button-clean:hover {
+  transform: translateY(-2px);
+}
+
+.home-section-clean {
+  margin: 36px 0;
+}
+
+.home-section-clean h2 {
+  margin: 0 0 10px;
+  font-size: clamp(1.55rem, 3vw, 2.05rem);
+  line-height: 1.18;
+  letter-spacing: -0.035em;
+}
+
+.home-section-clean p {
+  margin: 0 0 14px;
+  color: #4b5563;
+}
+
+.home-link-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.home-link-card {
+  display: block;
+  min-height: 136px;
+  padding: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.055);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.home-link-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(37, 99, 235, 0.38);
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.085);
+}
+
+.home-link-card strong {
+  display: block;
+  margin-bottom: 7px;
+  color: #111827;
+  font-size: 1.08rem;
+}
+
+.home-link-card span {
+  display: block;
+  color: #5b6678;
+  font-size: 0.95rem;
+}
+
+.home-mini-note {
+  padding: 19px 21px;
+  border: 1px solid rgba(37, 99, 235, 0.16);
+  border-left: 4px solid #2563eb;
+  border-radius: 18px;
+  background: #eff6ff;
+}
+
+.home-map-card {
+  padding: 22px;
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(239, 246, 255, 0.82), rgba(255, 255, 255, 1)),
+    #ffffff;
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.07);
+}
+
 #visited-map {
   width: 100%;
   height: 620px;
-  margin: 24px 0 32px 0;
+  margin: 18px 0 0;
   border: 1px solid #d8dee9;
-  border-radius: 12px;
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
 }
 
 #visited-map .jvm-tooltip {
@@ -66,10 +216,112 @@ Beyond academia, I have a strong foundation in industrial collaboration. My inte
   padding: 6px 10px;
   font-size: 13px;
 }
+
+@media (max-width: 900px) {
+  .home-link-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-hero-clean {
+    padding: 34px 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-link-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero-clean {
+    padding: 30px 22px;
+    border-radius: 22px;
+  }
+
+  #visited-map {
+    height: 430px;
+  }
+}
 </style>
 
-<h3>Places I have visited</h3>
-<div id="visited-map"></div>
+<div class="home-landing">
+
+<section class="home-hero-clean">
+  <div class="home-kicker">PhD Scholar · TU Eindhoven · Computer Vision for Mobility</div>
+  <h1>Understanding <span>road user behaviour</span> through data, vision, and learning.</h1>
+  <p class="home-intro">
+    Welcome, I am <strong>Mohammad Shadab Alam</strong>, a PhD scholar in the
+    <a href="https://www.tue.nl/en/research/research-groups/computational-design-systems">Computational Design Systems</a>
+    group at the Department of
+    <a href="https://www.tue.nl/en/our-university/departments/industrial-design/">Industrial Design</a>,
+    <a href="https://www.tue.nl">TU Eindhoven</a>. My work uses computer vision, machine learning,
+    reinforcement learning, and data driven analysis to study behaviour in real world traffic and support safer autonomous mobility.
+  </p>
+  <div class="home-actions-clean">
+    <a class="home-button-clean primary" href="/research/">Research</a>
+    <a class="home-button-clean secondary" href="/publications/">Publications</a>
+    <a class="home-button-clean secondary" href="/about/">About</a>
+    <a class="home-button-clean secondary" href="https://scholar.google.com/citations?user=H03lUu8AAAAJ&hl=en">Google Scholar</a>
+  </div>
+</section>
+
+<section class="home-section-clean">
+  <h2>Start here</h2>
+  <p>
+    This homepage is a short entry point. For detailed information, please use the dedicated pages below.
+  </p>
+
+  <div class="home-link-grid" aria-label="Website sections">
+    <a class="home-link-card" href="/about/">
+      <strong>About</strong>
+      <span>A short biography, profile details, awards, grants, research visits, and collaborations.</span>
+    </a>
+
+    <a class="home-link-card" href="/research/">
+      <strong>Research</strong>
+      <span>My work on global traffic behaviour, pedestrian analysis, LLM based human factors research, and autonomous systems.</span>
+    </a>
+
+    <a class="home-link-card" href="/publications/">
+      <strong>Publications</strong>
+      <span>Journal articles, conference papers, preprints, PDFs, DOIs, code, and bibliographic details.</span>
+    </a>
+
+    <a class="home-link-card" href="/talks/">
+      <strong>Talks</strong>
+      <span>Conference presentations, invited talks, webinars, workshops, and outreach activities.</span>
+    </a>
+
+    <a class="home-link-card" href="/education/">
+      <strong>Education</strong>
+      <span>Courses, teaching activities, guest lectures, and supervision related information.</span>
+    </a>
+
+    <a class="home-link-card" href="/volunteering/">
+      <strong>Volunteering</strong>
+      <span>Academic service, reviewing, conference support, and community contributions.</span>
+    </a>
+  </div>
+</section>
+
+<section class="home-section-clean">
+  <div class="home-mini-note">
+    <p>
+      My current PhD research focuses on scalable, reproducible resources for studying pedestrian behaviour in natural traffic environments, especially through large scale driving videos and modular computer vision pipelines.
+    </p>
+  </div>
+</section>
+
+<section class="home-section-clean">
+  <div class="home-map-card">
+    <h2>Places I have visited</h2>
+    <p>
+      Travelling gives me a broader view of cities, mobility, infrastructure, and everyday human behaviour. The map below shows places from my journey.
+    </p>
+    <div id="visited-map"></div>
+  </div>
+</section>
+
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/jsvectormap"></script>
 <script src="https://cdn.jsdelivr.net/npm/jsvectormap/dist/maps/world.js"></script>
@@ -79,7 +331,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const map = new jsVectorMap({
     selector: "#visited-map",
     map: "world",
-    backgroundColor: "#8fd3ff",
+    backgroundColor: "#bfdbfe",
     zoomButtons: true,
     zoomOnScroll: true,
     draggable: true,
@@ -92,25 +344,25 @@ document.addEventListener("DOMContentLoaded", function () {
         strokeWidth: 0.7
       },
       hover: {
-        fill: "#f1f5f9"
+        fill: "#dbeafe"
       },
       selected: {
-        fill: "#d62828"
+        fill: "#2563eb"
       },
       selectedHover: {
-        fill: "#b91c1c"
+        fill: "#1d4ed8"
       }
     },
 
     markerStyle: {
       initial: {
-        r: 3.5,
-        fill: "#111111",
+        r: 4,
+        fill: "#111827",
         stroke: "#ffffff",
-        strokeWidth: 1.1
+        strokeWidth: 1.2
       },
       hover: {
-        r: 5
+        r: 5.5
       }
     },
 

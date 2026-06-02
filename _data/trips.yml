@@ -171,3 +171,15 @@
   country_code: "NL"
   lat: 52.1601
   lng: 4.4970
+
+- city: Sofia
+  country: Bulgaria
+  country_code: "BG"
+  lat: 42.6977
+  lng: 23.3219
+
+- city: Bucharest
+  country: Romania
+  country_code: "RO"
+  lat: 44.4268
+  lng: 26.1025
