@@ -1,5 +1,9 @@
-@techreport{alam2026crowd,
-  title={A global dataset of continuous urban dashcam driving},
-  author={Alam, Md Shadab and Bazilinska, Olena and Bazilinskyy, Pavlo},
-  year={2026}
+@techreport{alam2026globaldatasetcontinuousurban,
+      title={A global dataset of continuous urban dashcam driving}, 
+      author={Md Shadab Alam and Olena Bazilinska and Pavlo Bazilinskyy},
+      year={2026},
+      eprint={2604.01044},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2604.01044}, 
 }

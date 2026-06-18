@@ -1,0 +1,5 @@
+@techreport{verstelle2026sound,
+  title={Personalised Electric Vehicle Acoustics with Generative AI: Dynamic Sonification and User Acceptance Study},
+  author={Verstelle, Wessel and Alam, Md Shadab and Bazilinskyy, Pavlo},
+  year={2026}
+}

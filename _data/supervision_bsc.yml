@@ -1,9 +1,9 @@
-# - name: Wouter Salden, Jakub Woziwodzki, Axel Reitz
-#   project: Designing an emergency drone
-#   project_url: https://mobility-squad.com/angel
-#   year: 2023
-#   status: completed
-#   comment: within <a href="https://mobility-squad.com" target="_blank">Future Mobility squad</a>
+- name: Wessel Verstelle
+  project: Personalised Electric Vehicle Acoustics with Generative AI: Dynamic Sonification and User Acceptance Study
+  project_url: https://shaadalam9.github.io/publications/verstelle2026sound
+  year: 2026
+  status: completed
+  comment: within <a href="https://mobility-squad.com" target="_blank">Future Mobility squad</a>
 
 # - name: Jochem Verstegen
 #   name_url: https://www.linkedin.com/in/jochemverstegen/
