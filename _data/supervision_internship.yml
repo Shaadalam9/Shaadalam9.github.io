@@ -1,10 +1,10 @@
-- name: Margarida Fortes Ferreira 
-  name_url: https://www.linkedin.com/in/margaridaff
-  project: Vibe coding a driving simulator
-  project_url: https://shaadalam9.github.io/publications/ferreira2025
-  year: 2025
-  status: completed
-  comment: <a href="https://www.universiteitleiden.nl" target="_blank">Leiden University</a> student placement at TU/e
+- name: Brileena Benny 
+  name_url: https://www.linkedin.com/in/brileena-benny-8b9038366/
+  project:
+  project_url:
+  year: 2026
+  status: ongoing
+  # comment: <a href="https://www.universiteitleiden.nl" target="_blank">Leiden University</a> student placement at TU/e
 
 - name: Priyanshu Singh 
   name_url: https://www.linkedin.com/in/priyanshu-singh-45572b304
@@ -13,3 +13,11 @@
   year: 2026
   status: completed
   comment: <a href="https://www.bcrec.ac.in/" target="_blank" rel="noopener noreferrer">Dr BC Roy Engineering College</a>
+
+- name: Margarida Fortes Ferreira 
+  name_url: https://www.linkedin.com/in/margaridaff
+  project: Vibe coding a driving simulator
+  project_url: https://shaadalam9.github.io/publications/ferreira2025
+  year: 2025
+  status: completed
+  comment: <a href="https://www.universiteitleiden.nl" target="_blank">Leiden University</a> student placement at TU/e
