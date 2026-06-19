@@ -4,7 +4,7 @@ sitemap: false
 title: "Exploring Veo 3's Capabilities for Generating Urban Traffic Scenes in 76 Cities Worldwide"
 authors: Alam, M. S., Wang, Z., Zhang, L., Bazilinskyy, P.
 pdf: alam2025veo3
-image: alam2025veo3.png
+image: alam2025veo3.jpg
 display: Submitted
 year: 2026
 doi:

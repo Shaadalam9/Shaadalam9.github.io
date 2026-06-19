@@ -4,7 +4,7 @@ sitemap: false
 title: "Personalised Electric Vehicle Acoustics with Generative AI: Dynamic Sonification and User Acceptance Study"
 authors: Verstelle, W., Alam, M. S., Bazilinskyy, P.
 pdf: verstelle2026sound
-image: verstelle2026sound.png
+image: verstelle2026sound.jpg
 display: Submitted for publication.
 year: 2026
 suppmat: https://www.dropbox.com/scl/fo/xkycbumjwh0zgyh38kx79/AK4jn5LCIYmV1XoLblyJLQ4?rlkey=47412fjfh845oywzfb2mdcr2q&st=ijm8wbsl

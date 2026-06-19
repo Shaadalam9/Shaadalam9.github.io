@@ -4,7 +4,7 @@ sitemap: false
 title: "A global dataset of continuous urban dashcam driving"
 authors: Alam, M. S., Bazilinska, O., Bazilinskyy, P.
 pdf: alam2026crowd
-image: alam2026crowd.png
+image: alam2026crowd.jpg
 display: Submitted
 year: 2026
 doi:

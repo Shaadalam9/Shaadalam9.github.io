@@ -4,7 +4,7 @@ sitemap: false
 title: "Vibe Coding in Practice: Building a Driving Simulator Without Expert Programming Skills"
 authors: Fortes-Ferreira, M., & Alam, M. S., Bazilinskyy, P.
 pdf: ferreira2025
-image: ferreira2025.png
+image: ferreira2025.jpg
 display: 17th International Conference on Automotive User Interfaces and Interactive Vehicular Applications (AutoUI). Brisbane, QLD, Australia
 year: 2025
 doi: 10.1145/3744335.3758482

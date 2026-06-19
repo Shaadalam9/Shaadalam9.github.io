@@ -1,10 +1,10 @@
 ---
 layout: publication
 sitemap: false
-title: "Collision Patterns and Reporting Blind Spots in 970 California Autonomous Vehicle Crash Reports"
+title: "Collision Patterns and Reporting Blind Spots in 971 California Autonomous Vehicle Crash Reports"
 authors: Alam, M. S., Zhang, L., Li, Z., Dou, F., Bazilinskyy, P.
 pdf: alam2026events
-image: alam2026events.png
+image: alam2026events.jpg
 display: Submitted
 year: 2026
 doi:

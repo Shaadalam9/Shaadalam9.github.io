@@ -4,7 +4,7 @@ sitemap: false
 title: "You’ll never walk alone: Inter-pedestrian distance, eHMIs, and crossing decisions in virtual reality"
 authors: Alam, M. S., Dey, D., Martens, M., Bazilinskyy, P.
 pdf: alam2026multiped
-image: alam2026multiped.png
+image: alam2026multiped.jpg
 display: Submitted for publication.
 year: 2026
 doi: 

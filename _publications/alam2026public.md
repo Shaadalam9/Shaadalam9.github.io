@@ -4,7 +4,7 @@ sitemap: false
 title: "What Can Public Traffic Cameras Reveal? A Short Horizon Privacy Audit Using Open Source Vehicle Tracking"
 authors: Alam, M. S., Bazilinskyy, P.
 pdf: alam2026public
-image: alam2026public.png
+image: alam2026public.jpg
 display: Submitted for publication.
 year: 2026
 doi: 
