@@ -1,5 +1,5 @@
 @techreport{alam2026learning,
   title={Randomised versus fixed trial order in repeated exposure VR studies of pedestrian interaction with automated vehicles},
-  author={Alam, Md Shadab and Bazilinskyy, Pavlo},
+  author={},
   year={2026}
 }

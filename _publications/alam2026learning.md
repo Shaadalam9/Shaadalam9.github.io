@@ -2,7 +2,7 @@
 layout: publication
 sitemap: false
 title: "Randomised versus fixed trial order in repeated exposure VR studies of pedestrian interaction with automated vehicles"
-authors: Alam, M. S., Bazilinskyy, P.
+authors:
 pdf: alam2026learning
 image: alam2026learning.png
 display: Working project.
