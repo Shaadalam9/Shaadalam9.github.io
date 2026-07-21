@@ -183,3 +183,51 @@
   country_code: "RO"
   lat: 44.4268
   lng: 26.1025
+
+- city: Gothenburg
+  country: Sweden
+  country_code: "SE"
+  lat: 57.7089
+  lng: 11.9746
+
+- city: Riga
+  country: Latvia
+  country_code: "LV"
+  lat: 56.9496
+  lng: 24.1052
+
+- city: Vilnius
+  country: Lithuania
+  country_code: "LT"
+  lat: 54.6872
+  lng: 25.2797
+
+- city: Shanghai
+  country: China
+  country_code: "CN"
+  lat: 31.2304
+  lng: 121.4737
+
+- city: Hong Kong
+  country: Hong Kong
+  country_code: "HK"
+  lat: 22.3193
+  lng: 114.1694
+
+- city: Manila
+  country: Philippines
+  country_code: "PH"
+  lat: 14.5995
+  lng: 120.9842
+
+- city: Pattaya
+  country: Thailand
+  country_code: "TH"
+  lat: 12.9236
+  lng: 100.8825
+
+- city: Wayanad
+  country: India
+  country_code: "IN"
+  lat: 11.7256
+  lng: 76.1104

@@ -1,5 +1,5 @@
 @techreport{alam2026multiped,
-  title={You’ll never walk alone: Inter-pedestrian distance, eHMIs, and crossing decisions in virtual reality},
+  title={You'll Never Walk Alone: Effects of Vehicle Yielding, eHMIs, and Pedestrian Position on Perceived Crossing Risk},
   author={Alam, Md Shadab and Dey, Debargha and Martens, Marieke and Bazilinskyy, Pavlo},
   year={2026}
 }
