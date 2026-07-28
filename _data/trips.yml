@@ -214,11 +214,11 @@
   lat: 22.3193
   lng: 114.1694
 
-- city: Manila
-  country: Philippines
-  country_code: "PH"
-  lat: 14.5995
-  lng: 120.9842
+- city: Hanoi
+  country: Vietnam
+  country_code: "VN"
+  lat: 21.0278
+  lng: 105.8342
 
 - city: Pattaya
   country: Thailand
