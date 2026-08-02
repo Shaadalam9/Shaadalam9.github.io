@@ -12,7 +12,5 @@ booktitle = {Proceedings of the 17th International Conference on Automotive User
 pages = {180–197},
 numpages = {18},
 keywords = {Dashcam Videos, Cross-country Analysis, Pedestrian Behaviour, Crossing Speed, Crossing Initiation Time},
-location = {
-},
 series = {AutomotiveUI '25}
 }
