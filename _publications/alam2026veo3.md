@@ -3,8 +3,8 @@ layout: publication
 sitemap: false
 title: "Exploring Veo 3's Capabilities for Generating Urban Traffic Scenes in 76 Cities Worldwide"
 authors: Alam, M. S., Wang, Z., Zhang, L., Bazilinskyy, P.
-pdf: alam2025veo3
-image: alam2025veo3.jpg
+pdf: alam2026veo3
+image: alam2026veo3.jpg
 display: 17th International Conference on Automotive User Interfaces and Interactive Vehicular Applications (AutoUI). Gothenburg, Sweden
 year: 2026
 doi: 10.1145/3828158.3838250
