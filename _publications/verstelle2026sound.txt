@@ -1,5 +1,10 @@
 @techreport{verstelle2026sound,
   title={Personalised Electric Vehicle Acoustics with Generative AI: Dynamic Sonification and User Acceptance Study},
   author={Verstelle, Wessel and Alam, Md Shadab and Bazilinskyy, Pavlo},
-  year={2026}
+  year={2026},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  doi={10.1145/3828158.3838227},
+  booktitle = {Adjunct Proceedings of the 18th International Conference on Automotive User Interfaces and Interactive Vehicular Applications},
+  series = {AutomotiveUI Adjunct '26}
 }
