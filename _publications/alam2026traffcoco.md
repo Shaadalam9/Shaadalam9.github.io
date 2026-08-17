@@ -1,4 +1,3 @@
-
 ---
 layout: publication
 sitemap: false

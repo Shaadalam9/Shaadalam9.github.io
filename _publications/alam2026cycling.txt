@@ -1,0 +1,4 @@
+@techreport{alam2026cycling,
+  title={},
+  author={Alam, Md Shadab and Bazilinskyy, Pavlo}
+}
