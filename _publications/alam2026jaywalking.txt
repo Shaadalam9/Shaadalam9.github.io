@@ -1,0 +1,4 @@
+@techreport{alam2026traffcoco,
+  title={Understanding Jaywalking Behaviour Worldwide Using Naturalistic Dashcam Videos},
+  author={Alam, Md Shadab and Bazilinskyy, Pavlo}
+}

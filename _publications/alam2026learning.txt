@@ -1,5 +1,5 @@
 @techreport{alam2026learning,
-  title={Randomised versus fixed trial order in repeated exposure VR studies of pedestrian interaction with automated vehicles},
-  author={},
+  title={Trial ordering in repeated exposure virtual reality pedestrian research: comparing fixed and participant specific randomised sequences},
+  author={Alam, Md Shadab and Martens, Marieke H. and Bazilinskyy, Pavlo},
   year={2026}
 }

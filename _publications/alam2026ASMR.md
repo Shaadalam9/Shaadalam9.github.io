@@ -1,13 +1,13 @@
 ---
 layout: publication
 sitemap: false
-title: "Nineteen Years of ASMR on YouTube: A Multilingual, Theme-Level Analysis of 42,268 Videos"
+title: "Nineteen years of ASMR on YouTube: A multilingual, theme-level analysis of 89,241 videos"
 authors: Alam, M. S., Bazilinskyy, P.
 pdf: alam2026ASMR
 image: alam2026ASMR.jpg
-display: Submitted.
-year: 2026
+display: In preparation.
+year:
 doi: 
 code: https://github.com/Shaadalam9/ASMR-analysis
-abstract: ASMR videos have become a major genre on online platforms, yet their large scale characteristics remain underexplored. Using the YouTube Data API and a pytubefix workflow, we assemble a dataset of 42,268 ASMR videos from 8,587 channels (2008 to 2026, 34 languages) enriched with duration, views, likes, inferred language, theme flags, and lemmatised title and description text. English dominates (76.94% of videos), followed by Korean, Japanese, Spanish, Dutch, and Portuguese. Across the corpus, the mean growth is 1,786.69 views per day and the duration analysis shows that short videos (under 10 minutes) average 3,435.52 views per day versus 1,005.91 for 10 to 30 minute content, while very long (over 180 minutes) videos reach 2,481.93 views per day. Theme detection indicates that drive themed content (17.14%), sleep related content (17.13%), and visual trigger content (15.54%) are particularly prevalent, with whisper (10.83%) and binaural videos (8.55%) also common. K means clustering on multimodal text, language, and engagement features, visualised with tSNE, yields 11 content clusters (1 to 29,321 videos) and a small set of extremely high growth outliers.
+abstract: Autonomous sensory meridian response (ASMR) videos are commonly framed around whispered speech, gentle sounds, close-up attention, relaxation, sleep, and comfort, yet longitudinal, large-scale descriptions of this labelled YouTube genre are scarce. We analyse 89,241 ASMR YouTube videos uploaded between 1 January 2008 and 31 July 2026, with metadata processed on 1 August 2026, from 18,024 channels across 81 language categories. Using title and description text mining with duration, engagement, growth, theme-label indicators, and exploratory clustering metrics, we provide a multilingual longitudinal map of explicitly labelled ASMR on YouTube. Mean growth was 1,125.41 views/day (SD 11,196.23). Among videos with known duration, those under 10 min grew fastest on average (2,075.55 views/day), videos between 10 and 30 min averaged 585.11 views/day, and videos over 180 min averaged 1,293.15 views/day. The most prevalent themes were sleep-related content (17.62%), whisper-focused content (15.49\%), role-play (14.09\%), mukbang or eating (7.08\%), and visual triggers (6.85\%); driving-related content accounted for 3.67\%. An exploratory k-means solution grouped videos into 11 clusters, and a full-dataset UMAP projection visualised the resulting structure for all 89,241 videos without treating those groups as definitive ASMR subgenres.
 ---

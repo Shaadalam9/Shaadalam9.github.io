@@ -5,8 +5,8 @@ title: "Collision Patterns and Reporting Blind Spots in 971 California Autonomou
 authors: Alam, M. S., Zhang, L., Li, Z., Dou, F., Bazilinskyy, P.
 pdf: alam2026events
 image: alam2026events.jpg
-display: Submitted
-year: 2026
+display: In preparation.
+year: 
 doi:
 suppmat: 
 code: https://github.com/bazilinskyy/llm-events
