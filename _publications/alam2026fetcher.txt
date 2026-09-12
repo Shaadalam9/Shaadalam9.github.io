@@ -1,0 +1,4 @@
+@techreport{alam2026fetcher,
+  title={Automated Construction of Living Mobility Datasets from Public Video: A YouTube Case Study},
+  author={Alam, Md Shadab and Hoggenmueller, Marius and Bazilinskyy, Pavlo}
+}
