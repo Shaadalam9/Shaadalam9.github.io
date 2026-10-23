@@ -1,12 +1,12 @@
 ---
 layout: publication
-sitemap: false
 title: "Cross or Nah? LLMs Get in the Mindset of a Pedestrian in front of Automated Car with an eHMI"
 authors: Alam, M. S., Bazilinskyy, P.
 pdf: alam2025GPT
 image: alam2025GPT.jpg
 display: 17th International Conference on Automotive User Interfaces and Interactive Vehicular Applications (AutoUI). Brisbane, QLD, Australia
 year: 2025
+type: conference
 doi: 10.1145/3744335.3758477
 code: https://github.com/Shaadalam9/llms-av-crowdsourced
 suppmat: https://doi.org/10.4121/cb208bd8-7cf4-42d5-ae5e-9ad2c654aeb3

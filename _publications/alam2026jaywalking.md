@@ -1,6 +1,5 @@
 ---
 layout: publication
-sitemap: false
 title: "Understanding Jaywalking Behaviour Worldwide Using Naturalistic Dashcam Videos"
 authors: 
 pdf: alam2026jaywalking

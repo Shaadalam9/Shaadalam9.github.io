@@ -1,0 +1,233 @@
+---
+title: "Research"
+layout: gridlay
+permalink: /research/
+---
+{% assign crowd = site.data.crowd %}
+{% assign figs = site.data.crowd_figures %}
+{% assign fig_base = "https://raw.githubusercontent.com/crowd-dataset/crowd/main/figures/" %}
+{% assign fig_live = "https://htmlpreview.github.io/?https://github.com/crowd-dataset/crowd/blob/main/figures/" %}
+
+<h1>Research</h1>
+<p class="page-lead">I use computer vision and machine learning to understand how people behave in real-world traffic, and to make automated systems safer. Jump to a topic:</p>
+<nav class="research-nav">
+  <a href="#crowd">Pedestrians around the globe</a>
+  <a href="#vr">Virtual reality experiments</a>
+  <a href="#llm">AI in place of participants</a>
+  <a href="#ships">Deep RL for autonomous ships</a>
+  <a href="#code">Code &amp; data</a>
+</nav>
+
+<!-- CROWD -->
+<section class="research-block" id="crowd">
+  <div class="research-intro">
+    <div>
+      <h2>Pedestrians around the globe</h2>
+      <p>How do pedestrians cross the road in Lagos, Hanoi or Eindhoven? The interactions between future cars and pedestrians should be understandable and safe worldwide, yet most traffic research relies on WEIRD (Western, educated, industrialised, rich, democratic) samples. The internet has become ubiquitous, and YouTube is full of dashcam and walking videos recorded on city streets around the world.</p>
+      <p>So we built <a href="{{ crowd.repo }}"><strong>CROWD</strong> (City Road Observations With Dashcams)</a>, an open dataset of hand-picked day and night urban footage from YouTube, analysed with computer vision to compare the behaviour of road users across countries and cultures. The dataset grows every night.</p>
+      <div class="crowd-stats">
+        <div><span data-crowd="hours">{{ crowd.hours }}</span><small>hours of footage</small></div>
+        <div><span data-crowd="videos">{{ crowd.videos }}</span><small>videos</small></div>
+        <div><span data-crowd="localities">{{ crowd.localities }}</span><small>cities &amp; towns</small></div>
+        <div><span data-crowd="countries">{{ crowd.countries }}</span><small>countries &amp; territories</small></div>
+      </div>
+    </div>
+    <figure class="research-video">
+      <div class="video-frame">
+        <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/NipvoDg0Nyk?playlist=NipvoDg0Nyk&loop=1&autoplay=1&mute=1&rel=0" title="YOLO object detection on a dashcam video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <figcaption>Detecting and tracking road users in a dashcam video.</figcaption>
+    </figure>
+  </div>
+
+  <p>Using YOLO-based detection and tracking, we analysed pedestrian behaviour at the <a href="{{ site.baseurl }}/publications/alam2024crossing.html">city level</a> (565 cities) and the <a href="{{ site.baseurl }}/publications/alam2025pedestrian.html">country level</a> (233 countries and territories). We are now going beyond YOLO, combining detection, multi-object tracking, semantic understanding, depth estimation and 3D scene reasoning, to understand more precisely what happens on the streets of cities on every continent.</p>
+
+  <div class="research-links">
+    <a class="btn-cta btn-cta-primary" href="{{ crowd.repo }}"><i class="fa fa-github"></i> CROWD on GitHub</a>
+    <a class="btn-cta" href="{{ crowd.paper }}">Pedestrian planet (AutoUI 2025)</a>
+    <a class="btn-cta" href="{{ site.baseurl }}/publications/alam2026crowd.html">Dataset paper</a>
+    <a class="btn-cta" href="{{ crowd.kaggle }}"><i class="fa fa-database"></i> Data</a>
+  </div>
+
+  <h3 class="research-sub">Explore the dataset</h3>
+  <div class="fig-tabs" role="tablist">
+    {% for f in figs %}<button type="button" role="tab" class="pub-filter{% if forloop.first %} active{% endif %}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" data-fig="{{ forloop.index0 }}">{{ f.title }}</button>{% endfor %}
+  </div>
+  <div class="fig-stage">
+    {% for f in figs %}
+    <figure class="fig-panel" data-fig="{{ forloop.index0 }}"{% unless forloop.first %} hidden{% endunless %}>
+      <a href="{{ fig_live }}{{ f.file }}.html" target="_blank"><img src="{{ fig_base }}{{ f.file }}.png" alt="{{ f.caption }}" loading="lazy"></a>
+      <figcaption>{{ f.caption }} <a href="{{ fig_live }}{{ f.file }}.html" target="_blank">Open the interactive chart &nearr;</a></figcaption>
+    </figure>
+    {% endfor %}
+  </div>
+
+  <h3 class="research-sub">Is your city in CROWD?</h3>
+  <div class="city-search" data-src="{{ crowd.globe_data }}">
+    <input type="search" id="city-q" placeholder="Type a city, e.g. Eindhoven, Lagos, Hanoi…" autocomplete="off" aria-label="Search cities in the CROWD dataset">
+    <ul id="city-results" aria-live="polite"></ul>
+    <p class="city-hint">Search more than {{ crowd.localities | divided_by: 1000 | times: 1000 }} towns and cities and watch their footage on YouTube.</p>
+  </div>
+</section>
+
+<!-- VR -->
+<section class="research-block" id="vr">
+  <div class="research-intro">
+    <div>
+      <h2>Virtual reality experiments</h2>
+      <p>Real roads are not a safe place to test how pedestrians react to an automated vehicle that may or may not stop. In virtual reality, participants stand at the kerb of a realistic street while cars approach, yield or drive past, and we can vary one thing at a time: the vehicle's behaviour, the signals it shows, the sounds it makes and who else is standing nearby.</p>
+      <p>Participants wear a Meta Quest 3 headset in a street scene built in Unity, and hold a controller trigger whenever they feel it would be unsafe to cross. Recording the trigger and head movements 50 times per second shows exactly when, and for how long, people feel unsafe.</p>
+    </div>
+    <div class="vr-gallery">
+      <figure class="vr-main">
+        <img src="{{ site.baseurl }}/images/research/vr_street_scene.jpg" alt="Virtual street with two pedestrians at the kerb and an approaching automated car" id="vr-main-img">
+        <figcaption id="vr-main-cap">The virtual street: two pedestrians wait at the kerb as an automated car approaches.</figcaption>
+      </figure>
+      <div class="vr-thumbs" role="tablist" aria-label="VR images">
+        <button type="button" class="active" data-src="{{ site.baseurl }}/images/research/vr_street_scene.jpg" data-cap="The virtual street: two pedestrians wait at the kerb as an automated car approaches." aria-label="Virtual street scene"><img src="{{ site.baseurl }}/images/research/vr_street_scene.jpg" alt=""></button>
+        <button type="button" data-src="{{ site.baseurl }}/images/research/vr_ehmi.jpg" data-cap="The eHMI: a steady cyan light bar while driving (left) and an inward wiping animation when the car yields (right)." aria-label="eHMI light bar"><img src="{{ site.baseurl }}/images/research/vr_ehmi.jpg" alt=""></button>
+        <button type="button" data-src="{{ site.baseurl }}/images/research/vr_lab.jpg" data-cap="A participant in the VR lab at TU Eindhoven, with the street scene on the laptop." aria-label="VR lab"><img src="{{ site.baseurl }}/images/research/vr_lab.jpg" alt=""></button>
+        <button type="button" data-src="{{ site.baseurl }}/images/research/vr_listening_booth.jpg" data-cap="Rating electric-vehicle sounds in VR inside an acoustically treated booth." aria-label="Listening booth"><img src="{{ site.baseurl }}/images/research/vr_listening_booth.jpg" alt=""></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="vr-studies">
+    <article class="vr-study">
+      <h3>When you are not the only pedestrian</h3>
+      <p>Most studies place a single pedestrian in front of an automated vehicle, but real kerbs are shared. Fifty participants stood next to a virtual pedestrian, 2 to 10&nbsp;m away, in front of or behind them, while the car yielded or not and showed a light-bar eHMI or nothing.</p>
+      <ul class="vr-findings">
+        <li><strong>39–53 percentage points</strong> less time judged unsafe when the car yielded: its motion was by far the strongest cue.</li>
+        <li><strong>9 percentage points</strong> less time judged unsafe with the eHMI, but only when the participant was first in the car's path.</li>
+        <li>A companion study with <strong>50 more participants</strong> showed that a fixed trial order left these conclusions unchanged, but made ratings drift over the session.</li>
+      </ul>
+      <div class="talk-links">
+        <a class="talk-link" href="{{ site.baseurl }}/publications/alam2026multiped.html"><i class="fa fa-file-text-o"></i> Crossing-risk paper</a>
+        <a class="talk-link" href="{{ site.baseurl }}/publications/alam2026learning.html"><i class="fa fa-file-text-o"></i> Trial-order paper</a>
+        <a class="talk-link" href="https://github.com/bazilinskyy/multiped" target="_blank"><i class="fa fa-github"></i> Code</a>
+      </div>
+    </article>
+    <article class="vr-study">
+      <h3>How should a quiet electric car sound?</h3>
+      <p>Electric vehicles are hard to hear, so regulations require them to emit an exterior sound, which adds to urban noise. In 15 VR scenarios, a car passed in front of participants while playing pure, intermittent or complex tones, compared with a diesel engine and tyre noise alone.</p>
+      <ul class="vr-findings">
+        <li>Participants rated each sound's <strong>annoyance, noticeability and informativeness</strong>, and used the trigger to show when they would cross.</li>
+        <li><strong>Psychoacoustic metrics</strong> predicted annoyance better than conventional sound levels.</li>
+        <li>The results point to EV sounds that are <strong>easy to notice without adding noise pollution</strong>.</li>
+      </ul>
+      <div class="talk-links">
+        <a class="talk-link" href="{{ site.baseurl }}/publications/bazilinskyy2025a.html"><i class="fa fa-file-text-o"></i> Internoise 2025</a>
+        <a class="talk-link" href="{{ site.baseurl }}/publications/bazilinskyy2025sound.html"><i class="fa fa-file-text-o"></i> Euronoise 2025</a>
+        <a class="talk-link" href="https://github.com/Shaadalam9/sound-ev" target="_blank"><i class="fa fa-github"></i> Code</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- LLMs -->
+<section class="research-block research-split" id="llm">
+  <video class="llm-anim" autoplay muted loop playsinline preload="metadata" poster="{{ site.baseurl }}/publications/alam2025GPT.jpg" aria-label="Animation of characters wearing t-shirts branded with different large language models, waving">
+    <source src="{{ site.baseurl }}/images/research/alam2025GPT.mp4" type="video/mp4">
+    <img src="{{ site.baseurl }}/images/research/alam2025GPT.gif" alt="Animation of characters wearing t-shirts branded with different large language models">
+  </video>
+  <div>
+    <h2>Do we need human participants for human factors research?</h2>
+    <p>The logical next step is to ask whether we even need human participants to conduct (basic) human factors research. Some hypotheses must be tested in a tightly controlled environment with expensive eye trackers. But some research questions might be answered through the "wisdom of humanity up to a certain point in time", which is arguably what a large language model is.</p>
+    <p>In <a href="https://doi.org/10.4121/dfbe6de4-d559-49cd-a7c6-9bebe5d43d50">this study</a>, we used the GPT-4V vision-language model to compare LLM-based assessments of risk with findings from a <a href="https://doi.org/10.1016/j.trf.2023.01.014">crowdsourced study</a> with 1,378 participants. Population-level human risk could be predicted with AI with a high degree of accuracy. We also <a href="{{ site.baseurl }}/publications/alam2025GPT.html">explored</a> how 11 LLMs evaluate external human-machine interfaces (eHMIs) on automated vehicles.</p>
+  </div>
+</section>
+
+<!-- Ships -->
+<section class="research-block" id="ships">
+  <div class="research-split-flip">
+    <div>
+      <h2>Autonomous ship control with deep RL and maritime expertise</h2>
+      <p>My master's research brings together classic maritime control and modern AI. Autopilots based on PID or PD control and line-of-sight (LOS) guidance have navigated ships safely for decades, and deep reinforcement learning (DRL) promises controllers that adapt and optimise themselves.</p>
+      <p>The central challenge of DRL for vessels is the amount of training data and computing time it needs. We "fast-track" training by first letting the agent learn from traditional controllers through behavioural cloning, then letting it explore on its own. Validated in simulation and with a scaled model of the benchmark KCS container ship, the DRL agents followed paths effectively, converged faster and stayed safer in strong winds and other challenging conditions.</p>
+      <p>Read more in <a href="https://doi.org/10.1016/j.oceaneng.2023.113937"><em>Ocean Engineering</em></a> and the <a href="https://doi.org/10.1080/20464177.2024.2367276"><em>Journal of Marine Engineering &amp; Technology</em></a>.</p>
+    </div>
+    <figure class="research-video">
+      <div class="video-frame">
+        <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/qmuS_ZRelwc?playlist=qmuS_ZRelwc&loop=1&autoplay=1&mute=1&rel=0" title="DQN controller for an autonomous ship" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <figcaption>A DRL (DQN) controller steering an autonomous ship.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- Code & data: built from the code/suppmat fields of the papers -->
+{% assign pubs_sorted = site.publications | where_exp: "p", "p.title != ''" | sort: "year" | reverse %}
+{% assign n_open = 0 %}{% assign n_data = 0 %}
+{% for p in pubs_sorted %}{% if p.code or p.suppmat %}{% assign n_open = n_open | plus: 1 %}{% endif %}{% if p.suppmat %}{% assign n_data = n_data | plus: 1 %}{% endif %}{% endfor %}
+<section class="research-block" id="code">
+  <h2>Code &amp; data</h2>
+  <p>I share the code, analysis and data behind my papers, so others can check, reuse and build on them. {{ n_open }} papers come with open code or data, {{ n_data }} of them with an open dataset.</p>
+  <div class="code-grid">
+    {% for p in pubs_sorted %}{% if p.year %}{% if p.code or p.suppmat %}{% include code-card.html p=p %}{% endif %}{% endif %}{% endfor %}
+    {% for p in pubs_sorted %}{% unless p.year %}{% if p.code or p.suppmat %}{% include code-card.html p=p %}{% endif %}{% endunless %}{% endfor %}
+  </div>
+</section>
+
+<script>
+(function () {
+  // Chart tabs
+  var tabs = document.querySelectorAll('.fig-tabs [data-fig]'), panels = document.querySelectorAll('.fig-panel');
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () {
+      tabs.forEach(function (x) { x.classList.toggle('active', x === t); x.setAttribute('aria-selected', x === t); });
+      panels.forEach(function (p) { p.hidden = p.getAttribute('data-fig') !== t.getAttribute('data-fig'); });
+    });
+  });
+
+  // VR gallery: thumbnails swap the main image
+  var mainImg = document.getElementById('vr-main-img'), mainCap = document.getElementById('vr-main-cap');
+  document.querySelectorAll('.vr-thumbs button').forEach(function (b, _, all) {
+    b.addEventListener('click', function () {
+      all.forEach(function (x) { x.classList.toggle('active', x === b); });
+      mainImg.src = b.getAttribute('data-src');
+      mainImg.alt = b.getAttribute('aria-label');
+      mainCap.textContent = b.getAttribute('data-cap');
+    });
+  });
+
+  // City search over the nightly CROWD localities (loaded the first time someone uses the box).
+  var box = document.querySelector('.city-search'), q = document.getElementById('city-q'), out = document.getElementById('city-results');
+  var points = null, loading = null, fmt = function (n) { return n.toLocaleString('en-US'); };
+  function load() {
+    if (!loading) loading = fetch(box.getAttribute('data-src')).then(function (r) { return r.json(); }).then(function (d) {
+      points = d.points.map(function (p) { return { name: p[6], h: p[2], videos: p[3], video: p[7], start: p[8] }; });
+      document.querySelectorAll('[data-crowd]').forEach(function (el) {
+        var v = d[el.getAttribute('data-crowd')];
+        if (typeof v === 'number') el.textContent = fmt(v);
+      });
+    });
+    return loading;
+  }
+  function search() {
+    var term = q.value.trim().toLowerCase();
+    if (term.length < 2) { out.innerHTML = ''; return; }
+    if (!points) out.innerHTML = '<li class="city-none">Loading cities…</li>';
+    load().then(function () {
+      var hits = points.filter(function (p) { return p.name.toLowerCase().indexOf(term) >= 0; })
+        .sort(function (a, b) { return b.h - a.h; }).slice(0, 8);
+      out.innerHTML = '';
+      if (!hits.length) { out.innerHTML = '<li class="city-none">Not in the dataset yet.</li>'; return; }
+      hits.forEach(function (p) {
+        var li = document.createElement('li');
+        var name = document.createElement('strong'); name.textContent = p.name;
+        var meta = document.createElement('span'); meta.textContent = fmt(p.h) + ' h of footage · ' + fmt(p.videos) + ' video' + (p.videos === 1 ? '' : 's');
+        li.append(name, meta);
+        if (p.video) {
+          var a = document.createElement('a');
+          a.href = 'https://www.youtube.com/watch?v=' + encodeURIComponent(p.video) + '&t=' + p.start + 's';
+          a.target = '_blank'; a.rel = 'noopener'; a.innerHTML = '<i class="fa fa-play-circle"></i> Watch';
+          li.append(a);
+        }
+        out.append(li);
+      });
+    }).catch(function () { out.innerHTML = '<li class="city-none">The city list could not be loaded right now.</li>'; });
+  }
+  q.addEventListener('focus', load);
+  q.addEventListener('input', search);
+})();
+</script>

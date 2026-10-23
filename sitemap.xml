@@ -1,0 +1,13 @@
+---
+layout: null
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% for p in site.pages %}{% unless p.sitemap == false %}{% assign last = p.url | slice: -1 %}{% if p.url contains '.html' or last == '/' %}{% unless p.url contains '/css/' or p.url contains '404' %}
+  <url><loc>{{ site.public_url }}{{ p.url }}</loc></url>{% endunless %}{% endif %}{% endunless %}{% endfor %}
+{% for d in site.publications %}{% if d.title != '' %}
+  <url><loc>{{ site.public_url }}{{ d.url }}</loc></url>{% endif %}{% endfor %}
+{% for d in site.courses %}
+  <url><loc>{{ site.public_url }}{{ d.url }}</loc></url>{% endfor %}
+</urlset>

@@ -1,0 +1,8 @@
+{% assign m = include.member %}
+{% if m.email %}<a href="mailto:{{ m.email }}" aria-label="Email" title="Email"><i class="fa fa-envelope"></i></a>{% endif %}
+{% if m.scholar %}<a href="{{ m.scholar }}" target="_blank" aria-label="Google Scholar" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>{% endif %}
+{% if m.github %}<a href="{{ m.github }}" target="_blank" aria-label="GitHub" title="GitHub"><i class="fa fa-github"></i></a>{% endif %}
+{% if m.linkedin %}<a href="{{ m.linkedin }}" target="_blank" aria-label="LinkedIn" title="LinkedIn"><i class="fa fa-linkedin"></i></a>{% endif %}
+{% if m.orcid %}<a href="{{ m.orcid }}" target="_blank" aria-label="ORCID" title="ORCID"><i class="ai ai-orcid"></i></a>{% endif %}
+{% if m.researchgate %}<a href="{{ m.researchgate }}" target="_blank" aria-label="ResearchGate" title="ResearchGate"><i class="ai ai-researchgate"></i></a>{% endif %}
+{% if m.cv %}<a href="{{ m.cv }}" target="_blank" aria-label="CV" title="CV"><i class="ai ai-cv"></i></a>{% endif %}

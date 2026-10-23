@@ -1,0 +1,119 @@
+---
+title: "About"
+layout: gridlay
+permalink: /about/
+---
+{% assign me = site.data.pi[0] %}
+
+<section class="profile">
+  <img class="profile-photo" src="{{ site.baseurl }}/images/team/{{ me.photo-large }}" alt="Portrait of {{ me.name }}">
+  <div>
+    <h1>{{ me.name }}</h1>
+    <p class="hero-roles">AI Engineer at <a href="https://kpmg.com/nl/en.html">KPMG Netherlands</a> &middot; PhD researcher at <a href="https://www.tue.nl">TU Eindhoven</a></p>
+    <div class="hero-cta">
+      {% if me.cv %}<a class="btn-cta btn-cta-primary" href="{{ me.cv }}" target="_blank"><i class="fa fa-file-text-o"></i> Download CV</a>{% endif %}
+      <a class="btn-cta" href="mailto:{{ me.email }}"><i class="fa fa-envelope-o"></i> {{ me.email }}</a>
+    </div>
+    <p class="hero-social">{% include social-links.html member=me %}</p>
+  </div>
+</section>
+
+<section class="about-block">
+  <div class="section-head">
+    <h2>Short biography</h2>
+    <button type="button" class="btn-cta btn-copy-bio" data-copy="#bio-text"><i class="fa fa-clipboard"></i> Copy bio</button>
+  </div>
+  <div class="short-bio" id="bio-text">
+    <p>Md Shadab Alam is an AI Engineer at KPMG Netherlands and a PhD researcher at the Department of Industrial Design, Eindhoven University of Technology (TU/e). Shadab's research uses computer vision and machine learning to understand how pedestrians and other road users behave in real-world traffic around the globe. A central part of this work is <a href="https://github.com/crowd-dataset/crowd">CROWD</a>, a dataset of over 35,000 hours of dashcam footage from 238 countries and territories. Shadab also explores how large language models and generative AI can support human factors research for automated vehicles.</p>
+    <p>Shadab holds an MSc in Robotics and AI from the Indian Institute of Technology Madras, with a thesis on deep reinforcement learning controllers for autonomous ships, and a B.Tech in Mechanical Engineering from Jamia Millia Islamia. In 2026 Shadab was a visiting researcher in computer vision and machine learning at EPFL. Shadab has also applied machine learning in industry, at Nikah Forever and Guinea Motors. The research has appeared in venues such as AutoUI, <em>Ocean Engineering</em> and <em>Machine Vision and Applications</em>. Shadab served as web chair of IEEE RO-MAN 2025 and reviews for NeurIPS, IEEE RO-MAN and AutoUI.</p>
+  </div>
+  <p class="bio-note">Feel free to use this bio for talks, events and publications.</p>
+</section>
+
+<div class="about-columns">
+  <section class="about-block card">
+    <h2>Journey</h2>
+    <ol class="timeline">
+      {% for i in (1..me.number_educ) %}{% capture key %}education{{ i }}{% endcapture %}
+      <li>{{ me[key] }}</li>
+      {% endfor %}
+    </ol>
+  </section>
+
+  <section class="about-block card">
+    <h2>Service</h2>
+    <ul class="plain-list">
+      <li>Web chair, <a href="https://www.ro-man2025.org/">IEEE RO-MAN 2025</a>, Eindhoven</li>
+      <li>Placement coordinator, IIT Madras</li>
+    </ul>
+    <h3>Reviewer for</h3>
+    <div class="chips">
+      <a class="chip" href="https://neurips.cc/">NeurIPS</a>
+      <a class="chip" href="https://ro-man2026.org/">IEEE RO-MAN</a>
+      <a class="chip" href="https://www.auto-ui.org/">AutoUI</a>
+      <a class="chip" href="https://www.sciencedirect.com/journal/ocean-engineering">Ocean Engineering</a>
+      <a class="chip" href="https://link.springer.com/journal/10846">J. Intelligent &amp; Robotic Systems</a>
+      <a class="chip" href="https://www.sciencedirect.com/journal/engineering-applications-of-artificial-intelligence">Eng. Applications of AI</a>
+    </div>
+    {% if site.data.research_visits %}
+    <h3>Research visits</h3>
+    <ul class="plain-list">
+      {% for visit in site.data.research_visits %}
+      <li>{% if visit.institution_url %}<a href="{{ visit.institution_url }}">{{ visit.institution }}</a>{% else %}{{ visit.institution }}{% endif %}{% if visit.location %}, {{ visit.location }}{% endif %}{% if visit.period %} <small>({{ visit.period }})</small>{% endif %}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </section>
+</div>
+
+<div class="about-columns">
+  {% if site.data.awards %}
+  <section class="about-block card">
+    <h2>Awards</h2>
+    <ul class="honours">
+      {% for h in site.data.awards %}
+      <li><span class="honour-year">{{ h.year }}</span><span>{% if h.name_url %}<a href="{{ h.name_url }}">{{ h.name }}</a>{% else %}{{ h.name }}{% endif %}<br><small>{{ h.organisation }}</small></span></li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if site.data.grants %}
+  <section class="about-block card">
+    <h2>Grants</h2>
+    <ul class="honours">
+      {% for h in site.data.grants %}
+      <li><span class="honour-year">{{ h.year }}</span><span>{% if h.name_url %}<a href="{{ h.name_url }}">{{ h.name }}</a>{% else %}{{ h.name }}{% endif %}<br><small>{{ h.organisation }}</small></span></li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+</div>
+
+{% if site.data.collaborators %}
+<section class="about-block">
+  <h2>Collaborators</h2>
+  <div class="collab-grid">
+    {% for c in site.data.collaborators %}
+    <div class="collab">
+      <strong>{% if c.name_url %}<a href="{{ c.name_url }}">{{ c.name }}</a>{% else %}{{ c.name }}{% endif %}</strong>
+      <small>{{ c.field }}</small>
+      <small>{% if c.institution_url %}<a href="{{ c.institution_url }}">{{ c.institution }}</a>{% else %}{{ c.institution }}{% endif %}</small>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<script>
+document.querySelectorAll('.btn-copy-bio').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var text = document.querySelector(btn.getAttribute('data-copy')).innerText.trim();
+    navigator.clipboard.writeText(text).then(function () {
+      var old = btn.innerHTML;
+      btn.textContent = 'Copied';
+      setTimeout(function () { btn.innerHTML = old; }, 1500);
+    });
+  });
+});
+</script>

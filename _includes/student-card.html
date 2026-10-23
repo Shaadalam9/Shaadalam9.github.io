@@ -1,0 +1,23 @@
+{% comment %}
+  One supervision project. Students on the same project (same level, year and title) share a card.
+  Usage: {% include student-card.html group=g level="MSc" %}
+{% endcomment %}
+{% assign first = include.group.items | first %}
+{% assign status = first.status | default: "completed" %}
+{% if status == "ongoing" %}{% assign status = "inprogress" %}{% endif %}
+{% assign paper = nil %}
+{% if first.paper %}{% assign paper = site.publications | where_exp: "p", "p.pdf == first.paper" | first %}{% endif %}
+<article class="student-card" data-level="{{ include.level | downcase }}" data-status="{{ status }}">
+  <div class="student-meta">
+    <span class="student-level">{{ include.level }}</span>
+    <span class="student-year">{% if first.period %}{{ first.period }}{% else %}{{ first.year }}{% endif %}</span>
+    {% if status == "inprogress" %}<span class="student-status is-live">In progress</span>{% else %}<span class="student-status">Completed</span>{% endif %}
+    {% if paper %}<span class="student-status is-paper">{% if paper.year %}Published{% else %}Paper in preparation{% endif %}</span>{% endif %}
+  </div>
+  <h3>{% if first.project and first.project != "" %}{{ first.project }}{% else %}Project to be announced{% endif %}</h3>
+  <p class="student-names">
+    {% for s in include.group.items %}{% if s.name_url and s.name_url != "" %}<a href="{{ s.name_url }}" target="_blank">{{ s.name | strip }}</a>{% else %}{{ s.name | strip }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}
+  </p>
+  {% if first.comment %}<p class="student-note">{{ first.comment }}</p>{% endif %}
+  {% if paper %}<a class="talk-link" href="{{ paper.url | relative_url }}"><i class="fa fa-file-text-o"></i> Read the paper</a>{% endif %}
+</article>

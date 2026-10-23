@@ -1,6 +1,5 @@
 ---
 layout: publication
-sitemap: false
 title: "Enhancing driver experience in SAE level 3 automated vehicles through multimodal and emotion-aware in-vehicle agents"
 authors: Zeng, X., Alam, M. S., Bazilinskyy, P.
 pdf: zeng2026enhancing

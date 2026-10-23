@@ -1,9 +1,10 @@
 - name: Christian Janssen
   name_url: https://www.linkedin.com/in/christian-janssen-783156288
-  project: Dynamic external Human-Machine Interface for pedestrians
+  project: "Learning a simple directional eHMI: A VR study of AV-pedestrian interaction"
   project_url:
+  paper: janssen2026learning
   year: 2025
-  status: inprogress
+  status: completed
   comment: Co-supervision with IE&IS department
 
 - name: Alexandra van Dijk
@@ -17,6 +18,7 @@
   name_url: https://www.linkedin.com/in/xingjian-zeng-596a29213
   project: Enhancing Driver Experience in SAE Level 3 Automated Vehicles through Multimodal and Emotion-aware In-vehicle Agents
   project_url: https://bazilinskyy.github.io/publications/zeng2025like
+  paper: zeng2026enhancing
   year: 2024
   status: completed
   comment: FMP project within <a href="https://mobility-squad.com" target="_blank">Future Mobility squad</a>

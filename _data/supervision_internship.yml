@@ -1,15 +1,17 @@
-- name: Brileena Benny 
+- name: Brileena Benny
   name_url: https://www.linkedin.com/in/brileena-benny-8b9038366/
-  project:
+  project: "TraffCOCO: A Scalable Framework and Dataset for Traffic Scene Object Detection"
   project_url:
+  period: June–September 2026
   year: 2026
-  status: ongoing
-  # comment: <a href="https://www.universiteitleiden.nl" target="_blank">Leiden University</a> student placement at TU/e
+  status: completed
+  paper: alam2026traffcoco
 
 - name: Priyanshu Singh 
   name_url: https://www.linkedin.com/in/priyanshu-singh-45572b304
   project: Survey of illumination domain transfer
   project_url: https://shaadalam9.github.io/publications/alam2026IDT
+  paper: alam2026IDT
   year: 2026
   status: completed
   comment: <a href="https://www.bcrec.ac.in/" target="_blank" rel="noopener noreferrer">Dr BC Roy Engineering College</a>
@@ -18,6 +20,7 @@
   name_url: https://www.linkedin.com/in/margaridaff
   project: Vibe coding a driving simulator
   project_url: https://shaadalam9.github.io/publications/ferreira2025
+  paper: ferreira2025
   year: 2025
   status: completed
   comment: <a href="https://www.universiteitleiden.nl" target="_blank">Leiden University</a> student placement at TU/e

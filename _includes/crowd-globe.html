@@ -1,0 +1,223 @@
+{% comment %}
+  Interactive globe of the CROWD dataset localities.
+  Adapted from Pavlo Bazilinskyy's website (github.com/bazilinskyy/bazilinskyy.github.io, _includes/crowd-globe.html).
+  The data is the nightly crowd-globe.json published on his site (site.data.crowd.globe_data).
+  Once it loads, every element with data-crowd="localities|countries|hours|videos" gets the live number.
+{% endcomment %}
+<style>
+#crowd-globe { --sea:#e3ecef; --land:#ffffff; --border:#cfd8dc; --grat:rgba(15,23,42,.06); --dot:#2f69a8; --recent:#a67c1a; --day:#b4532a;
+  position:relative; text-align:center }
+[data-theme="dark"] #crowd-globe { --sea:#1a2830; --land:#2b2722; --border:#3d362e; --grat:rgba(255,255,255,.05); --dot:#6f9fd8; --recent:#e3b341; --day:#e07a4f; }
+#crowd-globe canvas { display:block; margin:0 auto; cursor:grab; touch-action:none; max-width:100% }
+#crowd-globe canvas:active { cursor:grabbing }
+#crowd-globe-tip { position:fixed; pointer-events:none; display:none; background:var(--surface-2); color:var(--heading); border:1px solid var(--border);
+  border-radius:8px; padding:6px 9px; font-size:12px; line-height:1.45; text-align:left; box-shadow:0 6px 20px rgba(0,0,0,.4); max-width:240px; z-index:1100 }
+#crowd-globe-tip .r { color:var(--recent) } #crowd-globe-tip .m { opacity:.7 } #crowd-globe-tip .d { color:var(--day) }
+#crowd-globe-leg { display:flex; flex-wrap:wrap; justify-content:center; gap:4px 14px; font-size:12px; color:var(--muted); margin-top:10px }
+#crowd-globe-leg i { display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:5px }
+#crowd-globe-wrap { position:relative; display:inline-block }
+#crowd-globe-ctl { position:absolute; left:50%; bottom:6%; transform:translateX(-50%); display:flex; gap:6px }
+#crowd-globe-ctl button { padding:5px 14px; border-radius:999px; font-size:13px; font-weight:600; line-height:1.4; color:var(--on-accent);
+  background:var(--accent); border:0; cursor:pointer; white-space:nowrap; box-shadow:0 6px 18px rgba(0,0,0,.35) }
+#crowd-globe-ctl button:hover, #crowd-globe-ctl button:focus-visible { filter:brightness(1.1) }
+#crowd-globe-ctl button[hidden] { display:none }
+#crowd-globe-ctl #crowd-globe-close { padding:5px 11px; background:var(--surface-2); color:var(--heading); border:1px solid var(--border) }
+#crowd-globe-video { margin:0 auto 10px }
+#crowd-globe-video iframe { display:block; width:100%; aspect-ratio:16/9; border:0; border-radius:12px }
+#crowd-globe-video div { font-size:13px; margin-top:6px; color:var(--muted) }
+#crowd-globe-date { font-size:11px; color:var(--muted); opacity:.8; margin-top:4px }
+</style>
+<div id="crowd-globe" data-src="{{ site.data.crowd.globe_data }}">
+  <div id="crowd-globe-video"></div>
+  <div id="crowd-globe-wrap">
+    <canvas aria-label="Globe with the localities of the CROWD dataset" role="img"></canvas>
+    <div id="crowd-globe-ctl">
+      <button id="crowd-globe-go" type="button" hidden>Take me somewhere</button>
+      <button id="crowd-globe-close" type="button" hidden title="Close the video" aria-label="Close the video">×</button>
+    </div>
+  </div>
+  <div id="crowd-globe-tip"></div>
+  <div id="crowd-globe-leg"></div>
+  <div id="crowd-globe-date"></div>
+</div>
+<script>
+(function () {
+  const box = document.getElementById('crowd-globe'), cv = box.querySelector('canvas'), ctx = cv.getContext('2d');
+  const tip = document.getElementById('crowd-globe-tip'), FPS = 20, SPEED = 6;  // frames per second, degrees per second
+  const css = n => getComputedStyle(box).getPropertyValue(n).trim(), fmt = n => n.toLocaleString('en-US');
+  const videos = n => `${fmt(n)} video${n === 1 ? '' : 's'}`;
+  let size, R, proj, path, land, borders, tiers = [[], [], []], data, shown = [], rot = [-10, -22], hover = false, held = 0, lastT = 0, visible = false, running = false;
+  let fly = null, picked = null;  // the flight to a random place and that place
+
+  function setup() {
+    size = Math.min(box.clientWidth, 440); R = size / 2 - 2;
+    const dpr = devicePixelRatio || 1;
+    cv.width = cv.height = Math.round(size * dpr); cv.style.width = cv.style.height = size + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    proj = d3.geoOrthographic().scale(R).translate([size / 2, size / 2]).clipAngle(90).precision(1.5);
+    path = d3.geoPath(proj, ctx);
+  }
+
+  function draw(t = performance.now()) {
+    proj.rotate(rot);
+    ctx.clearRect(0, 0, size, size);
+    ctx.beginPath(); path({type: 'Sphere'}); ctx.fillStyle = css('--sea'); ctx.fill();
+    ctx.beginPath(); path(d3.geoGraticule10()); ctx.strokeStyle = css('--grat'); ctx.lineWidth = 0.6; ctx.stroke();
+    if (land) {
+      ctx.beginPath(); path(land); ctx.fillStyle = css('--land'); ctx.fill();
+      ctx.beginPath(); path(borders); ctx.strokeStyle = css('--border'); ctx.lineWidth = 0.5; ctx.stroke();
+    }
+    // the points by hand (orthographic, centre at -rot): a few multiplications each instead of d3's projection
+    const c0 = size / 2, lon0 = -rot[0] * Math.PI / 180, lat0 = -rot[1] * Math.PI / 180, s0 = Math.sin(lat0), k0 = Math.cos(lat0);
+    const pulse = (t / 1600) % 1;
+    const place = p => {
+      const dl = p.lon - lon0, cd = Math.cos(dl);
+      if (s0 * p.s + k0 * p.k * cd < 0.02) return null;  // on the far side
+      return [c0 + R * p.k * Math.sin(dl), c0 - R * (k0 * p.s - s0 * p.k * cd)];
+    };
+    shown = [];
+    tiers.forEach((list, tier) => {  // older first (small squares), then the last month, then the last week on top
+      ctx.beginPath();
+      for (const p of list) {
+        const xy = place(p);
+        if (!xy) continue;
+        const [x, y] = xy;
+        if (tier) { const r = 2.6 + tier * 0.5; ctx.moveTo(x + r, y); ctx.arc(x, y, r, 0, 2 * Math.PI); }
+        else ctx.rect(x - p.r, y - p.r, 2 * p.r, 2 * p.r);
+        shown.push([x, y, p]);
+      }
+      ctx.globalAlpha = tier ? 1 : 0.6;
+      ctx.fillStyle = css(['--dot', '--recent', '--day'][tier]); ctx.fill();
+      if (tier) { ctx.lineWidth = 0.8; ctx.strokeStyle = css('--sea'); ctx.stroke(); }
+      ctx.globalAlpha = 1;
+    });
+    ctx.beginPath();  // the last week's places pulse
+    for (const p of tiers[2]) {
+      const xy = place(p);
+      if (!xy) continue;
+      const r = 3.1 + 9 * pulse;
+      ctx.moveTo(xy[0] + r, xy[1]); ctx.arc(xy[0], xy[1], r, 0, 2 * Math.PI);
+    }
+    ctx.globalAlpha = 0.7 * (1 - pulse); ctx.strokeStyle = css('--day'); ctx.lineWidth = 1.2; ctx.stroke(); ctx.globalAlpha = 1;
+    const xy = picked && place(picked);  // the place "Take me somewhere" chose
+    if (xy) {
+      ctx.beginPath(); ctx.arc(xy[0], xy[1], 7, 0, 2 * Math.PI);
+      ctx.moveTo(xy[0] - 12, xy[1]); ctx.lineTo(xy[0] - 4, xy[1]); ctx.moveTo(xy[0] + 4, xy[1]); ctx.lineTo(xy[0] + 12, xy[1]);
+      ctx.moveTo(xy[0], xy[1] - 12); ctx.lineTo(xy[0], xy[1] - 4); ctx.moveTo(xy[0], xy[1] + 4); ctx.lineTo(xy[0], xy[1] + 12);
+      ctx.strokeStyle = css('--day'); ctx.lineWidth = 2; ctx.stroke();
+    }
+  }
+
+  function frame(t) {  // turns only while on screen
+    if (!visible || document.hidden) { running = false; return; }
+    requestAnimationFrame(frame);
+    if (t - lastT < 1000 / FPS) return;
+    if (fly) {  // eased turn to the chosen place, then it stays there a while
+      const k = Math.min(1, (t - fly.t0) / 1500), e = k < 0.5 ? 2 * k * k : 1 - (-2 * k + 2) ** 2 / 2;
+      rot = [fly.from[0] + e * fly.d[0], fly.from[1] + e * fly.d[1]];
+      if (k === 1) { fly = null; held = t + 20000; }
+    } else if (!hover && t > held) rot[0] += SPEED * Math.min(t - lastT, 250) / 1000;
+    lastT = t;
+    draw(t);
+  }
+  function start() {
+    if (running || !visible || document.hidden || !proj) return;
+    running = true; lastT = performance.now(); requestAnimationFrame(frame);
+  }
+
+  // Live numbers for the rest of the page.
+  function fillNumbers(d) {
+    document.querySelectorAll('[data-crowd]').forEach(el => {
+      const v = d[el.getAttribute('data-crowd')];
+      if (typeof v === 'number') { el.textContent = fmt(v); el.removeAttribute('data-count'); }
+    });
+  }
+
+  const script = src => new Promise((ok, fail) => { const s = document.createElement('script'); s.src = src; s.onload = ok; s.onerror = fail; document.head.appendChild(s); });
+  async function init() {
+    await script('https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js');
+    await script('https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js');
+    setup();
+    fetch('https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json').then(r => r.json()).then(w => {
+      land = topojson.feature(w, w.objects.land);
+      borders = topojson.mesh(w, w.objects.countries, (a, b) => a !== b);
+      draw();
+    }).catch(() => {});
+    data = await (await fetch(box.getAttribute('data-src'), {cache: 'no-cache'})).json();
+    fillNumbers(data);
+    for (const [lat, lon, h, videos, month, week, name, video, start] of data.points)
+      tiers[week ? 2 : month ? 1 : 0].push({lon: lon * Math.PI / 180, s: Math.sin(lat * Math.PI / 180),
+        k: Math.cos(lat * Math.PI / 180), r: 0.6 + Math.min(1.9, Math.sqrt(h) / 10), h, videos, month, week, name, video, start, lat, lng: lon});
+    document.getElementById('crowd-globe-leg').innerHTML =
+      `<span><i style="background:var(--day)"></i>last week: +${fmt(data.week)} segments in ${fmt(data.week_places)} places</span>` +
+      `<span><i style="background:var(--recent)"></i>last month: +${fmt(data.month)} in ${fmt(data.month_places)} places</span>` +
+      `<span><i style="background:var(--dot);opacity:.6"></i>all ${fmt(data.localities)} localities (bigger = more footage)</span>`;
+    document.getElementById('crowd-globe-date').textContent = 'Updated every night from the dataset; last update ' +
+      new Date(data.built).toLocaleDateString('en-GB', {day: 'numeric', month: 'long', year: 'numeric'}) + '.';
+    draw(); start();
+    addEventListener('resize', () => { setup(); draw(); });
+    d3.select(cv).call(d3.drag().on('drag', e => {
+      rot[0] += e.dx * 0.4; rot[1] = Math.max(-80, Math.min(80, rot[1] - e.dy * 0.4));
+      held = performance.now() + 4000; fly = null; draw();
+    }));
+    const go = document.getElementById('crowd-globe-go'), all = tiers.flat().filter(p => p.video);
+    go.hidden = false;
+    go.addEventListener('click', () => {  // turn to a random place and play its longest segment
+      picked = all[Math.floor(Math.random() * all.length)];
+      const to = [-picked.lng, Math.max(-60, Math.min(60, -picked.lat))];
+      const d0 = ((to[0] - rot[0]) % 360 + 540) % 360 - 180;  // the short way round
+      fly = {t0: performance.now(), from: rot.slice(), d: [d0, to[1] - rot[1]]};
+      const v = document.getElementById('crowd-globe-video'), id = encodeURIComponent(picked.video);
+      const frame = Object.assign(document.createElement('iframe'), {title: `Dashcam footage from ${picked.name}`, allow: 'autoplay; encrypted-media; picture-in-picture', allowFullscreen: true,
+        src: `https://www.youtube-nocookie.com/embed/${id}?start=${picked.start}&autoplay=1&mute=1&rel=0`});
+      const cap = document.createElement('div'), link = Object.assign(document.createElement('a'), {href: `https://www.youtube.com/watch?v=${id}&t=${picked.start}s`, target: '_blank', textContent: 'open on YouTube'});
+      cap.append(`${picked.name}: ${fmt(picked.h)} h of footage in ${videos(picked.videos)} (`, link, ')');
+      v.replaceChildren(frame, cap);
+      go.textContent = 'Take me somewhere else'; close.hidden = false;
+      start();
+    });
+    const close = document.getElementById('crowd-globe-close');
+    close.addEventListener('click', () => {  // back to how it was before: no video, no marker, the globe turning
+      document.getElementById('crowd-globe-video').replaceChildren();
+      picked = null; fly = null; held = 0;
+      go.textContent = 'Take me somewhere'; close.hidden = true;
+      draw(); start();
+    });
+  }
+
+  function nearest(e) {  // the place within 8 px of the pointer; ties: the newer (drawn later)
+    const b = cv.getBoundingClientRect(), mx = e.clientX - b.left, my = e.clientY - b.top;
+    let best = null, bd = 64;
+    for (const [x, y, p] of shown) { const d = (x - mx) ** 2 + (y - my) ** 2; if (d <= bd) { bd = d; best = p; } }
+    return best;
+  }
+  cv.addEventListener('click', e => {  // d3.drag swallows the click that ends a drag
+    const p = nearest(e);
+    if (p && p.video) open(`https://www.youtube.com/watch?v=${encodeURIComponent(p.video)}&t=${p.start}s`, '_blank', 'noopener');
+  });
+  cv.addEventListener('mousemove', e => {
+    const best = nearest(e);
+    hover = true;
+    cv.style.cursor = best && best.video ? 'pointer' : '';
+    if (!best) { tip.style.display = 'none'; return; }
+    const line = (cls, text) => Object.assign(document.createElement('div'), {className: cls, textContent: text});
+    tip.replaceChildren(line('', best.name), line('', `${fmt(best.h)} h of footage in ${videos(best.videos)}`));
+    tip.firstChild.style.fontWeight = 'bold';
+    if (best.month) tip.append(line('r', `+${fmt(best.month)} segments in the last month`));
+    if (best.week) tip.append(line('d', `+${fmt(best.week)} in the last week`));
+    if (best.video) tip.append(line('m', 'Click to watch its footage on YouTube'));
+    tip.style.display = 'block';
+    tip.style.left = Math.min(e.clientX + 12, innerWidth - tip.offsetWidth - 4) + 'px';
+    tip.style.top = Math.min(e.clientY + 12, innerHeight - tip.offsetHeight - 4) + 'px';
+  });
+  cv.addEventListener('mouseleave', () => { hover = false; tip.style.display = 'none'; });
+  document.addEventListener('visibilitychange', start);
+
+  let loading = null;  // the libraries and data load only once the globe is close to the screen
+  new IntersectionObserver(([en]) => {
+    visible = en.isIntersecting;
+    if (visible && !loading) loading = init().catch(e => console.error('crowd globe:', e));
+    start();
+  }, { rootMargin: '400px 0px' }).observe(box);
+})();
+</script>

@@ -1,0 +1,14 @@
+{% comment %} One paper's open code and data. Usage: {% include code-card.html p=paper %} {% endcomment %}
+{% assign p = include.p %}
+{% assign repo = p.code | remove: "https://github.com/" | remove: "http://github.com/" %}
+<article class="code-card">
+  <div class="student-meta">
+    {% if p.year %}<span class="student-year">{{ p.year }}</span>{% else %}<span class="student-status">In preparation</span>{% endif %}
+    {% if p.code contains "github.com" %}<span class="code-repo"><i class="fa fa-github"></i> {{ repo }}</span>{% endif %}
+  </div>
+  <h3><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
+  <div class="talk-links">
+    {% if p.code %}<a class="talk-link" href="{{ p.code }}" target="_blank"><i class="fa fa-code"></i> Code</a>{% endif %}
+    {% if p.suppmat %}<a class="talk-link" href="{{ p.suppmat }}" target="_blank"><i class="fa fa-database"></i> Data</a>{% endif %}
+  </div>
+</article>

@@ -1,12 +1,12 @@
 ---
 layout: publication
-sitemap: false
 title: "Pedestrian crossing behaviour in front of electric vehicles emitting synthetic sounds: A virtual reality experiment"
-authors: Bazilinskyy, P., Alam, M. S., Merino-Martınez, R.
+authors: Bazilinskyy, P., Alam, M. S., Merino-Martínez, R.
 pdf: bazilinskyy2025a
 image: bazilinskyy2025a.jpg
 display: "54th International Institute of Noise Control Engineering (Internoise). São Paulo, Brazil"
 year: 2025
+type: conference
 doi: 10.3397/IN_2025_1076086
 suppmat: https://doi.org/10.4121/629cae37-76e7-4b14-8693-25c96a263b4b
 code: https://github.com/Shaadalam9/sound-ev

@@ -1,0 +1,67 @@
+{% comment %}
+  Compact metrics row: publications per year (from this site's _publications) and citations
+  per year from Google Scholar (_data/scholar.yml, refreshed with scripts/update_scholar.py).
+  Two separate mini charts on purpose: the two measures have different scales.
+{% endcomment %}
+{% assign published = site.publications | where_exp: "p", "p.title != ''" | where_exp: "p", "p.year != nil" %}
+{% assign pub_years = published | group_by: "year" | sort: "name" %}
+{% assign gs = site.data.scholar %}
+<section class="metrics" id="pub-metrics">
+  <div class="metric-tile"><span class="metric-num">{{ published.size }}</span><span class="metric-label">publications</span></div>
+  <div class="metric-tile"><span class="metric-num">{{ gs.citations }}</span><span class="metric-label">citations</span></div>
+  <div class="metric-tile"><span class="metric-num">{{ gs.h_index }}</span><span class="metric-label">h-index</span></div>
+  <figure class="metric-chart">
+    <figcaption>Publications / year</figcaption>
+    <div class="bar-chart" data-color="var(--chart-1)" data-unit="publication"
+      data-values='{ {% for g in pub_years %}"{{ g.name }}": {{ g.size }}{% unless forloop.last %}, {% endunless %}{% endfor %} }'></div>
+  </figure>
+  <figure class="metric-chart">
+    <figcaption>Citations / year</figcaption>
+    <div class="bar-chart" data-color="var(--chart-2)" data-unit="citation"
+      data-values='{ {% for c in gs.citations_per_year %}"{{ c[0] }}": {{ c[1] }}{% unless forloop.last %}, {% endunless %}{% endfor %} }'></div>
+  </figure>
+</section>
+<p class="metric-source">Citations and h-index from <a href="{{ site.data.pi[0].scholar }}">Google Scholar</a>, as of {{ gs.updated | date: "%-d %B %Y" }}.</p>
+<div id="metric-tip" class="metric-tip" role="status"></div>
+
+<script>
+(function () {
+  var box = document.getElementById('pub-metrics'), tip = document.getElementById('metric-tip');
+  var thisYear = new Date().getFullYear();
+
+  // Mini bar chart: one series, baseline-anchored bars with rounded tops, year under each bar.
+  box.querySelectorAll('.bar-chart').forEach(function (el) {
+    var data = JSON.parse(el.getAttribute('data-values')), ys = [];
+    var lo = Math.min.apply(null, Object.keys(data).map(Number));
+    for (var y = lo; y <= thisYear; y++) ys.push(y);
+    var max = Math.max.apply(null, ys.map(function (y) { return data[y] || 0; })) || 1;
+    var W = 200, H = 64, padB = 14, padT = 4, gap = 6;
+    var bw = Math.min(26, (W - gap * (ys.length - 1)) / ys.length);
+    var x0 = (W - (bw * ys.length + gap * (ys.length - 1))) / 2;
+    var color = el.getAttribute('data-color'), unit = el.getAttribute('data-unit');
+    var svg = '<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + el.parentNode.querySelector('figcaption').textContent + ': ' +
+      ys.map(function (y) { return y + ' ' + (data[y] || 0); }).join(', ') + '">';
+    svg += '<line x1="0" x2="' + W + '" y1="' + (H - padB) + '" y2="' + (H - padB) + '" class="bar-base"/>';
+    ys.forEach(function (y, i) {
+      var v = data[y] || 0, h = v ? Math.max(2, (H - padB - padT) * v / max) : 0;
+      var x = x0 + i * (bw + gap), top = H - padB - h, r = Math.min(3, h / 2, bw / 2);
+      if (h) svg += '<path d="M' + x + ',' + (H - padB) + 'V' + (top + r) + 'Q' + x + ',' + top + ' ' + (x + r) + ',' + top +
+        'H' + (x + bw - r) + 'Q' + (x + bw) + ',' + top + ' ' + (x + bw) + ',' + (top + r) + 'V' + (H - padB) + 'Z" style="fill:' + color + '"/>';
+      svg += '<text x="' + (x + bw / 2) + '" y="' + (H - 3) + '" class="bar-year">' + String(y).slice(2) + '</text>';
+      svg += '<rect x="' + (x - gap / 2) + '" y="0" width="' + (bw + gap) + '" height="' + H + '" class="bar-hit" data-tip="' +
+        y + ': ' + v + ' ' + unit + (v === 1 ? '' : 's') + '"/>';
+    });
+    el.innerHTML = svg + '</svg>';
+  });
+
+  box.addEventListener('mousemove', function (e) {
+    var t = e.target.getAttribute && e.target.getAttribute('data-tip');
+    if (!t) { tip.style.display = 'none'; return; }
+    tip.textContent = t;
+    tip.style.display = 'block';
+    tip.style.left = Math.min(e.clientX + 12, innerWidth - tip.offsetWidth - 8) + 'px';
+    tip.style.top = (e.clientY + 14) + 'px';
+  });
+  box.addEventListener('mouseleave', function () { tip.style.display = 'none'; });
+})();
+</script>

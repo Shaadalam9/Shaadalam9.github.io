@@ -1,6 +1,5 @@
 ---
 layout: publication
-sitemap: false
 title: ""
 authors:
 pdf: alam2026cycling

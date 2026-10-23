@@ -1,0 +1,20 @@
+# Charts from the CROWD repository shown in "Explore the dataset" on the Research page.
+# file: name in https://github.com/crowd-dataset/crowd/tree/main/figures (without .png/.html)
+- file: map_localities_footage
+  title: Where the footage is
+  caption: Every town and city in the dataset, sized by its hours of footage.
+- file: map_footage_per_capita
+  title: Footage per person
+  caption: Hours of footage per million inhabitants of each country.
+- file: map_pedestrians_per_minute
+  title: Pedestrians per minute
+  caption: How many pedestrians a driving camera sees per minute, by country.
+- file: bar_road_user_mix_continent
+  title: Road users by continent
+  caption: The mix of pedestrians, bicycles, motorcycles, cars, buses and trucks on each continent.
+- file: dumbbell_pedestrians_day_night
+  title: Day and night
+  caption: Pedestrians seen per minute during the day and at night.
+- file: bubble_pedestrian_deaths_vs_pedestrians
+  title: Pedestrians and road deaths
+  caption: Pedestrians seen on the road compared with pedestrian deaths per country.

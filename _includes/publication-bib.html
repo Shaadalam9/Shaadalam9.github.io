@@ -1,0 +1,8 @@
+{% comment %}
+  Collapsible BibTeX box. The entry is fetched from publications/<src>.txt the first time it opens
+  (see js/publications.js). Usage: {% include publication-bib.html id="x" src="x" show=false %}
+{% endcomment %}
+<div class="collapse{% if include.show %} show{% endif %}" id="bib-{{ include.id }}"><div class="well-bib pub-bib">
+  <button type="button" class="pub-copy" aria-label="Copy BibTeX">Copy</button>
+  <pre data-bib-src="{{ site.baseurl }}/publications/{{ include.src }}.txt">Loading…</pre>
+</div></div>

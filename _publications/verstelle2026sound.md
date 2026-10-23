@@ -1,12 +1,12 @@
 ---
 layout: publication
-sitemap: false
 title: "Personalised Electric Vehicle Acoustics with Generative AI: Dynamic Sonification and User Acceptance Study"
 authors: Verstelle, W., Alam, M. S., Bazilinskyy, P.
 pdf: verstelle2026sound
 image: verstelle2026sound.jpg
 display: 18th International Conference on Automotive User Interfaces and Interactive Vehicular Applications (AutoUI). Gothenburg, Sweden
 year: 2026
+type: conference
 doi: 10.1145/3828158.3838227
 suppmat: https://doi.org/10.4121/2cf90f2d-557a-411c-836d-f14d3263e03d
 code: https://github.com/Shaadalam9/llm-ev-sound

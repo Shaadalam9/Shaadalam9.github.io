@@ -1,0 +1,11 @@
+# City Road Observations With Dashcams (CROWD): https://github.com/crowd-dataset/crowd
+# Fallback numbers shown before the live data loads. The home page globe replaces them with the
+# nightly figures published at globe_data (built by github.com/bazilinskyy/bazilinskyy.github.io).
+repo: https://github.com/crowd-dataset/crowd
+paper: https://dl.acm.org/doi/10.1145/3744333.3747827
+kaggle: https://www.kaggle.com/datasets/anonymousauthor123/pedestrian-in-youtubepyt
+globe_data: https://bazilinskyy.github.io/js/crowd-globe.json
+localities: 10287
+countries: 238
+hours: 35661
+videos: 80533

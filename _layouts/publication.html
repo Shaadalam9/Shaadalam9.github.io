@@ -1,11 +1,9 @@
 ---
 layout: gridlay
 ---
-{% assign pdfpresent = false %}
-{% if page.pdf %}
-  {% assign pdfpresent = true %}
-  {% assign pdffile = page.pdf  | append: ".pdf" %}
-{% endif %}
+{% include has-pdf.html name=page.pdf %}
+{% assign pdfpresent = has_pdf %}
+{% assign pdffile = page.pdf | append: ".pdf" %}
 
 <h1> {{ page.title }} </h1>
 <div class="rowl1">
@@ -13,14 +11,14 @@ layout: gridlay
       <img src="{{ site.url }}{{ site.baseurl }}/publications/{{ page.image }}" class="img-responsive" style="border-radius: 5px; width: 280px;" />
       <div style="max-width: 280px">
         {% if pdfpresent == true %}<a href="{{ pdffile }}" target="_blank"><button class="btn-pdf">PDF</button></a>{% endif %}
-        {% if page.doi %}<a href="http://doi.org/{{ page.doi }}" target="_blank"><button class="btn-doi">DOI</button></a> {% endif %}
+        {% if page.doi %}<a href="https://doi.org/{{ page.doi }}" target="_blank"><button class="btn-doi">DOI</button></a> {% endif %}
         {% if page.arxiv %}<a href="https://arxiv.org/abs/{{ page.arxiv }}" target="_blank"><button class="btn-arxiv">ARXIV</button></a> {% endif %}
         {% if page.code %}<a href="{{ page.code }}" target="_blank"><button class="btn-code">CODE</button></a> {% endif %}
         {% if page.suppmat %}<a href="{{ page.suppmat }}" target="_blank"><button class="btn-suppmat">SUPPLEMENT</button></a> {% endif %}
       </div>
     </div>
-    <h4>{{ page.authors }}</h4>
-    <h5><em>{{ page.display }}</em>{% if page.year %} ({{page.year}}){% endif %}</h5>
+    <h4>{% include publication-authors.html authors=page.authors %}</h4>
+    <h5>{% if page.year and page.type %}<span class="pub-type pub-type-{{ page.type }}">{{ site.data.pub_types[page.type] | default: page.type }}</span> {% endif %}<em>{{ page.display }}</em>{% if page.year %} ({{page.year}}){% endif %}</h5>
     {% if page.abstract %}
       <a class="btn-abstract" style="text-decoration:none; color:#ebebeb; hover:#ebebeb; pointer-events: none;" role="button">ABSTRACT</a> {{ page.abstract }}
     {% endif %}
@@ -31,11 +29,12 @@ layout: gridlay
       {{ page.content | markdownify }}
     {% endif %}
 
-    <div class="well-bib">
-     <iframe src='{{site.url}}{{site.baseurl}}/publications/{{page.pdf}}.txt' scrolling="yes" width="100%" height="210" frameborder="0"></iframe>
-    </div>
-
     {% if page.pdf %}
+      {% include publication-bib.html id="page" src=page.pdf show=true %}
+      <script src="{{ site.baseurl }}/js/publications.js"></script>
+    {% endif %}
+
+    {% if pdfpresent %}
       <object data="{{ pdffile }}#view=FitH" width="100%" height="700" type="application/pdf"></object>
     {% endif %} 
 </div>

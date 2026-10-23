@@ -1,0 +1,160 @@
+---
+title: "Talks"
+layout: gridlay
+permalink: /talks/
+---
+{% assign talks = site.data.conference_talks %}
+{% assign roles = site.data.chairing_autoui %}
+{% assign talk_years = talks | group_by: "year" | sort: "name" | reverse %}
+{% assign countries = talks | map: "country" | uniq %}
+
+<h1>Talks</h1>
+<p class="page-lead">Presentations of my research at international conferences, and the events I have helped organise. Hover over a talk to find it on the map, or click a city to see what I presented there.</p>
+
+<div class="talks-filters pub-filters" role="group" aria-label="Filter talks">
+  <button type="button" class="pub-filter active" data-filter="all" aria-pressed="true">All</button>
+  {% for g in talk_years %}<button type="button" class="pub-filter" data-filter="{{ g.name }}" aria-pressed="false">{{ g.name }}</button>{% endfor %}
+  {% if roles %}<button type="button" class="pub-filter" data-filter="organising" aria-pressed="false">Organising</button>{% endif %}
+  <span class="talks-count"><strong>{{ talks.size }}</strong> talks in <strong>{{ countries.size }}</strong> countries</span>
+</div>
+<p class="talks-place" hidden><span></span> <button type="button" class="talks-place-clear" aria-label="Show all places">Show all</button></p>
+
+<div class="talks-layout">
+  <div class="talks-list">
+    {% for g in talk_years %}
+    <section class="talk-year" data-year="{{ g.name }}">
+      <h2 class="talk-year-head">{{ g.name }}</h2>
+      {% for t in g.items %}
+      {% assign paper = site.publications | where_exp: "p", "p.pdf == t.paper" | first %}
+      <article class="talk-card" data-year="{{ t.year }}" data-kind="talk" data-place="{{ t.city }}, {{ t.country }}" data-lat="{{ t.lat }}" data-lng="{{ t.lng }}"{% if t.online %} data-online="1"{% endif %}>
+        <div class="talk-meta">
+          <span class="talk-venue">{{ t.venue }}</span>
+          <span class="talk-where"><i class="fa fa-map-marker"></i> {{ t.city }}, {{ t.country }}</span>
+          {% if t.online %}<span class="talk-online">Online</span>{% endif %}
+        </div>
+        <h3>{{ t.title }}</h3>
+        <p class="talk-authors">{% include publication-authors.html authors=t.authors %}</p>
+        <p class="talk-conf">{{ t.conf }}</p>
+        <div class="talk-links">
+          {% if paper %}<a class="talk-link" href="{{ paper.url | relative_url }}"><i class="fa fa-file-text-o"></i> Paper</a>{% endif %}
+          {% include has-pdf.html name=paper.pdf %}{% if has_pdf %}<a class="talk-link" href="{{ site.baseurl }}/publications/{{ paper.pdf }}.pdf" target="_blank"><i class="fa fa-download"></i> PDF</a>{% endif %}
+          {% if paper.doi %}<a class="talk-link" href="https://doi.org/{{ paper.doi }}" target="_blank">DOI</a>{% endif %}
+          {% if t.slides %}<a class="talk-link" href="{{ t.slides }}" target="_blank"><i class="fa fa-desktop"></i> Slides</a>{% endif %}
+          {% if t.video %}<a class="talk-link" href="{{ t.video }}" target="_blank"><i class="fa fa-play-circle"></i> Video</a>{% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </section>
+    {% endfor %}
+
+    {% if roles %}
+    <section class="talk-year" data-year="organising">
+      <h2 class="talk-year-head">Organising</h2>
+      {% for r in roles %}
+      <article class="talk-card talk-role" data-year="{{ r.year }}" data-kind="organising" data-place="{{ r.location }}" data-lat="{{ r.lat }}" data-lng="{{ r.lng }}">
+        <div class="talk-meta">
+          <span class="talk-venue">{{ r.event }}</span>
+          <span class="talk-where"><i class="fa fa-map-marker"></i> {{ r.location }}</span>
+          <span class="talk-year-tag">{{ r.year }}</span>
+        </div>
+        <h3>{% if r.link %}<a href="{{ r.link }}" target="_blank">{{ r.title }}</a>{% else %}{{ r.title }}{% endif %}</h3>
+      </article>
+      {% endfor %}
+    </section>
+    {% endif %}
+  </div>
+
+  <aside class="talks-map-wrap">
+    <div id="talks-map" aria-label="Map of places where talks were given"></div>
+    <p class="talks-map-note"><span class="dot dot-talk"></span>talk <span class="dot dot-role"></span>organising role</p>
+  </aside>
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap@1.6.0/dist/jsvectormap.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.6.0/dist/jsvectormap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.6.0/dist/maps/world.js"></script>
+<script>
+(function () {
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.talk-card'));
+  var chips = document.querySelectorAll('.talks-filters .pub-filter');
+  var placeBar = document.querySelector('.talks-place');
+  var state = { filter: 'all', place: null };
+
+  // One marker per place; a place with several talks gets one marker.
+  var places = [], index = {};
+  cards.forEach(function (c) {
+    var key = c.getAttribute('data-place');
+    if (!(key in index)) {
+      index[key] = places.length;
+      places.push({ name: key, coords: [parseFloat(c.getAttribute('data-lat')), parseFloat(c.getAttribute('data-lng'))],
+                    role: c.getAttribute('data-kind') === 'organising', n: 0 });
+    }
+    if (c.getAttribute('data-kind') === 'talk') places[index[key]].n++;
+    c.setAttribute('data-marker', index[key]);
+  });
+
+  var css = function (n) { return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); };
+  var map = null;
+  function drawMap() {
+    if (map) { map.destroy(); document.getElementById('talks-map').innerHTML = ''; }
+    map = new jsVectorMap({
+      selector: '#talks-map',
+      map: 'world',
+      backgroundColor: 'transparent',
+      zoomButtons: false,
+      zoomOnScroll: false,
+      regionStyle: { initial: { fill: css('--map-land'), stroke: css('--map-line'), strokeWidth: 0.5 }, hover: { fill: css('--map-land') } },
+      markerStyle: { initial: { r: 6, fill: css('--chart-1'), stroke: css('--map-line'), strokeWidth: 2 }, hover: { r: 8, cursor: 'pointer' } },
+      markers: places.map(function (p) { return { name: p.name, coords: p.coords }; }),
+      onMarkerTooltipShow: function (event, tooltip, i) {
+        var p = places[i];
+        tooltip.text(p.name + (p.n ? ' · ' + p.n + ' talk' + (p.n > 1 ? 's' : '') : ' · organising'), true);
+      },
+      onMarkerClick: function (event, i) { state.place = places[i].name; apply(); }
+    });
+  }
+  drawMap();
+  document.addEventListener('themechange', function () { drawMap(); apply(); });
+  function markerEl(i) { return document.querySelector('#talks-map .jvm-marker[data-index="' + i + '"]'); }
+  // Organising places in gold. A style rule, because the map library rewrites the markers' classes.
+  var roleCss = places.map(function (p, i) { return p.role ? '#talks-map .jvm-marker[data-index="' + i + '"]:not(.is-hot){fill:var(--chart-2)}' : ''; }).join('');
+  if (roleCss) document.head.appendChild(Object.assign(document.createElement('style'), { textContent: roleCss }));
+
+  function apply() {
+    cards.forEach(function (c) {
+      var okFilter = state.filter === 'all' ||
+        (state.filter === 'organising' ? c.getAttribute('data-kind') === 'organising'
+                                       : c.getAttribute('data-kind') === 'talk' && c.getAttribute('data-year') === state.filter);
+      var okPlace = !state.place || c.getAttribute('data-place') === state.place;
+      c.hidden = !(okFilter && okPlace);
+    });
+    document.querySelectorAll('.talk-year').forEach(function (s) {
+      s.hidden = !s.querySelector('.talk-card:not([hidden])');
+    });
+    placeBar.hidden = !state.place;
+    if (state.place) placeBar.querySelector('span').innerHTML = 'Showing <strong></strong>';
+    if (state.place) placeBar.querySelector('strong').textContent = state.place;
+    places.forEach(function (p, i) {
+      var visible = cards.some(function (c) { return !c.hidden && +c.getAttribute('data-marker') === i; });
+      var el = markerEl(i);
+      if (el) el.classList.toggle('is-dim', !visible);
+    });
+  }
+
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      chips.forEach(function (c) { c.classList.toggle('active', c === chip); c.setAttribute('aria-pressed', c === chip); });
+      state.filter = chip.getAttribute('data-filter');
+      apply();
+    });
+  });
+  placeBar.querySelector('button').addEventListener('click', function () { state.place = null; apply(); });
+
+  // Hovering a card lights up its place on the map.
+  cards.forEach(function (c) {
+    c.addEventListener('mouseenter', function () { var el = markerEl(c.getAttribute('data-marker')); if (el) el.classList.add('is-hot'); });
+    c.addEventListener('mouseleave', function () { var el = markerEl(c.getAttribute('data-marker')); if (el) el.classList.remove('is-hot'); });
+  });
+  window.addEventListener('resize', function () { if (map) map.updateSize(); });
+})();
+</script>

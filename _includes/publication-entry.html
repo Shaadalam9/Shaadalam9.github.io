@@ -1,0 +1,31 @@
+{% comment %}
+  One publication in the list. Usage: {% include publication-entry.html publi=publi %}
+{% endcomment %}
+{% assign publi = include.publi %}
+{% assign pid = publi.pdf | default: publi.slug | slugify %}
+{% if publi.year %}{% assign ptype = publi.type | default: "other" %}{% else %}{% assign ptype = "in-prep" %}{% endif %}
+<div class="well-sm publication-entry" data-type="{{ ptype }}">
+<ul class="flex-container">
+<li class="flex-item1">
+  {% if publi.image %}<img src="{{ site.url }}{{ site.baseurl }}/publications/{{ publi.image }}" class="img-responsive" alt="" loading="lazy"/>{% endif %}
+</li>
+<li class="flex-item2">
+  <a href="{{ publi.url | relative_url }}"><strong>{{ publi.title }}</strong></a><br/>
+  {% if publi.authors %}{% include publication-authors.html authors=publi.authors %}<br/>{% endif %}
+  {% if ptype != "in-prep" %}<span class="pub-type pub-type-{{ ptype }}">{{ site.data.pub_types[ptype] | default: ptype }}</span> {% endif %}<em>{{ publi.display }}</em>{% if publi.year %} ({{ publi.year }}){% endif %}<br/>
+  {% if publi.abstract %}<a data-bs-toggle="collapse" href="#abs-{{ pid }}" class="btn-abstract" role="button" aria-expanded="false" aria-controls="abs-{{ pid }}">ABSTRACT</a>{% endif %}
+  {% if publi.pdf %}<a data-bs-toggle="collapse" href="#bib-{{ pid }}" class="btn-bib" role="button" aria-expanded="false" aria-controls="bib-{{ pid }}">BIB</a>{% endif %}
+  {% include has-pdf.html name=publi.pdf %}{% if has_pdf %}<a href="{{ site.baseurl }}/publications/{{ publi.pdf }}.pdf" target="_blank"><button class="btn-pdf">PDF</button></a>{% endif %}
+  {% if publi.doi %}<a href="https://doi.org/{{ publi.doi }}" target="_blank"><button class="btn-doi">DOI</button></a>{% endif %}
+  {% if publi.arxiv %}<a href="https://arxiv.org/abs/{{ publi.arxiv }}" target="_blank"><button class="btn-arxiv">ARXIV</button></a>{% endif %}
+  {% if publi.code %}<a href="{{ publi.code }}" target="_blank"><button class="btn-code">CODE</button></a>{% endif %}
+  {% if publi.suppmat %}<a href="{{ publi.suppmat }}" target="_blank"><button class="btn-suppmat">SUPPLEMENT</button></a>{% endif %}
+  {% if publi.abstract %}
+  <div class="collapse" id="abs-{{ pid }}"><div class="well-abstract">{{ publi.abstract }}</div></div>
+  {% endif %}
+  {% if publi.pdf %}
+  {% include publication-bib.html id=pid src=publi.pdf %}
+  {% endif %}
+</li>
+</ul>
+</div>

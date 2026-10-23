@@ -1,0 +1,7 @@
+{% comment %}
+  Sets has_pdf to true when _publications/<include.name>.pdf exists, so PDF buttons never lead to a 404.
+  Usage: {% include has-pdf.html name=publi.pdf %}{% if has_pdf %}...{% endif %}
+{% endcomment %}
+{% unless pdf_files %}{% for c in site.collections %}{% if c.label == "publications" %}{% capture pdf_files %}|{{ c.files | map: "path" | join: "|" }}|{% endcapture %}{% endif %}{% endfor %}{% endunless %}
+{% capture pdf_key %}/{{ include.name }}.pdf|{% endcapture %}
+{% assign has_pdf = false %}{% if include.name and pdf_files contains pdf_key %}{% assign has_pdf = true %}{% endif %}

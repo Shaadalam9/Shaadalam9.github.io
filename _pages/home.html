@@ -1,0 +1,219 @@
+---
+title: "Home"
+layout: homelay
+permalink: /
+---
+{% assign me = site.data.pi[0] %}
+{% assign pubs = site.publications | where_exp: "p", "p.title != ''" %}
+{% assign published = pubs | where_exp: "p", "p.year != nil" | sort: "year" | reverse %}
+{% assign inprep = pubs | where_exp: "p", "p.year == nil" %}
+{% assign countries = site.data.trips | map: "country_code" | uniq %}
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-text">
+    <h1 class="hero-title">{{ me.name }}</h1>
+    <p class="hero-roles">AI Engineer at <a href="https://kpmg.com/nl/en.html">KPMG Netherlands</a> &middot; PhD researcher at <a href="https://www.tue.nl">TU Eindhoven</a></p>
+    <p class="hero-lead">I work on computer vision, deep learning and reinforcement learning, and on turning research into systems that hold up in the real world: from studying how people behave in traffic and making automated vehicles safer to building AI solutions in industry.</p>
+    <div class="hero-cta">
+      <a class="btn-cta btn-cta-primary" href="{{ site.baseurl }}/publications/">See my publications</a>
+      {% if me.cv %}<a class="btn-cta" href="{{ me.cv }}" target="_blank"><i class="fa fa-file-text-o"></i> CV</a>{% endif %}
+      <a class="btn-cta" href="mailto:{{ me.email }}"><i class="fa fa-envelope-o"></i> Get in touch</a>
+    </div>
+    <p class="hero-social">{% include social-links.html member=me %}</p>
+  </div>
+  <div class="hero-photo">
+    <img src="{{ site.baseurl }}/images/team/{{ me.photo-large }}" alt="Portrait of {{ me.name }}">
+  </div>
+</section>
+
+<!-- About -->
+<section class="home-section">
+  <div class="section-head">
+    <h2>About me</h2>
+    <a class="section-link" href="{{ site.baseurl }}/about/">Full bio, journey &amp; awards &rarr;</a>
+  </div>
+  <div class="about-short">
+    <div>
+      <p>I study how pedestrians and other road users behave in real-world traffic, using computer vision, deep learning and reinforcement learning on large-scale video from around the world. My PhD is in the Department of <a href="https://www.tue.nl/en/our-university/departments/industrial-design/">Industrial Design</a> at <a href="https://www.tue.nl">TU Eindhoven</a>, and I am now also starting as an <strong>AI Engineer at <a href="https://kpmg.com/nl/en.html">KPMG Netherlands</a></strong>, bringing these methods from research into real-world products.</p>
+      <p>Before that I did an MSc in Robotics and AI at IIT Madras, training deep reinforcement learning controllers for autonomous ships.</p>
+    </div>
+    <div>
+      <h3>Toolbox</h3>
+      <div class="chips">
+        <span class="chip">Python</span><span class="chip">C++</span><span class="chip">C</span><span class="chip">Rust</span>
+        <span class="chip">Computer vision</span><span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">Transformers</span>
+        <span class="chip">Graph neural networks</span><span class="chip">Reinforcement learning</span>
+        <span class="chip chip-alt">AWS</span><span class="chip chip-alt">Google Cloud</span><span class="chip chip-alt">Azure</span>
+        <span class="chip chip-alt">Docker</span><span class="chip chip-alt">MLflow</span><span class="chip chip-alt">DVC</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- News -->
+<section class="home-section">
+  <div class="section-head">
+    <h2>News</h2>
+    <a class="section-link" href="{{ site.baseurl }}/allnews.html">All news &rarr;</a>
+  </div>
+  <ul class="news-list">
+    {% for item in site.data.news limit: 5 %}
+    <li><span class="news-date">{{ item.date }}</span><span class="news-text">{{ item.headline }}</span></li>
+    {% endfor %}
+  </ul>
+</section>
+
+<!-- Research themes -->
+<section class="home-section">
+  <div class="section-head">
+    <h2>What I work on</h2>
+    <a class="section-link" href="{{ site.baseurl }}/research/">All research &rarr;</a>
+  </div>
+  <div class="theme-grid">
+    <a class="theme-card" href="{{ site.baseurl }}/publications/alam2025pedestrian.html">
+      <div class="theme-img" style="background-image:url('{{ site.baseurl }}/publications/alam2025pedestrian.jpg')"></div>
+      <div class="theme-body">
+        <h3>Pedestrians across the planet</h3>
+        <p>Thousands of hours of YouTube dashcam footage from {{ site.data.crowd.countries }} countries and territories show how people cross streets around the world, well beyond WEIRD samples.</p>
+      </div>
+    </a>
+    <a class="theme-card" href="{{ site.baseurl }}/research/#vr">
+      <div class="theme-img" style="background-image:url('{{ site.baseurl }}/images/research/vr_street_scene.jpg')"></div>
+      <div class="theme-body">
+        <h3>Virtual reality experiments</h3>
+        <p>Pedestrians stand at a virtual kerb as automated cars approach, so we can safely test how yielding, eHMIs, vehicle sounds and other pedestrians change when people feel safe to cross.</p>
+      </div>
+    </a>
+    <a class="theme-card" href="{{ site.baseurl }}/publications/alam2025GPT.html">
+      <video class="theme-img" autoplay muted loop playsinline preload="metadata" poster="{{ site.baseurl }}/publications/alam2025GPT.jpg" aria-hidden="true"><source src="{{ site.baseurl }}/images/research/alam2025GPT.mp4" type="video/mp4"></video>
+      <div class="theme-body">
+        <h3>AI in place of participants?</h3>
+        <p>Can vision-language models such as GPT-4V predict how people judge risk around automated vehicles and their external displays (eHMIs)?</p>
+      </div>
+    </a>
+    <a class="theme-card" href="{{ site.baseurl }}/publications/alam2026veo3.html">
+      <div class="theme-img" style="background-image:url('{{ site.baseurl }}/publications/alam2026veo3.jpg')"></div>
+      <div class="theme-body">
+        <h3>Generative AI for traffic scenes</h3>
+        <p>Generating realistic traffic scenarios and changing light and weather in traffic video with GANs and video models such as Veo&nbsp;3.</p>
+      </div>
+    </a>
+    <a class="theme-card" href="{{ site.baseurl }}/publications/rohit2023rl.html">
+      <div class="theme-img" style="background-image:url('{{ site.baseurl }}/publications/rohit2023rl.jpg')"></div>
+      <div class="theme-body">
+        <h3>Deep RL for autonomous ships</h3>
+        <p>Fast-tracking deep reinforcement learning controllers for vessels by first learning from trusted PID and line-of-sight autopilots.</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- Featured project -->
+<section class="home-section feature" id="crowd">
+  <div class="feature-text">
+    <h2>CROWD: City Road Observations With Dashcams</h2>
+    <p>How do pedestrians cross the road in Lagos, Hanoi or Eindhoven? A major part of my PhD is <a href="{{ site.data.crowd.repo }}">CROWD</a>, a global dataset of dashcam and walking footage collected from YouTube and analysed with computer vision to compare road user behaviour across countries and cultures.</p>
+    <div class="crowd-stats">
+      <div><span data-crowd="hours">{{ site.data.crowd.hours }}</span><small>hours of footage</small></div>
+      <div><span data-crowd="videos">{{ site.data.crowd.videos }}</span><small>videos</small></div>
+      <div><span data-crowd="localities">{{ site.data.crowd.localities }}</span><small>cities &amp; towns</small></div>
+      <div><span data-crowd="countries">{{ site.data.crowd.countries }}</span><small>countries &amp; territories</small></div>
+    </div>
+    <p>A modular pipeline combines detection, multi-object tracking, semantic understanding, depth estimation and 3D scene reasoning, so we can study pedestrians in natural traffic and support safer automated vehicles in every region.</p>
+    <p class="feature-hint">Spin the globe, hover over a place, or press <strong>Take me somewhere</strong> to watch real footage from a random city.</p>
+    <div class="hero-cta">
+      <a class="btn-cta btn-cta-primary" href="{{ site.data.crowd.paper }}">Read the paper</a>
+      <a class="btn-cta" href="{{ site.data.crowd.repo }}"><i class="fa fa-github"></i> Code</a>
+      <a class="btn-cta" href="{{ site.data.crowd.kaggle }}"><i class="fa fa-database"></i> Data</a>
+    </div>
+  </div>
+  <div class="feature-media">
+    {% include crowd-globe.html %}
+  </div>
+</section>
+
+<!-- Latest papers -->
+<section class="home-section">
+  <div class="section-head">
+    <h2>Latest papers</h2>
+    <a class="section-link" href="{{ site.baseurl }}/publications/">All {{ published.size }} publications &rarr;</a>
+  </div>
+  <div class="paper-grid">
+    {% for publi in published limit: 3 %}
+    <a class="paper-card" href="{{ publi.url | relative_url }}">
+      {% if publi.image %}<img src="{{ site.baseurl }}/publications/{{ publi.image }}" alt="" loading="lazy">{% endif %}
+      <div class="paper-body">
+        <p class="paper-meta">{% if publi.type %}<span class="pub-type pub-type-{{ publi.type }}">{{ site.data.pub_types[publi.type] }}</span>{% endif %} {{ publi.year }}</p>
+        <h3>{{ publi.title }}</h3>
+        <p class="paper-venue">{{ publi.display | truncate: 90 }}</p>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Work in progress -->
+{% if inprep.size > 0 %}
+<section class="home-section">
+  <div class="section-head">
+    <h2>What I'm working on now</h2>
+    <a class="section-link" href="{{ site.baseurl }}/publications/#in-preparation">{{ inprep.size }} papers in progress &rarr;</a>
+  </div>
+  <ul class="wip-list">
+    {% for publi in inprep %}
+    <li><a href="{{ publi.url | relative_url }}"><span class="wip-dot"></span>{{ publi.title }}</a></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+<!-- Travel map -->
+<section class="home-section">
+  <div class="section-head">
+    <h2>Places I have visited</h2>
+    <span class="section-note">{{ countries.size }} countries · {{ site.data.trips.size }} cities</span>
+  </div>
+  <div id="visited-map"></div>
+</section>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap@1.6.0/dist/jsvectormap.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.6.0/dist/jsvectormap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.6.0/dist/maps/world.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var css = function (n) { return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); };
+  var map = null;
+  function draw() {
+    if (map) { map.destroy(); document.getElementById("visited-map").innerHTML = ""; }
+    map = new jsVectorMap({
+      selector: "#visited-map",
+      map: "world",
+      backgroundColor: "transparent",
+      zoomButtons: true,
+      zoomOnScroll: false,
+      draggable: true,
+      showTooltip: true,
+      regionStyle: {
+        initial: { fill: css("--map-land"), stroke: css("--map-line"), strokeWidth: 0.6 },
+        hover: { fill: css("--map-land") },
+        selected: { fill: css("--chart-1") },
+        selectedHover: { fill: css("--accent") }
+      },
+      markerStyle: {
+        initial: { r: 4, fill: css("--warm"), stroke: css("--map-line"), strokeWidth: 1.2 },
+        hover: { r: 6 }
+      },
+      onRegionTooltipShow: function (event) { event.preventDefault(); },
+      selectedRegions: [{% for code in countries %}"{{ code }}"{% unless forloop.last %},{% endunless %}{% endfor %}],
+      markers: [
+        {% for visit in site.data.trips %}{ name: "{{ visit.city }}, {{ visit.country }}", coords: [{{ visit.lat }}, {{ visit.lng }}] }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    });
+  }
+  draw();
+  window.addEventListener("resize", function () { if (map) map.updateSize(); });
+  document.addEventListener("themechange", draw);
+});
+</script>

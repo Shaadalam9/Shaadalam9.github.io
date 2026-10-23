@@ -1,6 +1,5 @@
 ---
 layout: publication
-sitemap: false
 title: "Fixed or randomised trial order? A case study of pedestrian interaction with an automated vehicle"
 authors:
 pdf: alam2026learning

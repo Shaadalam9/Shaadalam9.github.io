@@ -1,24 +1,58 @@
+# Talks shown on the Talks page (newest first).
+# venue: short name on the card; conf: full name; paper: file name in _publications (links the talk to its paper);
+# lat/lng: where it took place (shown on the map); online: true if presented remotely.
 - authors: Alam, M. S., Martens, M., & Bazilinskyy, P.
   title: "Pedestrian planet: What YouTube driving from 233 countries and territories teaches us about the world"
-  conf: "International ACM Conference on Automotive User Interfaces and Interactive Vehicular Applications (AutoUI), Brisbane, QLD, Australia."
+  venue: AutoUI 2025
+  conf: "International ACM Conference on Automotive User Interfaces and Interactive Vehicular Applications (AutoUI)"
+  city: Brisbane
+  country: Australia
+  lat: -27.4698
+  lng: 153.0251
   year: 2025
+  paper: alam2025pedestrian
 
 - authors: Alam, M. S., & Bazilinskyy, P.
   title: "Cross or Nah? LLMs get in the mindset of a pedestrian in front of automated car with an eHMI"
-  conf: "International ACM Conference on Automotive User Interfaces and Interactive Vehicular Applications (AutoUI), Brisbane, QLD, Australia."
+  venue: AutoUI 2025
+  conf: "International ACM Conference on Automotive User Interfaces and Interactive Vehicular Applications (AutoUI)"
+  city: Brisbane
+  country: Australia
+  lat: -27.4698
+  lng: 153.0251
   year: 2025
+  paper: alam2025GPT
 
 - authors: Alam, M. S., Parmar, S. H., Martens, M. H., & Bazilinskyy, P.
   title: "Deep Learning Approach for Realistic Traffic Video Changes Across Lighting and Weather Conditions"
-  conf: "2025 8th International Conference on Information and Computer Technologies (ICICT), Hilo, HI, USA (online)."
+  venue: ICICT 2025
+  conf: "8th International Conference on Information and Computer Technologies (ICICT)"
+  city: Hilo, HI
+  country: USA
+  lat: 19.7074
+  lng: -155.0885
+  online: true
   year: 2025
+  paper: alam2025deep
 
-- authors: Alam, M. S., Martens, M., H. & Bazilinskyy, P.
+- authors: Alam, M. S., Martens, M. H., & Bazilinskyy, P.
   title: "Generating realistic traffic scenarios: A deep learning approach using generative adversarial networks (GANs)"
-  conf: "Human Interaction and Emerging Technologies (IHIET-AI 2025): Artificial Intelligence and Future Applications, Málaga, Spain."
+  venue: IHIET-AI 2025
+  conf: "Human Interaction and Emerging Technologies (IHIET-AI 2025): Artificial Intelligence and Future Applications"
+  city: Málaga
+  country: Spain
+  lat: 36.7213
+  lng: -4.4214
   year: 2025
+  paper: alam2024generating
 
 - authors: Alam, M. S., Subramanian, T., Martens, M., Remlinger, W., & Bazilinskyy, P.
   title: "From A to B with ease: User-centric interfaces for shuttle buses"
-  conf: "International ACM Conference on Automotive User Interfaces and Interactive Vehicular Applications (AutoUI), Stanford, USA."
+  venue: AutoUI 2024
+  conf: "International ACM Conference on Automotive User Interfaces and Interactive Vehicular Applications (AutoUI)"
+  city: Stanford, CA
+  country: USA
+  lat: 37.4275
+  lng: -122.1697
   year: 2024
+  paper: alam2024from

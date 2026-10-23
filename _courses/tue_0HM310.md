@@ -1,7 +1,6 @@
 ---
 title: "0HM310: Automotive human factors"
 layout: course
-sitemap: false
 name: Automotive human factors
 name_url: https://research.tue.nl/en/courses/automotive-human-factors-3
 year_start: 2024

@@ -1,0 +1,66 @@
+---
+title: "Teaching & mentoring"
+layout: gridlay
+permalink: /education/
+---
+{% assign courses = site.courses | sort: "year_start" | reverse %}
+{% assign msc = site.data.supervision_msc | sort: "year" | reverse | group_by_exp: "s", "s.year | append: s.project" %}
+{% assign bsc = site.data.supervision_bsc | sort: "year" | reverse | group_by_exp: "s", "s.year | append: s.project" %}
+{% assign interns = site.data.supervision_internship | sort: "year" | reverse | group_by_exp: "s", "s.year | append: s.project" %}
+{% assign n_students = site.data.supervision_msc.size | plus: site.data.supervision_bsc.size | plus: site.data.supervision_internship.size %}
+
+<h1>Teaching &amp; mentoring</h1>
+<p class="page-lead">I teach in the MSc Industrial Design programme at TU Eindhoven and supervise student projects on automated vehicles, human factors and AI. Several of these projects have turned into published papers.</p>
+
+<h2 class="section-title">Courses</h2>
+<div class="course-grid">
+  {% for c in courses %}
+  <a class="course-card" href="{{ c.url | relative_url }}">
+    <div class="student-meta">
+      {% if c.code and c.code != "" %}<span class="student-level">{{ c.code }}</span>{% endif %}
+      <span class="student-year">{{ c.year_start }}{% if c.year_end and c.year_end != c.year_start %}–{{ c.year_end }}{% elsif c.year_end == nil %}–now{% endif %}</span>
+      <span class="student-status">{{ c.type | upcase }} · {{ c.institution }}</span>
+    </div>
+    <h3>{{ c.name }}</h3>
+    <p>{{ c.subheading }}</p>
+    {% if c.students and c.students != "" %}<p class="course-students"><i class="fa fa-users"></i> {{ c.students }} students</p>{% endif %}
+    <span class="course-more">Course details &rarr;</span>
+  </a>
+  {% endfor %}
+</div>
+
+<div class="section-head mentoring-head">
+  <h2 class="section-title">Student supervision</h2>
+  <span class="talks-count"><strong>{{ n_students }}</strong> students supervised</span>
+</div>
+<div class="pub-filters students-filters" role="group" aria-label="Filter students">
+  <button type="button" class="pub-filter active" data-filter="all" aria-pressed="true">All</button>
+  {% if msc.size > 0 %}<button type="button" class="pub-filter" data-filter="msc" aria-pressed="false">MSc</button>{% endif %}
+  {% if bsc.size > 0 %}<button type="button" class="pub-filter" data-filter="bsc" aria-pressed="false">BSc</button>{% endif %}
+  {% if interns.size > 0 %}<button type="button" class="pub-filter" data-filter="internship" aria-pressed="false">Internships</button>{% endif %}
+  <button type="button" class="pub-filter" data-filter="inprogress" aria-pressed="false">In progress</button>
+  <button type="button" class="pub-filter" data-filter="published" aria-pressed="false">Led to a paper</button>
+</div>
+
+<div class="student-grid">
+  {% for g in msc %}{% include student-card.html group=g level="MSc" %}{% endfor %}
+  {% for g in bsc %}{% include student-card.html group=g level="BSc" %}{% endfor %}
+  {% for g in interns %}{% include student-card.html group=g level="Internship" %}{% endfor %}
+</div>
+
+<script>
+(function () {
+  var chips = document.querySelectorAll('.students-filters .pub-filter'), cards = document.querySelectorAll('.student-card');
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      var f = chip.getAttribute('data-filter');
+      chips.forEach(function (c) { c.classList.toggle('active', c === chip); c.setAttribute('aria-pressed', c === chip); });
+      cards.forEach(function (card) {
+        var show = f === 'all' || card.getAttribute('data-level') === f || card.getAttribute('data-status') === f ||
+          (f === 'published' && card.querySelector('.is-paper'));
+        card.hidden = !show;
+      });
+    });
+  });
+})();
+</script>

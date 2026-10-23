@@ -1,9 +1,8 @@
+# Organising roles shown on the Talks page.
 - title: "Web chair"
+  event: IEEE RO-MAN 2025
   link: https://www.ro-man2025.org/organising-committee
   location: Eindhoven, The Netherlands
+  lat: 51.4416
+  lng: 5.4697
   year: 2025
-
-# - title: "Chair of open data"
-#   link: https://www.auto-ui.org/24/organizers
-#   location: Stanford, USA
-#   year: 2024

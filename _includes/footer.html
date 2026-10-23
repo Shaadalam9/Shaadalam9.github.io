@@ -1,31 +1,26 @@
-<br/>
-<div id="footer" class="panel">
-  <div class="panel-footer">
-	<div class="container-fluid">
-	  <div class="row">
-		<div class="col-sm-4">
-			
-            <p>&copy {{ 'now' | date: "%Y" }} {{site.title | escape }} </p>
-
-              <p>{{ site.affiliation }}</p>
-
-		   <p>  </p><p>
-            		  
-		</div>
-
-		<div class="col-sm-4">
-            <p>{{ site.contact }}</p>
-		</div>
-
-
-		<div class="col-sm-4">
-            <p>{{ site.location }}</p>
-		</div>
-
-	  </div>
-	</div>
+{% assign me = site.data.pi[0] %}
+<footer id="footer" class="site-footer">
+  <div class="container-fluid">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-name">{{ site.title | escape }}</p>
+        <p>{{ site.affiliation }}</p>
+        <p class="footer-social">
+          {% include social-links.html member=me %}
+        </p>
+      </div>
+      <div>
+        <p class="footer-label">Contact</p>
+        <p>{{ site.contact }}</p>
+      </div>
+      <div>
+        <p class="footer-label">Address</p>
+        <p>{{ site.location }}</p>
+      </div>
+    </div>
+    <p class="footer-copy">&copy; {{ 'now' | date: "%Y" }} {{ site.title | escape }} · Built with Jekyll, hosted on GitHub Pages</p>
   </div>
-</div>
+</footer>
 
 <script type="text/javascript">
   // Open links from outside of the website in a new tab

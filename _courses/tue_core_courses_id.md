@@ -1,7 +1,6 @@
 ---
 title: "MSc Industrial Design: Core courses"
 layout: course
-sitemap: false
 name: Core courses, MSc Industrial Design
 name_url: https://studiegids.tue.nl/opleidingen/graduate-school/masters-programs/industrial-design/curriculum/core-courses
 year_start: 2024

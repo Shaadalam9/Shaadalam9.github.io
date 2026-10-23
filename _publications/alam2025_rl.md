@@ -1,6 +1,5 @@
 ---
 layout: publication
-sitemap: false
 title: "Deep Reinforcement Learning based Eye Tracking for Unity Environment"
 authors: Alam, M. S., Bazilinskyy, P.
 pdf: 

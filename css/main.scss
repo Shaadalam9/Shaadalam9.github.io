@@ -341,3 +341,95 @@ h1:hover .octicon, h2:hover .octicon, h3:hover .octicon, h4:hover .octicon, h5:h
   visibility: hidden;
 }
 
+
+/* Publications */
+a.btn-abstract, a.btn-bib,
+a.btn-abstract:hover, a.btn-bib:hover {
+  color: #ebebeb;
+  text-decoration: none;
+}
+
+.pub-summary {
+  margin-bottom: 12px;
+}
+
+.pub-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.pub-filter {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 3px 14px;
+  font-size: 13px;
+}
+
+.pub-filter:hover {
+  border-color: var(--accent);
+  color: var(--heading);
+}
+
+.pub-filter.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.pub-me {
+  color: var(--heading);
+}
+
+.pub-type {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0 7px;
+  border-radius: 3px;
+  border: 1px solid currentColor;
+  font-style: normal;
+}
+
+.pub-type-journal { color: #1e3a5f; }
+.pub-type-conference { color: #8f3f1e; }
+.pub-type-thesis { color: #7e22ce; }
+.pub-type-other { color: #6b6760; }
+
+.pub-bib {
+  position: relative;
+}
+
+.pub-bib pre {
+  background: transparent;
+  border: 0;
+  color: var(--text);
+  font-size: 12px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0 0 8px;
+  padding: 0;
+}
+
+.pub-copy {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 12px;
+  padding: 1px 10px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--text);
+}
+
+.pub-copy:hover {
+  border-color: var(--accent);
+}
+
+@import "site";

@@ -1,13 +1,17 @@
 # Site settings
 title: Md Shadab Alam
 email: m.s.alam@tue.nl
-description: Personal webpage of Shadab Alam
+description: AI engineer at KPMG Netherlands and PhD researcher at TU Eindhoven, working on computer vision, deep learning and reinforcement learning.
+tagline: AI engineer & researcher
+# Absolute address of the live site, used for link previews when the site is shared.
+public_url: https://shaadalam9.github.io
 baseurl: ""
 url: ""
-affiliation: I am part of the <a href="https://www.tue.nl/en/research/research-groups/future-everyday/" target="_blank">Future Everyday</a> group at TU Eindhoven.
+affiliation: I am part of the <a href="https://www.tue.nl/en/research/research-groups/computational-design-systems" target="_blank">Computational Design Systems</a> cluster of the Department of Industrial Design at TU Eindhoven.
 
-# Google analytics ID
-google_analytics: G-7BE63RZMTW
+# Google Analytics measurement ID (looks like G-XXXXXXXXXX). Leave empty for no tracking.
+# Create your own at https://analytics.google.com and paste it here.
+google_analytics: G-V1P2CCS4ZH
 
 # Location info. (shown in footer)
 location: >
@@ -27,7 +31,7 @@ nav_pages:
   - name: talks
   - name: research
   - name: education
-  - name: volunteering
+    label: Teaching
 
 # Do you want to group your publications by year? {true/false}
 group_pub_by_year: true
@@ -36,8 +40,6 @@ collections:
   courses:
     output: true
   publications:
-    output: true
-  workshops:
     output: true
 
 include:

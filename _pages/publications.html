@@ -1,0 +1,45 @@
+---
+title: "Publications"
+layout: gridlay
+permalink: /publications/
+---
+{% assign pubs = site.publications | where_exp: "p", "p.title != ''" %}
+{% assign inprep = pubs | where_exp: "p", "p.year == nil" %}
+{% assign published = pubs | where_exp: "p", "p.year != nil" %}
+{% assign by_year = published | group_by: "year" | sort: "name" | reverse %}
+{% assign n_journal = published | where: "type", "journal" | size %}
+{% assign n_conference = published | where: "type", "conference" | size %}
+{% assign n_thesis = published | where: "type", "thesis" | size %}
+
+<h1>Publications</h1>
+
+{% include publication-metrics.html %}
+
+<p class="pub-summary">
+  {{ n_journal }} journal &middot; {{ n_conference }} conference{% if n_thesis > 0 %} &middot; {{ n_thesis }} thesis{% endif %} &middot; {{ inprep.size }} in preparation
+  &middot; <a href="#" class="pub-bib-all">Download all (.bib)</a>
+</p>
+
+<div class="pub-filters" role="group" aria-label="Filter publications">
+  <button type="button" class="pub-filter active" data-filter="all" aria-pressed="true">All</button>
+  <button type="button" class="pub-filter" data-filter="in-prep" aria-pressed="false">In preparation</button>
+  <button type="button" class="pub-filter" data-filter="journal" aria-pressed="false">Journal</button>
+  <button type="button" class="pub-filter" data-filter="conference" aria-pressed="false">Conference</button>
+  {% if n_thesis > 0 %}<button type="button" class="pub-filter" data-filter="thesis" aria-pressed="false">Thesis</button>{% endif %}
+</div>
+
+{% if inprep.size > 0 %}
+<section class="pub-group">
+<h2 id="in-preparation">In preparation</h2>
+{% for publi in inprep %}{% include publication-entry.html publi=publi %}{% endfor %}
+</section>
+{% endif %}
+
+{% for group in by_year %}
+<section class="pub-group">
+<h2 id="{{ group.name }}">{{ group.name }}</h2>
+{% for publi in group.items %}{% include publication-entry.html publi=publi %}{% endfor %}
+</section>
+{% endfor %}
+
+<script src="{{ site.baseurl }}/js/publications.js"></script>

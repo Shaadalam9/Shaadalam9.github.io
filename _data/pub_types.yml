@@ -1,0 +1,7 @@
+# Labels for the `type:` field of entries in _publications.
+# Entries without a year are listed under "In preparation" regardless of type.
+journal: Journal
+conference: Conference
+thesis: Thesis
+other: Other
+in-prep: In preparation

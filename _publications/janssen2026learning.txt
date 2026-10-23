@@ -1,0 +1,8 @@
+@inproceedings{janssen2026learning,
+  title={Learning a simple directional eHMI: A VR study of AV-pedestrian interaction},
+  author={Janssen, Christian and Alam, Md Shadab and Bazilinskyy, Pavlo and Dou, Fei and Zhang, Linghan},
+  booktitle={Adjunct Proceedings of the 18th International Conference on Automotive User Interfaces and Interactive Vehicular Applications (AutoUI)},
+  address={Gothenburg, Sweden},
+  year={2026},
+  doi={10.1145/3828158.3838268}
+}
