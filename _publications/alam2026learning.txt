@@ -1,5 +1,7 @@
-@techreport{alam2026learning,
-  title={Fixed or randomised trial order? A case study of pedestrian interaction with an automated vehicle},
-  author={Alam, Md Shadab and Martens, Marieke H. and Bazilinskyy, Pavlo},
-  year={2026}
+@unpublished{alam2026learning,
+  title    = {Fixed or randomised trial order? {A} case study of pedestrian interaction with an automated vehicle},
+  author   = {Alam, Md Shadab and Martens, Marieke H. and Bazilinskyy, Pavlo},
+  note     = {Preprint submitted to Elsevier},
+  year     = {2026},
+  keywords = {Trial randomisation, Trial order, Virtual reality, Automated vehicles, Pedestrian behaviour, Experimental design, Repeated measures}
 }

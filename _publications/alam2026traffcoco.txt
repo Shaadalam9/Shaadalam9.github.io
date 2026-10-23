@@ -1,4 +1,6 @@
-@techreport{alam2026traffcoco,
-  title={TraffCOCO: A Scalable Framework and Dataset for Traffic Scene Object Detection},
-  author={Alam, Md Shadab and Bazilinskyy, Pavlo}
+@unpublished{alam2026traffcoco,
+  title  = {{TraffCOCO}: A scalable framework and dataset for traffic scene object detection},
+  author = {Alam, Md Shadab and Benny, Brileena and Bazilinskyy, Pavlo},
+  note   = {Manuscript in preparation},
+  year   = {2026}
 }

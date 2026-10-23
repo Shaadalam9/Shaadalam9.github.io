@@ -1,7 +1,7 @@
 ---
 layout: publication
 title: "Perceived Crossing Risk in Multipedestrian Encounters with Automated Vehicles: Effects of Yielding, eHMIs, and Pedestrian Position"
-authors: Alam, M. S., Dey, D., Martens, M., Bazilinskyy, P.
+authors: Alam, M. S., Dey, D., Martens, M. H., Bazilinskyy, P.
 pdf: alam2026multiped
 image: alam2026multiped.jpg
 display: In preparation.

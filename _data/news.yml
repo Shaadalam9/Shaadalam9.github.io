@@ -1,22 +1,22 @@
 # News shown on the home page (newest first; the first 5 appear there) and on /allnews.html.
 # date: free text such as "Oct 2026" or "2026"; headline may contain links.
-- date: Oct 2026
-  headline: Started as an <strong>AI Engineer at <a href="https://kpmg.com/nl/en.html">KPMG Netherlands</a></strong>, alongside finishing my PhD at TU Eindhoven.
+- date: Jan 2027
+  headline: Joining <strong><a href="https://kpmg.com/nl/en.html">KPMG Netherlands</a> as an AI Engineer</strong> from 1 January 2027, alongside finishing my PhD at TU Eindhoven.
 
-- date: 2026
+- date: Oct 2026
+  headline: Paper at the UbiComp 2026 companion on <a href="/publications/alam2026public.html">what public traffic cameras can reveal about privacy</a>.
+
+- date: Sep 2026
   headline: Three papers at <strong>AutoUI 2026</strong> in Gothenburg, on <a href="/publications/alam2026veo3.html">generating traffic scenes with Veo&nbsp;3</a>, <a href="/publications/verstelle2026sound.html">personalised EV sounds with generative AI</a> and <a href="/publications/janssen2026learning.html">learning a directional eHMI in VR</a>.
 
 - date: 2026
   headline: Our survey of day–night illumination domain translation was published in <a href="/publications/alam2026IDT.html"><em>Machine Vision and Applications</em></a>.
 
-- date: 2026
+- date: Feb 2026
   headline: Received the <a href="https://community.data.4tu.nl/the-fair-data-fund/">FAIR Data Fund</a> grant from 4TU.NIRICT.
 
 - date: Jan–May 2026
   headline: Research exchange in computer vision and machine learning at <a href="https://www.epfl.ch">EPFL</a>, Switzerland.
-
-- date: 2026
-  headline: Paper at the UbiComp 2026 companion on <a href="/publications/alam2026public.html">what public traffic cameras can reveal about privacy</a>.
 
 - date: 2025
   headline: Honorable Mention at <a href="https://www.auto-ui.org/25/">AutoUI 2025</a> in Brisbane, where I presented <a href="/publications/alam2025pedestrian.html">Pedestrian planet</a> and <a href="/publications/alam2025GPT.html">Cross or Nah?</a>.

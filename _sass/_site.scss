@@ -1390,3 +1390,42 @@ a.btn-abstract, a.btn-bib { color: var(--ink-text) !important; }
   border: 0;
   padding: 0;
 }
+
+// Justified paragraphs (with hyphenation so justified lines don't get big gaps)
+#homeid p, #gridid p, .well-abstract, .news-text, .vr-findings li {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+// ...but not short one-line labels, captions and notes
+#homeid .hero-roles, #gridid .hero-roles, .paper-meta, .paper-venue, .metric-source, .bio-note, .city-hint,
+.talks-map-note, .talks-place, .course-students, .student-names, .student-note, .feature-hint,
+.section-note, .pub-summary, #crowd-globe p, figcaption, .footer-copy, .theme-card p {
+  text-align: left;
+  -webkit-hyphens: manual;
+  hyphens: manual;
+}
+
+// Toolbox chips with logos
+.tool-chip { display: inline-flex; align-items: center; gap: 6px; }
+
+.tool-ico {
+  width: 14px;
+  height: 14px;
+  flex: none;
+  display: inline-block;
+  object-fit: contain;
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+
+.tool-ico-mask {
+  background-color: var(--ico-color);
+  -webkit-mask: var(--ico) center / contain no-repeat;
+  mask: var(--ico) center / contain no-repeat;
+}
+
+.tool-ico-fa { font-size: 13px; line-height: 14px; text-align: center; color: var(--accent); }
+
+:root[data-theme="dark"] .tool-ico-invert { filter: invert(1) hue-rotate(180deg); }

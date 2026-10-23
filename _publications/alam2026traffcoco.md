@@ -1,7 +1,7 @@
 ---
 layout: publication
 title: "TraffCOCO: A Scalable Framework and Dataset for Traffic Scene Object Detection"
-authors: Alam, M. S., Bazilinskyy, P.
+authors: Alam, M. S., Benny, B., Bazilinskyy, P.
 pdf: alam2026traffcoco
 image: alam2026traffcoco.jpg
 display: In preparation.

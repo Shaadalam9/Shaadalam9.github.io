@@ -1,4 +1,6 @@
-@techreport{alam2026cycling,
-  title={},
-  author={Alam, Md Shadab and Bazilinskyy, Pavlo}
+@unpublished{alam2026cycling,
+  title  = {},
+  author = {Alam, Md Shadab and Bazilinskyy, Pavlo and Rouchitsas, Alexandros},
+  note   = {Manuscript in preparation},
+  year   = {2026}
 }

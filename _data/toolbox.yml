@@ -1,0 +1,48 @@
+# Toolbox on the home page. One of:
+#   devicon: <path> from https://devicon.dev (full-colour logo)
+#   simple: <slug> + color: <hex> from https://simpleicons.org (one-colour logo, tinted)
+#   fa: <Font Awesome 4 icon> for methods that have no logo
+# group: alt gives the second chip colour (used for cloud and MLOps tools).
+- name: Python
+  devicon: python/python-original
+- name: C++
+  devicon: cplusplus/cplusplus-original
+- name: C
+  devicon: c/c-original
+- name: Rust
+  devicon: rust/rust-original
+  dark_invert: true
+- name: Computer vision
+  fa: eye
+- name: PyTorch
+  devicon: pytorch/pytorch-original
+- name: TensorFlow
+  devicon: tensorflow/tensorflow-original
+- name: Transformers
+  simple: huggingface
+  color: "#FFB000"
+- name: Graph neural networks
+  fa: sitemap
+- name: Reinforcement learning
+  fa: refresh
+- name: AWS
+  devicon: amazonwebservices/amazonwebservices-original-wordmark
+  dark_invert: true
+  group: alt
+- name: Google Cloud
+  devicon: googlecloud/googlecloud-original
+  group: alt
+- name: Azure
+  devicon: azure/azure-original
+  group: alt
+- name: Docker
+  devicon: docker/docker-original
+  group: alt
+- name: MLflow
+  simple: mlflow
+  color: "#0194E2"
+  group: alt
+- name: DVC
+  simple: dvc
+  color: "#945DD6"
+  group: alt

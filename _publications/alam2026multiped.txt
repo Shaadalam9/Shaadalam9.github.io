@@ -1,4 +1,7 @@
-@techreport{alam2026multiped,
-  title={Perceived Crossing Risk in Multipedestrian Encounters with Automated Vehicles: Effects of Yielding, eHMIs, and Pedestrian Position},
-  author={Alam, Md Shadab and Dey, Debargha and Martens, Marieke and Bazilinskyy, Pavlo}
+@unpublished{alam2026multiped,
+  title    = {Perceived crossing risk in multipedestrian encounters with automated vehicles: Effects of yielding, {eHMIs}, and pedestrian position},
+  author   = {Alam, Md Shadab and Dey, Debargha and Martens, Marieke H. and Bazilinskyy, Pavlo},
+  note     = {Preprint submitted to Elsevier},
+  year     = {2026},
+  keywords = {Pedestrian safety, Automated vehicle, Crossing risk, eHMI, Virtual reality}
 }

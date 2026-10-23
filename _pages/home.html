@@ -13,7 +13,7 @@ permalink: /
 <section class="hero">
   <div class="hero-text">
     <h1 class="hero-title">{{ me.name }}</h1>
-    <p class="hero-roles">AI Engineer at <a href="https://kpmg.com/nl/en.html">KPMG Netherlands</a> &middot; PhD researcher at <a href="https://www.tue.nl">TU Eindhoven</a></p>
+    <p class="hero-roles">PhD researcher at <a href="https://www.tue.nl">TU Eindhoven</a> &middot; Incoming AI Engineer at <a href="https://kpmg.com/nl/en.html">KPMG Netherlands</a> (from Jan 2027)</p>
     <p class="hero-lead">I work on computer vision, deep learning and reinforcement learning, and on turning research into systems that hold up in the real world: from studying how people behave in traffic and making automated vehicles safer to building AI solutions in industry.</p>
     <div class="hero-cta">
       <a class="btn-cta btn-cta-primary" href="{{ site.baseurl }}/publications/">See my publications</a>
@@ -35,17 +35,13 @@ permalink: /
   </div>
   <div class="about-short">
     <div>
-      <p>I study how pedestrians and other road users behave in real-world traffic, using computer vision, deep learning and reinforcement learning on large-scale video from around the world. My PhD is in the Department of <a href="https://www.tue.nl/en/our-university/departments/industrial-design/">Industrial Design</a> at <a href="https://www.tue.nl">TU Eindhoven</a>, and I am now also starting as an <strong>AI Engineer at <a href="https://kpmg.com/nl/en.html">KPMG Netherlands</a></strong>, bringing these methods from research into real-world products.</p>
+      <p>I study how pedestrians and other road users behave in real-world traffic, using computer vision, deep learning and reinforcement learning on large-scale video from around the world. My PhD is in the Department of <a href="https://www.tue.nl/en/our-university/departments/industrial-design/">Industrial Design</a> at <a href="https://www.tue.nl">TU Eindhoven</a>, and from January 2027 I will join <strong><a href="https://kpmg.com/nl/en.html">KPMG Netherlands</a> as an AI Engineer</strong>, bringing these methods from research into real-world products.</p>
       <p>Before that I did an MSc in Robotics and AI at IIT Madras, training deep reinforcement learning controllers for autonomous ships.</p>
     </div>
     <div>
       <h3>Toolbox</h3>
       <div class="chips">
-        <span class="chip">Python</span><span class="chip">C++</span><span class="chip">C</span><span class="chip">Rust</span>
-        <span class="chip">Computer vision</span><span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">Transformers</span>
-        <span class="chip">Graph neural networks</span><span class="chip">Reinforcement learning</span>
-        <span class="chip chip-alt">AWS</span><span class="chip chip-alt">Google Cloud</span><span class="chip chip-alt">Azure</span>
-        <span class="chip chip-alt">Docker</span><span class="chip chip-alt">MLflow</span><span class="chip chip-alt">DVC</span>
+        {% for t in site.data.toolbox %}<span class="chip tool-chip{% if t.group == 'alt' %} chip-alt{% endif %}">{% if t.devicon %}<img class="tool-ico{% if t.dark_invert %} tool-ico-invert{% endif %}" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/{{ t.devicon }}.svg" alt="" width="14" height="14">{% elsif t.simple %}<span class="tool-ico tool-ico-mask" style="--ico:url('https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/{{ t.simple }}.svg'); --ico-color:{{ t.color }}" aria-hidden="true"></span>{% elsif t.fa %}<i class="fa fa-{{ t.fa }} tool-ico tool-ico-fa" aria-hidden="true"></i>{% endif %}{{ t.name }}</span>{% endfor %}
       </div>
     </div>
   </div>
