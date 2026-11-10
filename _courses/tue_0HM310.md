@@ -4,7 +4,7 @@ layout: course
 name: Automotive human factors
 name_url: https://research.tue.nl/en/courses/automotive-human-factors-3
 year_start: 2024
-year_end: 
+year_end: 2025
 institution: TU/e
 type: msc
 students: 60+

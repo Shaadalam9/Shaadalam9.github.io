@@ -14,6 +14,54 @@
   upcoming: true
   paper: alam2027pedestrians
 
+- authors: Alam, M. S., & Bazilinskyy, P.
+  title: "What Can Public Traffic Cameras Reveal? A Short Horizon Privacy Audit Using Open Source Vehicle Tracking"
+  venue: UbiComp 2026
+  conf: "ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp/ISWC 2026)"
+  city: Shanghai
+  country: China
+  lat: 31.2397
+  lng: 121.4998
+  year: 2026
+  when: 13–15 October 2026
+  paper: alam2026public
+
+- authors: Alam, M. S., Wang, Z., Zhang, L., & Bazilinskyy, P.
+  title: "Exploring Veo 3's Capabilities for Generating Urban Traffic Scenes in 76 Cities Worldwide"
+  venue: AutoUI 2026
+  conf: "18th International Conference on Automotive User Interfaces and Interactive Vehicular Applications (AutoUI)"
+  city: Gothenburg
+  country: Sweden
+  lat: 57.7089
+  lng: 11.9746
+  year: 2026
+  when: 20–23 September 2026
+  paper: alam2026veo3
+
+- authors: Janssen, C., Alam, M. S., Bazilinskyy, P., Dou, F., & Zhang, L.
+  title: "Learning a simple directional eHMI: A VR study of AV-pedestrian interaction"
+  venue: AutoUI 2026
+  conf: "18th International Conference on Automotive User Interfaces and Interactive Vehicular Applications (AutoUI)"
+  city: Gothenburg
+  country: Sweden
+  lat: 57.7089
+  lng: 11.9746
+  year: 2026
+  when: 20–23 September 2026
+  paper: janssen2026learning
+
+- authors: Verstelle, W., Alam, M. S., & Bazilinskyy, P.
+  title: "Personalised Electric Vehicle Acoustics with Generative AI: Dynamic Sonification and User Acceptance Study"
+  venue: AutoUI 2026
+  conf: "18th International Conference on Automotive User Interfaces and Interactive Vehicular Applications (AutoUI)"
+  city: Gothenburg
+  country: Sweden
+  lat: 57.7089
+  lng: 11.9746
+  year: 2026
+  when: 20–23 September 2026
+  paper: verstelle2026sound
+
 - authors: Alam, M. S., Martens, M., & Bazilinskyy, P.
   title: "Pedestrian planet: What YouTube driving from 233 countries and territories teaches us about the world"
   venue: AutoUI 2025

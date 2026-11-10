@@ -4,7 +4,7 @@ layout: course
 name: Embodying intelligent behavior in social context
 name_url: https://research.tue.nl/en/courses/embodying-intelligent-behavior-in-social-context-3
 year_start: 2024
-year_end: 2025
+year_end:
 institution: TU/e
 type: msc
 students: 
@@ -17,8 +17,7 @@ comment:
 This master's course explores how intelligent behaviour can be designed, embodied, and evaluated in social contexts. It sits at the intersection of interaction design, embodied intelligence, and social robotics.
 
 #### My role
-- 2024: lecturer.
-- 2025: lecturer.
+- 2024–present: lecturer.
 
 #### Teaching focus
 - Embodied interaction in social settings.
