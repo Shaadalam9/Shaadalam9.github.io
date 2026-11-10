@@ -31,6 +31,7 @@ permalink: /talks/
           <span class="talk-venue">{{ t.venue }}</span>
           <span class="talk-where"><i class="fa fa-map-marker"></i> {{ t.city }}, {{ t.country }}</span>
           {% if t.online %}<span class="talk-online">Online</span>{% endif %}
+          {% if t.upcoming %}<span class="talk-online talk-upcoming">Upcoming · {{ t.when }}</span>{% endif %}
         </div>
         <h3>{{ t.title }}</h3>
         <p class="talk-authors">{% include publication-authors.html authors=t.authors %}</p>

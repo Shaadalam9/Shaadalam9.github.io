@@ -1429,3 +1429,5 @@ a.btn-abstract, a.btn-bib { color: var(--ink-text) !important; }
 .tool-ico-fa { font-size: 13px; line-height: 14px; text-align: center; color: var(--accent); }
 
 :root[data-theme="dark"] .tool-ico-invert { filter: invert(1) hue-rotate(180deg); }
+
+.talk-upcoming { color: var(--accent-text); border-color: var(--accent); }

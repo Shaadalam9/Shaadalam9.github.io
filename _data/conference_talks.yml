@@ -1,6 +1,19 @@
 # Talks shown on the Talks page (newest first).
 # venue: short name on the card; conf: full name; paper: file name in _publications (links the talk to its paper);
 # lat/lng: where it took place (shown on the map); online: true if presented remotely.
+- authors: Alam, M. S., Rouchitsas, A., & Bazilinskyy, P.
+  title: "What Pedestrians Lack Around the World: Auditing Street Infrastructure in 75 Cities with On-Device Vision-Language Models"
+  venue: IHIET-AI 2027
+  conf: "19th International Conference on Human Interaction and Emerging Technologies (IHIET-AI 2027)"
+  city: Palma de Mallorca
+  country: Spain
+  lat: 39.5696
+  lng: 2.6502
+  year: 2027
+  when: 5–7 April 2027
+  upcoming: true
+  paper: alam2027pedestrians
+
 - authors: Alam, M. S., Martens, M., & Bazilinskyy, P.
   title: "Pedestrian planet: What YouTube driving from 233 countries and territories teaches us about the world"
   venue: AutoUI 2025
