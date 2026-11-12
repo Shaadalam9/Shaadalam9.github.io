@@ -1,6 +1,6 @@
 @inproceedings{alam2027pedestrians,
   author    = {Alam, Md Shadab and Rouchitsas, Alexandros and Bazilinskyy, Pavlo},
-  title     = {What Pedestrians Lack Around the World: Auditing Street Infrastructure in 75 Cities with On-Device Vision-Language Models},
+  title     = {What Pedestrians Lack Around the World: Auditing Street Infrastructure in Dashcam Video from 75 Cities with Vision-Language Models},
   booktitle = {Human Interaction and Emerging Technologies (IHIET-AI 2027): Artificial Intelligence and Future Applications},
   address   = {Palma de Mallorca, Spain},
   publisher = {AHFE International},
