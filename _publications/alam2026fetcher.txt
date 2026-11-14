@@ -1,6 +1,6 @@
 @unpublished{alam2026fetcher,
-  title  = {Automated construction of living mobility datasets from public video: A {YouTube} case study},
+  title  = {Living mobility datasets from public video: A continuously running pipeline for crashes, near-collisions and pedestrian environments},
   author = {Alam, Md Shadab and Hoggenmueller, Marius and Bazilinskyy, Pavlo},
-  note   = {Manuscript submitted to ACM},
+  note   = {Manuscript in preparation},
   year   = {2026}
 }
