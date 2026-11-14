@@ -5,7 +5,7 @@ repo: https://github.com/crowd-dataset/crowd
 paper: https://dl.acm.org/doi/10.1145/3744333.3747827
 kaggle: https://www.kaggle.com/datasets/anonymousauthor123/pedestrian-in-youtubepyt
 globe_data: https://bazilinskyy.github.io/js/crowd-globe.json
-localities: 10287
+localities: 10675
 countries: 238
-hours: 35661
-videos: 80533
+hours: 36666
+videos: 83882
